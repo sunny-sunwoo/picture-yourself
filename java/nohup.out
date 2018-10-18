@@ -1,0 +1,1721 @@
+log4j:WARN No appenders could be found for logger (org.jboss.logging).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.xnio.nio.NioXnio$2 (file:/home/ubuntu/picture-yourself/target/picyou.jar) to constructor sun.nio.ch.EPollSelectorProvider()
+WARNING: Please consider reporting this to the maintainers of org.xnio.nio.NioXnio$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+row 1
+98
+country china
+id 98
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+row 1
+99
+country china
+id 99
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+row 1
+100
+country china
+id 100
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+row 1
+101
+country china
+id 101
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+row 1
+102
+country china
+id 102
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+id 102
+photo 22F6CA5D-70DA-41F9-AE3B-8F2143B9BFC6.jpg
+row 1
+103
+country china
+id 103
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+id 102
+photo 22F6CA5D-70DA-41F9-AE3B-8F2143B9BFC6.jpg
+id 103
+photo 3A57F14B-EDF2-4320-B88D-6EC2E13EF02A.jpg
+row 1
+104
+country china
+id 104
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+id 102
+photo 22F6CA5D-70DA-41F9-AE3B-8F2143B9BFC6.jpg
+id 103
+photo 3A57F14B-EDF2-4320-B88D-6EC2E13EF02A.jpg
+id 104
+photo D0591D2D-D21C-4766-AA96-C93F4A4BEC65.jpg
+row 1
+105
+country china
+id 105
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+id 102
+photo 22F6CA5D-70DA-41F9-AE3B-8F2143B9BFC6.jpg
+id 103
+photo 3A57F14B-EDF2-4320-B88D-6EC2E13EF02A.jpg
+id 104
+photo D0591D2D-D21C-4766-AA96-C93F4A4BEC65.jpg
+id 105
+photo B9FF0004-406A-4B37-B623-9160D78C41AC.jpg
+row 1
+106
+country china
+id 106
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+id 102
+photo 22F6CA5D-70DA-41F9-AE3B-8F2143B9BFC6.jpg
+id 103
+photo 3A57F14B-EDF2-4320-B88D-6EC2E13EF02A.jpg
+id 104
+photo D0591D2D-D21C-4766-AA96-C93F4A4BEC65.jpg
+id 105
+photo B9FF0004-406A-4B37-B623-9160D78C41AC.jpg
+id 106
+photo 09AD22A7-9D00-4882-8B56-96EDFBF8B537.jpg
+row 1
+107
+country china
+id 107
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+id 102
+photo 22F6CA5D-70DA-41F9-AE3B-8F2143B9BFC6.jpg
+id 103
+photo 3A57F14B-EDF2-4320-B88D-6EC2E13EF02A.jpg
+id 104
+photo D0591D2D-D21C-4766-AA96-C93F4A4BEC65.jpg
+id 105
+photo B9FF0004-406A-4B37-B623-9160D78C41AC.jpg
+id 106
+photo 09AD22A7-9D00-4882-8B56-96EDFBF8B537.jpg
+id 107
+photo 0C45CF86-82FB-47A1-BB6B-141336C50024.jpg
+row 1
+108
+country china
+id 108
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+id 102
+photo 22F6CA5D-70DA-41F9-AE3B-8F2143B9BFC6.jpg
+id 103
+photo 3A57F14B-EDF2-4320-B88D-6EC2E13EF02A.jpg
+id 104
+photo D0591D2D-D21C-4766-AA96-C93F4A4BEC65.jpg
+id 105
+photo B9FF0004-406A-4B37-B623-9160D78C41AC.jpg
+id 106
+photo 09AD22A7-9D00-4882-8B56-96EDFBF8B537.jpg
+id 107
+photo 0C45CF86-82FB-47A1-BB6B-141336C50024.jpg
+id 108
+photo 4476972B-955A-449C-B067-D550AD0EDEA9.jpg
+row 1
+109
+country china
+id 109
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+id 102
+photo 22F6CA5D-70DA-41F9-AE3B-8F2143B9BFC6.jpg
+id 103
+photo 3A57F14B-EDF2-4320-B88D-6EC2E13EF02A.jpg
+id 104
+photo D0591D2D-D21C-4766-AA96-C93F4A4BEC65.jpg
+id 105
+photo B9FF0004-406A-4B37-B623-9160D78C41AC.jpg
+id 106
+photo 09AD22A7-9D00-4882-8B56-96EDFBF8B537.jpg
+id 107
+photo 0C45CF86-82FB-47A1-BB6B-141336C50024.jpg
+id 108
+photo 4476972B-955A-449C-B067-D550AD0EDEA9.jpg
+id 109
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+id 102
+photo 22F6CA5D-70DA-41F9-AE3B-8F2143B9BFC6.jpg
+id 103
+photo 3A57F14B-EDF2-4320-B88D-6EC2E13EF02A.jpg
+id 104
+photo D0591D2D-D21C-4766-AA96-C93F4A4BEC65.jpg
+id 105
+photo B9FF0004-406A-4B37-B623-9160D78C41AC.jpg
+id 106
+photo 09AD22A7-9D00-4882-8B56-96EDFBF8B537.jpg
+id 107
+photo 0C45CF86-82FB-47A1-BB6B-141336C50024.jpg
+id 108
+photo 4476972B-955A-449C-B067-D550AD0EDEA9.jpg
+id 109
+photo 097674CA-07A0-428B-B750-C876568E3420.jpg
+row 1
+110
+country usa
+id 110
+row 1
+country usa
+photo 097674CA-07A0-428B-B750-C876568E3420.jpg
+id 110
+photo 221D3A09-E0E7-4FC9-8F59-C5E7BDBA7DBF.jpg
+row 1
+111
+country korea
+id 111
+row 1
+country korea
+photo C2013D00-2BD9-42DF-934F-9D2C24C3C829.jpg
+id 91
+photo 221D3A09-E0E7-4FC9-8F59-C5E7BDBA7DBF.jpg
+id 111
+photo A7E3BF51-33E2-4D7A-9007-FBD393C1C363.jpg
+row 1
+112
+country china
+id 112
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+id 102
+photo 22F6CA5D-70DA-41F9-AE3B-8F2143B9BFC6.jpg
+id 103
+photo 3A57F14B-EDF2-4320-B88D-6EC2E13EF02A.jpg
+id 104
+photo D0591D2D-D21C-4766-AA96-C93F4A4BEC65.jpg
+id 105
+photo B9FF0004-406A-4B37-B623-9160D78C41AC.jpg
+id 106
+photo 09AD22A7-9D00-4882-8B56-96EDFBF8B537.jpg
+id 107
+photo 0C45CF86-82FB-47A1-BB6B-141336C50024.jpg
+id 108
+photo 4476972B-955A-449C-B067-D550AD0EDEA9.jpg
+id 109
+photo A7E3BF51-33E2-4D7A-9007-FBD393C1C363.jpg
+id 112
+photo 952BE1A0-1FC6-417D-B01E-C21139B1C11F.jpg
+row 1
+113
+country china
+id 113
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+id 102
+photo 22F6CA5D-70DA-41F9-AE3B-8F2143B9BFC6.jpg
+id 103
+photo 3A57F14B-EDF2-4320-B88D-6EC2E13EF02A.jpg
+id 104
+photo D0591D2D-D21C-4766-AA96-C93F4A4BEC65.jpg
+id 105
+photo B9FF0004-406A-4B37-B623-9160D78C41AC.jpg
+id 106
+photo 09AD22A7-9D00-4882-8B56-96EDFBF8B537.jpg
+id 107
+photo 0C45CF86-82FB-47A1-BB6B-141336C50024.jpg
+id 108
+photo 4476972B-955A-449C-B067-D550AD0EDEA9.jpg
+id 109
+photo A7E3BF51-33E2-4D7A-9007-FBD393C1C363.jpg
+id 112
+photo 952BE1A0-1FC6-417D-B01E-C21139B1C11F.jpg
+id 113
+photo BA77D37F-1657-458B-B087-7A0E6F99A736.jpg
+row 1
+114
+country china
+id 114
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+id 102
+photo 22F6CA5D-70DA-41F9-AE3B-8F2143B9BFC6.jpg
+id 103
+photo 3A57F14B-EDF2-4320-B88D-6EC2E13EF02A.jpg
+id 104
+photo D0591D2D-D21C-4766-AA96-C93F4A4BEC65.jpg
+id 105
+photo B9FF0004-406A-4B37-B623-9160D78C41AC.jpg
+id 106
+photo 09AD22A7-9D00-4882-8B56-96EDFBF8B537.jpg
+id 107
+photo 0C45CF86-82FB-47A1-BB6B-141336C50024.jpg
+id 108
+photo 4476972B-955A-449C-B067-D550AD0EDEA9.jpg
+id 109
+photo A7E3BF51-33E2-4D7A-9007-FBD393C1C363.jpg
+id 112
+photo 952BE1A0-1FC6-417D-B01E-C21139B1C11F.jpg
+id 113
+photo BA77D37F-1657-458B-B087-7A0E6F99A736.jpg
+id 114
+photo 4B72098C-1B9F-4330-9E0E-8617578CC0D7.jpg
+row 1
+115
+country china
+id 115
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+id 102
+photo 22F6CA5D-70DA-41F9-AE3B-8F2143B9BFC6.jpg
+id 103
+photo 3A57F14B-EDF2-4320-B88D-6EC2E13EF02A.jpg
+id 104
+photo D0591D2D-D21C-4766-AA96-C93F4A4BEC65.jpg
+id 105
+photo B9FF0004-406A-4B37-B623-9160D78C41AC.jpg
+id 106
+photo 09AD22A7-9D00-4882-8B56-96EDFBF8B537.jpg
+id 107
+photo 0C45CF86-82FB-47A1-BB6B-141336C50024.jpg
+id 108
+photo 4476972B-955A-449C-B067-D550AD0EDEA9.jpg
+id 109
+photo A7E3BF51-33E2-4D7A-9007-FBD393C1C363.jpg
+id 112
+photo 952BE1A0-1FC6-417D-B01E-C21139B1C11F.jpg
+id 113
+photo BA77D37F-1657-458B-B087-7A0E6F99A736.jpg
+id 114
+photo 4B72098C-1B9F-4330-9E0E-8617578CC0D7.jpg
+id 115
+photo CB3065D0-CA6D-4D63-A096-310369E08347.jpg
+row 1
+116
+country south korea
+id 116
+row 1
+country south korea
+photo CB3065D0-CA6D-4D63-A096-310369E08347.jpg
+id 116
+photo B95BD5BB-A52B-4CFC-8E5A-0C88A3E28C64.jpg
+row 1
+117
+country south korea
+id 117
+row 1
+country south korea
+photo CB3065D0-CA6D-4D63-A096-310369E08347.jpg
+id 116
+photo B95BD5BB-A52B-4CFC-8E5A-0C88A3E28C64.jpg
+id 117
+photo 7534942D-0AB5-4626-8BB8-FA2C90CDE8DC.jpg
+row 1
+118
+country united states
+id 118
+row 1
+country united states
+photo 7534942D-0AB5-4626-8BB8-FA2C90CDE8DC.jpg
+id 118
+photo D877AD7A-72BA-4E32-A0ED-B563D313848B.jpg
+row 1
+119
+country south korea
+id 119
+row 1
+country south korea
+photo B95BD5BB-A52B-4CFC-8E5A-0C88A3E28C64.jpg
+id 117
+photo D877AD7A-72BA-4E32-A0ED-B563D313848B.jpg
+id 119
+country south korea
+photo B95BD5BB-A52B-4CFC-8E5A-0C88A3E28C64.jpg
+id 117
+photo D877AD7A-72BA-4E32-A0ED-B563D313848B.jpg
+id 119
+country south korea
+photo B95BD5BB-A52B-4CFC-8E5A-0C88A3E28C64.jpg
+id 117
+photo D877AD7A-72BA-4E32-A0ED-B563D313848B.jpg
+id 119
+country south korea
+photo B95BD5BB-A52B-4CFC-8E5A-0C88A3E28C64.jpg
+id 117
+photo D877AD7A-72BA-4E32-A0ED-B563D313848B.jpg
+id 119
+photo 4F68A24E-E5B2-4DF2-9F4C-A90D137AAF79.jpg
+row 1
+120
+country Korea
+id 120
+row 1
+country Korea
+photo C2013D00-2BD9-42DF-934F-9D2C24C3C829.jpg
+id 91
+photo 221D3A09-E0E7-4FC9-8F59-C5E7BDBA7DBF.jpg
+id 111
+photo 4F68A24E-E5B2-4DF2-9F4C-A90D137AAF79.jpg
+id 120
+country Korea
+photo C2013D00-2BD9-42DF-934F-9D2C24C3C829.jpg
+id 91
+photo 221D3A09-E0E7-4FC9-8F59-C5E7BDBA7DBF.jpg
+id 111
+photo 4F68A24E-E5B2-4DF2-9F4C-A90D137AAF79.jpg
+id 120
+photo A3CCA434-6080-4ACC-930F-ED6E3F747C8F.jpg
+row 1
+121
+country china
+id 121
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+id 102
+photo 22F6CA5D-70DA-41F9-AE3B-8F2143B9BFC6.jpg
+id 103
+photo 3A57F14B-EDF2-4320-B88D-6EC2E13EF02A.jpg
+id 104
+photo D0591D2D-D21C-4766-AA96-C93F4A4BEC65.jpg
+id 105
+photo B9FF0004-406A-4B37-B623-9160D78C41AC.jpg
+id 106
+photo 09AD22A7-9D00-4882-8B56-96EDFBF8B537.jpg
+id 107
+photo 0C45CF86-82FB-47A1-BB6B-141336C50024.jpg
+id 108
+photo 4476972B-955A-449C-B067-D550AD0EDEA9.jpg
+id 109
+photo A7E3BF51-33E2-4D7A-9007-FBD393C1C363.jpg
+id 112
+photo 952BE1A0-1FC6-417D-B01E-C21139B1C11F.jpg
+id 113
+photo BA77D37F-1657-458B-B087-7A0E6F99A736.jpg
+id 114
+photo 4B72098C-1B9F-4330-9E0E-8617578CC0D7.jpg
+id 115
+photo A3CCA434-6080-4ACC-930F-ED6E3F747C8F.jpg
+id 121
+photo 3A3126C2-14F4-4741-B5E8-D9B2A02C0BF5.jpg
+row 1
+122
+country china
+id 122
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+id 102
+photo 22F6CA5D-70DA-41F9-AE3B-8F2143B9BFC6.jpg
+id 103
+photo 3A57F14B-EDF2-4320-B88D-6EC2E13EF02A.jpg
+id 104
+photo D0591D2D-D21C-4766-AA96-C93F4A4BEC65.jpg
+id 105
+photo B9FF0004-406A-4B37-B623-9160D78C41AC.jpg
+id 106
+photo 09AD22A7-9D00-4882-8B56-96EDFBF8B537.jpg
+id 107
+photo 0C45CF86-82FB-47A1-BB6B-141336C50024.jpg
+id 108
+photo 4476972B-955A-449C-B067-D550AD0EDEA9.jpg
+id 109
+photo A7E3BF51-33E2-4D7A-9007-FBD393C1C363.jpg
+id 112
+photo 952BE1A0-1FC6-417D-B01E-C21139B1C11F.jpg
+id 113
+photo BA77D37F-1657-458B-B087-7A0E6F99A736.jpg
+id 114
+photo 4B72098C-1B9F-4330-9E0E-8617578CC0D7.jpg
+id 115
+photo A3CCA434-6080-4ACC-930F-ED6E3F747C8F.jpg
+id 121
+photo 3A3126C2-14F4-4741-B5E8-D9B2A02C0BF5.jpg
+id 122
+photo D3D6B50F-7A63-4EFD-8EBD-8580863CC2A0.jpg
+row 1
+123
+country china
+id 123
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+id 102
+photo 22F6CA5D-70DA-41F9-AE3B-8F2143B9BFC6.jpg
+id 103
+photo 3A57F14B-EDF2-4320-B88D-6EC2E13EF02A.jpg
+id 104
+photo D0591D2D-D21C-4766-AA96-C93F4A4BEC65.jpg
+id 105
+photo B9FF0004-406A-4B37-B623-9160D78C41AC.jpg
+id 106
+photo 09AD22A7-9D00-4882-8B56-96EDFBF8B537.jpg
+id 107
+photo 0C45CF86-82FB-47A1-BB6B-141336C50024.jpg
+id 108
+photo 4476972B-955A-449C-B067-D550AD0EDEA9.jpg
+id 109
+photo A7E3BF51-33E2-4D7A-9007-FBD393C1C363.jpg
+id 112
+photo 952BE1A0-1FC6-417D-B01E-C21139B1C11F.jpg
+id 113
+photo BA77D37F-1657-458B-B087-7A0E6F99A736.jpg
+id 114
+photo 4B72098C-1B9F-4330-9E0E-8617578CC0D7.jpg
+id 115
+photo A3CCA434-6080-4ACC-930F-ED6E3F747C8F.jpg
+id 121
+photo 3A3126C2-14F4-4741-B5E8-D9B2A02C0BF5.jpg
+id 122
+photo D3D6B50F-7A63-4EFD-8EBD-8580863CC2A0.jpg
+id 123
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+id 102
+photo 22F6CA5D-70DA-41F9-AE3B-8F2143B9BFC6.jpg
+id 103
+photo 3A57F14B-EDF2-4320-B88D-6EC2E13EF02A.jpg
+id 104
+photo D0591D2D-D21C-4766-AA96-C93F4A4BEC65.jpg
+id 105
+photo B9FF0004-406A-4B37-B623-9160D78C41AC.jpg
+id 106
+photo 09AD22A7-9D00-4882-8B56-96EDFBF8B537.jpg
+id 107
+photo 0C45CF86-82FB-47A1-BB6B-141336C50024.jpg
+id 108
+photo 4476972B-955A-449C-B067-D550AD0EDEA9.jpg
+id 109
+photo A7E3BF51-33E2-4D7A-9007-FBD393C1C363.jpg
+id 112
+photo 952BE1A0-1FC6-417D-B01E-C21139B1C11F.jpg
+id 113
+photo BA77D37F-1657-458B-B087-7A0E6F99A736.jpg
+id 114
+photo 4B72098C-1B9F-4330-9E0E-8617578CC0D7.jpg
+id 115
+photo A3CCA434-6080-4ACC-930F-ED6E3F747C8F.jpg
+id 121
+photo 3A3126C2-14F4-4741-B5E8-D9B2A02C0BF5.jpg
+id 122
+photo D3D6B50F-7A63-4EFD-8EBD-8580863CC2A0.jpg
+id 123
+photo 2AD61E9E-8966-40AE-A244-21796A774F12.jpg
+row 1
+124
+photo 9103E972-701E-4230-90DA-9BAE79EF3B0E.jpg
+row 1
+125
+country south korea
+id 125
+row 1
+country south korea
+photo B95BD5BB-A52B-4CFC-8E5A-0C88A3E28C64.jpg
+id 117
+photo D877AD7A-72BA-4E32-A0ED-B563D313848B.jpg
+id 119
+photo 9103E972-701E-4230-90DA-9BAE79EF3B0E.jpg
+id 125
+photo 1FB19818-F3BA-4805-8684-4F2918F1A79F.jpg
+row 1
+126
+country korea
+id 126
+row 1
+country korea
+photo C2013D00-2BD9-42DF-934F-9D2C24C3C829.jpg
+id 91
+photo 221D3A09-E0E7-4FC9-8F59-C5E7BDBA7DBF.jpg
+id 111
+photo 4F68A24E-E5B2-4DF2-9F4C-A90D137AAF79.jpg
+id 120
+photo 1FB19818-F3BA-4805-8684-4F2918F1A79F.jpg
+id 126
+photo 2EA76250-82DC-48ED-B321-52BC85CBE90B.jpg
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 231,952,804 milliseconds ago.  The last packet sent successfully to the server was 231,953,228 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3746)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2509)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2487)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2079)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2013)
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5104)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1998)
+	at etc.cmu.edu.pictureyourself.PictureServlet.doGet(PictureServlet.java:42)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:64)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3728)
+	... 39 more
+country china
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 233,844,220 milliseconds ago.  The last packet sent successfully to the server was 233,844,220 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3746)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2509)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2487)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1966)
+	at etc.cmu.edu.pictureyourself.MatchServlet.doGet(MatchServlet.java:45)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:64)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3728)
+	... 36 more
+country china
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:918)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:897)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:886)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1187)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1182)
+	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4071)
+	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4040)
+	at etc.cmu.edu.pictureyourself.MatchServlet.doGet(MatchServlet.java:43)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:64)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 233,844,220 milliseconds ago.  The last packet sent successfully to the server was 233,844,220 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3746)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2509)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2487)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1966)
+	at etc.cmu.edu.pictureyourself.MatchServlet.doGet(MatchServlet.java:45)
+	... 30 more
+Caused by: java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3728)
+	... 36 more
+country korea
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:918)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:897)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:886)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1187)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1182)
+	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4071)
+	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4040)
+	at etc.cmu.edu.pictureyourself.MatchServlet.doGet(MatchServlet.java:43)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:64)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 233,844,220 milliseconds ago.  The last packet sent successfully to the server was 233,844,220 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3746)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2509)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2487)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1966)
+	at etc.cmu.edu.pictureyourself.MatchServlet.doGet(MatchServlet.java:45)
+	... 30 more
+Caused by: java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3728)
+	... 36 more
+country korea
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:918)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:897)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:886)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1187)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1182)
+	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4071)
+	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4040)
+	at etc.cmu.edu.pictureyourself.MatchServlet.doGet(MatchServlet.java:43)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:64)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 233,844,220 milliseconds ago.  The last packet sent successfully to the server was 233,844,220 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3746)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2509)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2487)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1966)
+	at etc.cmu.edu.pictureyourself.MatchServlet.doGet(MatchServlet.java:45)
+	... 30 more
+Caused by: java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3728)
+	... 36 more
+country korea
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:918)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:897)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:886)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1187)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1182)
+	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4071)
+	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4040)
+	at etc.cmu.edu.pictureyourself.MatchServlet.doGet(MatchServlet.java:43)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:64)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 233,844,220 milliseconds ago.  The last packet sent successfully to the server was 233,844,220 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3746)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2509)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2487)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1966)
+	at etc.cmu.edu.pictureyourself.MatchServlet.doGet(MatchServlet.java:45)
+	... 30 more
+Caused by: java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3728)
+	... 36 more
+country korea
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:918)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:897)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:886)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1187)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1182)
+	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4071)
+	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4040)
+	at etc.cmu.edu.pictureyourself.MatchServlet.doGet(MatchServlet.java:43)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:64)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 233,844,220 milliseconds ago.  The last packet sent successfully to the server was 233,844,220 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3746)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2509)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2487)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1966)
+	at etc.cmu.edu.pictureyourself.MatchServlet.doGet(MatchServlet.java:45)
+	... 30 more
+Caused by: java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3728)
+	... 36 more
+country china
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:918)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:897)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:886)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1187)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1182)
+	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4071)
+	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4040)
+	at etc.cmu.edu.pictureyourself.MatchServlet.doGet(MatchServlet.java:43)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:64)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 233,844,220 milliseconds ago.  The last packet sent successfully to the server was 233,844,220 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3746)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2509)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2487)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1966)
+	at etc.cmu.edu.pictureyourself.MatchServlet.doGet(MatchServlet.java:45)
+	... 30 more
+Caused by: java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3728)
+	... 36 more
+country china
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: No operations allowed after connection closed.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:918)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:897)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:886)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.throwConnectionClosedException(ConnectionImpl.java:1187)
+	at com.mysql.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:1182)
+	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4071)
+	at com.mysql.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:4040)
+	at etc.cmu.edu.pictureyourself.MatchServlet.doGet(MatchServlet.java:43)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:64)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 233,844,220 milliseconds ago.  The last packet sent successfully to the server was 233,844,220 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3746)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2509)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2487)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1966)
+	at etc.cmu.edu.pictureyourself.MatchServlet.doGet(MatchServlet.java:45)
+	... 30 more
+Caused by: java.net.SocketException: Broken pipe (Write failed)
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3728)
+	... 36 more
+log4j:WARN No appenders could be found for logger (org.jboss.logging).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.xnio.nio.NioXnio$2 (file:/home/ubuntu/picture-yourself/target/picyou.jar) to constructor sun.nio.ch.EPollSelectorProvider()
+WARNING: Please consider reporting this to the maintainers of org.xnio.nio.NioXnio$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+photo E9787F1E-56FC-4D4B-A040-4A66C2C4D00D.jpg
+row 1
+129
+country china
+id 129
+row 1
+country china
+photo AF43F18F-9522-4179-9731-05ADF943700D.jpg
+id 89
+photo 822FD42A-0BB8-40C0-AC08-28765DDD400E.jpg
+id 90
+photo 0854D02D-ED42-4FF6-8191-5A2B8F8C1F6C.jpg
+id 92
+photo 92808112-C0CA-4BBA-B138-99245305F333.jpg
+id 93
+photo FA6288CE-D71D-43FB-9D7C-585421F4A893.jpg
+id 94
+photo 136B2669-2C4C-4DC3-AB8E-9F169DE27492.jpg
+id 95
+photo CF893D05-8EFB-4ABD-9943-77C6686461AB.jpg
+id 96
+photo 8990A1D2-96FA-4410-81E8-C8E40D5485B2.jpg
+id 97
+photo 8086635E-34AE-43AB-B39A-9A95BBCBDED9.jpg
+id 98
+photo B4675D94-6CA8-4D18-AA07-9FA33AC3C1DD.jpg
+id 99
+photo D449714A-4DBB-4682-976A-E76FE7020CE5.jpg
+id 100
+photo F0B7DD3A-2932-4A3F-B926-D7787A883337.jpg
+id 101
+photo 63CAD591-C2FC-404D-8768-45F6DA2F0EA3.jpg
+id 102
+photo 22F6CA5D-70DA-41F9-AE3B-8F2143B9BFC6.jpg
+id 103
+photo 3A57F14B-EDF2-4320-B88D-6EC2E13EF02A.jpg
+id 104
+photo D0591D2D-D21C-4766-AA96-C93F4A4BEC65.jpg
+id 105
+photo B9FF0004-406A-4B37-B623-9160D78C41AC.jpg
+id 106
+photo 09AD22A7-9D00-4882-8B56-96EDFBF8B537.jpg
+id 107
+photo 0C45CF86-82FB-47A1-BB6B-141336C50024.jpg
+id 108
+photo 4476972B-955A-449C-B067-D550AD0EDEA9.jpg
+id 109
+photo A7E3BF51-33E2-4D7A-9007-FBD393C1C363.jpg
+id 112
+photo 952BE1A0-1FC6-417D-B01E-C21139B1C11F.jpg
+id 113
+photo BA77D37F-1657-458B-B087-7A0E6F99A736.jpg
+id 114
+photo 4B72098C-1B9F-4330-9E0E-8617578CC0D7.jpg
+id 115
+photo A3CCA434-6080-4ACC-930F-ED6E3F747C8F.jpg
+id 121
+photo 3A3126C2-14F4-4741-B5E8-D9B2A02C0BF5.jpg
+id 122
+photo D3D6B50F-7A63-4EFD-8EBD-8580863CC2A0.jpg
+id 123
+photo A8C10165-8501-4FB0-B05C-3D79A3F42972.jpg
+id 127
+photo DF93D19D-E7C6-4371-AC8E-85B911A219E9.jpg
+id 128
+photo E9787F1E-56FC-4D4B-A040-4A66C2C4D00D.jpg
+id 129
