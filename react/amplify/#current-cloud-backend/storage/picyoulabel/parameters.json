@@ -1,0 +1,9 @@
+{
+    "bucketName": "picyoubucket",
+    "authPolicyName": "s3_amplify_d3756c32",
+    "unauthPolicyName": "s3_amplify_d3756c32",
+    "authRoleName": "pictureyourself-20181014185330-authRole",
+    "unauthRoleName": "pictureyourself-20181014185330-unauthRole",
+    "authPermissions": "rw",
+    "unauthPermissions": "rw"
+}
