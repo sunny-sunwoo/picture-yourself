@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "ionic-20181031085031-authRole",
+            "UnauthRoleArn": "arn:aws:iam::156151112802:role/ionic-20181031085031-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::156151112802:role/ionic-20181031085031-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "ionic-20181031085031-deployment",
+            "UnauthRoleName": "ionic-20181031085031-unauthRole",
+            "StackName": "ionic-20181031085031",
+            "StackId": "arn:aws:cloudformation:us-east-1:156151112802:stack/ionic-20181031085031/8cef6c80-dd0b-11e8-92f8-500c3d441629"
+        }
+    }
+}

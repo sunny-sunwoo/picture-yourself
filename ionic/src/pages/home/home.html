@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Post</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div id="photo-div" class="content-div"> <!-- photo review -->
+		<p>Please review your photo!</p>
+		<img [src]="base64Image" *ngIf="base64Image">
+		<button (click)="tryAgain()" class="ui-button">TRY AGAIN</button>
+		<button (click)="share()" class="ui-button">SUBMIT</button>
+	</div>
+</ion-content>
