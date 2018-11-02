@@ -41,19 +41,14 @@ json.nodes = [];
 
 // preload
 function preload() {
-	// origImg = loadImage('src/geo-map-world.png');
-	origImg = loadImage('src/cmu-letter-4.png');
-	// origImg = loadImage('src/pitt-letter.png');
-	// origImg = loadImage('src/map.png');
-	data = loadJSON('json/input.json');
-	test = loadImage('src/img/20.png')
-	centerImg = loadImage('src/headshot-2020/edited-square/21.png');
+	origImg = loadImage('mosaic/src/cmu-letter-4.png');
+	data = loadJSON('mosaic/json/input.json');
+	test = loadImage('mosaic/src/img/20.png')
+	centerImg = loadImage('mosaic/src/headshot-2020/edited-square/21.png');
 	for(var i = 0; i < imageNumber; i++) {
-		imgFiles[i] = loadImage(`src/img/${i}.png`);
-		// imgFiles[i] = loadImage(`src/headshot-2020/edited-square/${i}.png`);
+		imgFiles[i] = loadImage(`mosaic/src/img/${i}.png`);
 	}
 }
-
 
 function setup() {
 	createCanvas(origImg.width, origImg.height);
@@ -63,11 +58,10 @@ function setup() {
 	convImg = createImage(w, h);
 	convImg.copy(origImg, 0, 0, origImg.width, origImg.height, 0, 0, w, h);
 	convImg.loadPixels();
-	console.log(convImg);
 }
 
 function draw() {
-	background(255);
+	background('rgba(0,255,0, 0)');
 	// image(test, 0, 0);
 
 	for(var i = 0; i < imageNumber; i++) {
@@ -80,14 +74,10 @@ function draw() {
 		avg /= imgFiles[i].pixels.length;
 		imgBrightness[i] = Math.floor(avg);
 	} 
-	console.log(imgFiles);
-	console.log(imgBrightness);
 
 	for(var i = 0; i < imageNumber; i++) {
 		brightLevels[imgBrightness[i]] = i;
 	}
-
-	console.log(brightLevels);
 	var xPos = 0;
 	var yPos = 0;
 
@@ -100,13 +90,12 @@ function draw() {
 			var b = convImg.pixels[index+2];
 
 			var bright = (r+g+b)/3;
-
 			var w = map(bright, 0, 255, 0, scl);
 
 			if(w != 0) {
 				var i = Math.floor(Math.random() * imageNumber);
-				image(imgFiles[i], x * scl, y * scl, w, w);
-				console.log(count + " // x: " + x * scl + "// y: " + y * scl);
+				// image(imgFiles[i], x * scl, y * scl, w, w);
+				// console.log(count + " // x: " + x * scl + "// y: " + y * scl);
 				var positionPair = {
 					x: x * scl, 
 					y: y * scl
@@ -116,10 +105,6 @@ function draw() {
 			}
 		}
 	}
-	// image(centerImg, tempX, tempY, tempW, tempW);
-
-	console.log(positionList);
-	console.log(count);
 
 	for (i=0; i < count ; i++){
 	   var obj = {
@@ -168,25 +153,25 @@ function draw() {
 	}
 	// json.nodes = data.nodes;
 	json.edges = data.edges;
+	noLoop();
+}
 
-
+function updateJSON() {
 	var request = new XMLHttpRequest();
 	var jsonData = {};
 	request.open('GET', 'http://ec2-34-228-225-161.compute-1.amazonaws.com:8080/PictureYourself/match?country=default', true);
 	request.onload = function () {
 	  // Begin accessing JSON data here
 	  jsonData = JSON.parse(this.response);
-	  // console.log(jsonData);
 	  var lastIndex = jsonData.postList.length - 1;
 	  var url = "https://s3.amazonaws.com/newpicbuck/public/" + jsonData.postList[lastIndex].photo;
 	  var index = Math.floor(Math.random() * count);
 	  json.nodes[index].url = url;
-	  // console.log(json.nodes[index]);
+	  console.log(json.nodes[index]);
 	  // saveJSON(json, 'data.json');
+	  getJSON(json);
 	}
 	request.send();
-	
-	noLoop();
 }
 
 const HOST = "https://s3.amazonaws.com/newpicbuck/public/";
@@ -214,25 +199,6 @@ function fetchPictureList(country) {
     })
 }
 
-// function updateList(postList) {
-//   let len = nodes.length;
-//   for (let i = len - 1; i >= 0; i--) {
-//     IMAGES.removeChild(nodes[i]);
-//   }
-//   nodes = [];
-//   for (let i = 0; i < postList.length; i++) {
-//     let post = postList[i];
-//     var img = document.createElement("img");
-//     img.setAttribute("src", HOST + post.photo);
-//     img.setAttribute("style", "max-width:200px; max-height:200px;");
-//     IMAGES.append(img);
-//     var text = document.createTextNode(post.country);
-//     IMAGES.append(text);
-//     nodes.push(img);
-//     nodes.push(text);
-//   }
-// }
-
 function checkUpdate() {
   const url = "http://ec2-34-228-225-161.compute-1.amazonaws.com:8080/PictureYourself/checkupdate";
   fetch(url)
@@ -241,6 +207,7 @@ function checkUpdate() {
       if (responseJson.update == 1) {
       	console.log(responseJson)
         fetchPictureList(responseJson.country);
+        updateJSON();
       }
     })
     .catch((error) => {
