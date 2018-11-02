@@ -164,12 +164,12 @@ function updateJSON() {
 	  // Begin accessing JSON data here
 	  jsonData = JSON.parse(this.response);
 	  var lastIndex = jsonData.postList.length - 1;
-	  var url = "https://s3.amazonaws.com/newpicbuck/public/" + jsonData.postList[lastIndex].photo;
+	  var newUrl = "https://s3.amazonaws.com/newpicbuck/public/" + jsonData.postList[lastIndex].photo;
 	  var index = Math.floor(Math.random() * count);
-	  json.nodes[index].url = url;
+	  json.nodes[index].url = newUrl;
 	  console.log(json.nodes[index]);
 	  // saveJSON(json, 'data.json');
-	  getJSON(json);
+	  getJSON(json, newUrl);
 	}
 	request.send();
 }

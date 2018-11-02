@@ -370,7 +370,6 @@ sigma.parsers.json('data-random.json', s, function (s) {
   filter = new sigma.plugins.filter(s);
   updatePane(s.graph, filter); // updating UI 
   console.log(s);
-
   function applyMinDegreeFilter(e) {
     var v = e.target.value; // input value of scroller
     _.$('min-degree-val').textContent = v;
@@ -391,9 +390,11 @@ sigma.parsers.json('data-random.json', s, function (s) {
 //sigma.parsers.json('data.json', s.graph);
 //s.startForceAtlas2({worker: true, barnesHutOptimize: false});
 var newGraph;
-function getJSON(jsonInput) {
-    console.log(jsonInput);
-    newGraph = jsonInput;
+var newSrc;
+function getJSON(jsonInput, newUrl) {
+  newSrc = newUrl
+  console.log(jsonInput);
+  newGraph = jsonInput;
     // console.log(s);
   }
 
@@ -410,9 +411,6 @@ function myMessageIn(){
       // console.log("message in");
     }
   }, 10);
-
-  
-  
 }
 
 function myMessageOut(){
@@ -550,11 +548,11 @@ $("#target-img").center()
 
 //Zoom in / out
 $("#click-change").on("click", function() {
+  console.log(newSrc);
+  $("#target-img").attr("src",newSrc);
   $("#target-img").css("border-radius", "50%");
   $("#target-img").addClass("big").css({"display": "initial"});
 });
-
-
 
 _.$('click-appear').addEventListener("click", function(){ myAppear(s.graph); });
 _.$('click-disappear').addEventListener("click", function(){ myDisappear(s.graph); });
