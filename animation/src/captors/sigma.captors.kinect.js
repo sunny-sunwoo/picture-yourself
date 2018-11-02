@@ -55,7 +55,7 @@
 
     sigma.classes.dispatcher.extend(this);
 
-    var socket = io("http://128.2.236.245:3000");
+    var socket = io("http://localhost:3000");
 
     socket.on("disconnect", function() {
       console.log("Disconnected");
@@ -93,16 +93,18 @@
 
     function _kinectWheelHandler(head) {
       var pos,
-          dRatio,
           ratio,
           coordinates,
-          newStageRatio;
-      
-      dRatio = head.cameraZ / _startKinectZ;
-      newStageRatio = _startCameraRatio * dRatio;
+          newRatio;
 
-      if (newStageRatio != _camera.ratio) {
-        ratio = newStageRatio / camera.ratio;
+      newRatio = Math.max(
+        0.1,
+        1 - 2 * (_startKinectZ - head.cameraZ)
+      );
+      console.log(head.cameraZ, _startKinectZ, newRatio);
+
+      if (newRatio != _camera.ratio) {
+        ratio = newRatio / camera.ratio;
         pos = _camera.cameraPosition(
           (head.depthX - 0.5) * 1000,
           (head.depthY - 0.5) * 1000,
@@ -111,7 +113,7 @@
         coordinates = {
           x: pos.x * (1 - ratio) + _camera.x,
           y: pos.y * (1 - ratio) + _camera.y,
-          ratio: newStageRatio
+          ratio: newRatio
         };
         _camera.goTo(coordinates);
       }
@@ -129,9 +131,11 @@
 
         _camera.isMoving = true;
 
+        var scale = 1000 + 8000 * (_startKinectZ - head.cameraZ);
+
         pos = _camera.cameraPosition(
-          _startMouseX - head.depthX * 1000,
-          _startMouseY - head.depthY * 1000,
+          (_startMouseX - head.depthX) * scale,
+          (_startMouseY - head.depthY) * scale,
           true
         );
 
@@ -160,8 +164,8 @@
       _lastKinectZ = head.cameraZ;
       _lastCameraRatio = 1;
 
-      _startMouseX = head.depthX * 1000;
-      _startMouseY = head.depthY * 1000;
+      _startMouseX = head.depthX;
+      _startMouseY = head.depthY;
       _startKinectZ = head.cameraZ;
 
       _isMouseDown = true;
