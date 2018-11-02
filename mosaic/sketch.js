@@ -24,7 +24,6 @@ tempW;
 var L = 30,
 N = 100;
 
-
 // create nodes
 var positionList = [];
 var urls = [];
@@ -52,8 +51,7 @@ function preload() {
 	for(var i = 0; i < imageNumber; i++) {
 		imgFiles[i] = loadImage(`src/img/${i}.png`);
 		// imgFiles[i] = loadImage(`src/headshot-2020/edited-square/${i}.png`);
-	} 
-
+	}
 }
 
 
@@ -71,7 +69,6 @@ function setup() {
 function draw() {
 	background(255);
 	// image(test, 0, 0);
-	
 
 	for(var i = 0; i < imageNumber; i++) {
 		imgFiles[i].loadPixels();
@@ -109,14 +106,6 @@ function draw() {
 			if(w != 0) {
 				var i = Math.floor(Math.random() * imageNumber);
 				image(imgFiles[i], x * scl, y * scl, w, w);
-				// if(count == 161) {
-				// 	image(centerImg, x * scl, y * scl, w, w);
-				// 	w = w * 1.4;
-				// 	tempX = x * scl;
-				// 	tempY = y * scl;
-				// 	tempW = w * 1.4;
-				// }
-
 				console.log(count + " // x: " + x * scl + "// y: " + y * scl);
 				var positionPair = {
 					x: x * scl, 
@@ -127,8 +116,7 @@ function draw() {
 			}
 		}
 	}
-	image(centerImg, tempX, tempY, tempW, tempW);
-	var cc= 0;
+	// image(centerImg, tempX, tempY, tempW, tempW);
 
 	console.log(positionList);
 	console.log(count);
@@ -162,7 +150,6 @@ function draw() {
 	     obj[val] = obj['random_' + val];
 	   });
 	   data.nodes.push(obj);
-	   // cc++;
 	}
 
 	for(i=0; i<count; i++) {
@@ -195,9 +182,70 @@ function draw() {
 	  var index = Math.floor(Math.random() * count);
 	  json.nodes[index].url = url;
 	  // console.log(json.nodes[index]);
-	  saveJSON(json, 'data.json');
+	  // saveJSON(json, 'data.json');
 	}
 	request.send();
 	
 	noLoop();
 }
+
+const HOST = "https://s3.amazonaws.com/newpicbuck/public/";
+const IMAGES = document.querySelector("ul");
+
+console.log(window.location.href);
+var href = new URL(window.location.href);
+var country = href.searchParams.get("country");
+// console.log(country);
+if (!country)
+  country = "default";
+fetchPictureList(country);
+var nodes = [];
+
+function fetchPictureList(country) {
+  const url = "http://ec2-34-228-225-161.compute-1.amazonaws.com:8080/PictureYourself/match?country=" + country;
+  fetch(url)
+    .then((response) => response.json())
+    .then((responseJson) => {
+      console.log(responseJson)
+      //updateList(responseJson.postList)
+    })
+    .catch((error) => {
+      console.error(error)
+    })
+}
+
+// function updateList(postList) {
+//   let len = nodes.length;
+//   for (let i = len - 1; i >= 0; i--) {
+//     IMAGES.removeChild(nodes[i]);
+//   }
+//   nodes = [];
+//   for (let i = 0; i < postList.length; i++) {
+//     let post = postList[i];
+//     var img = document.createElement("img");
+//     img.setAttribute("src", HOST + post.photo);
+//     img.setAttribute("style", "max-width:200px; max-height:200px;");
+//     IMAGES.append(img);
+//     var text = document.createTextNode(post.country);
+//     IMAGES.append(text);
+//     nodes.push(img);
+//     nodes.push(text);
+//   }
+// }
+
+function checkUpdate() {
+  const url = "http://ec2-34-228-225-161.compute-1.amazonaws.com:8080/PictureYourself/checkupdate";
+  fetch(url)
+    .then((response) => response.json())
+    .then((responseJson) => {
+      if (responseJson.update == 1) {
+      	console.log(responseJson)
+        fetchPictureList(responseJson.country);
+      }
+    })
+    .catch((error) => {
+      console.error(error)
+    })
+}
+
+var interval = setInterval(checkUpdate, 1000);
