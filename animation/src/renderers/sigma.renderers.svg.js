@@ -74,7 +74,7 @@
 
     // Initialize captors:
     this.captors = [];
-    a = this.options.captors || [sigma.captors.mouse, sigma.captors.touch];
+    a = this.options.captors || [sigma.captors.kinect, sigma.captors.mouse, sigma.captors.touch];
     for (i = 0, l = a.length; i < l; i++) {
       fn = typeof a[i] === 'function' ? a[i] : sigma.captors[a[i]];
       this.captors.push(

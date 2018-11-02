@@ -20,6 +20,7 @@ module.exports = function(grunt) {
     'src/classes/sigma.classes.edgequad.js',
 
     // Captors:
+    'src/captors/sigma.captors.kinect.js',
     'src/captors/sigma.captors.mouse.js',
     'src/captors/sigma.captors.touch.js',
 
