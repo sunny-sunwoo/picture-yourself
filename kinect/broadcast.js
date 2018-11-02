@@ -1,24 +1,29 @@
-var Kinect2 = require('kinect2'),
-    express = require('express'),
-    http = require('http'),
+var Kinect2 = require("kinect2"),
+    express = require("express"),
     app = express(),
-    server = http.createServer(app),
-    server = app.listen(8000),
-    io = require('socket.io').listen(server);
+    server = require("http").createServer(app),
+    io = require("socket.io").listen(server);
 
 var kinect = new Kinect2();
 
-if(kinect.open()) {
-    console.log('Server listening on port 8000');
+if (kinect.open()) {
+    server.listen(3000);
+    console.log("Server listening on port 3000");
+    console.log("Point your browser to http://128.2.236.245:3000");
 
-    app.get('/', function(req, res) {
-        res.sendFile('http://127.0.0.1:8080');
-    });
+    // app.get('/', function(req, res) {
+    //     res.sendFile(__dirname + '/public/index.html');
+    // });
+    app.use(express.static("./public"));
 
-    kinect.on('bodyFrame', function(bodyFrame){
-        io.sockets.emit('bodyFrame', bodyFrame);
-		//console.log(bodyFrame);          
-    });
+    kinect.on("bodyFrame", function(bodyFrame) {
+        io.sockets.emit("bodyFrame", bodyFrame);
+        // for(var i = 0;  i < bodyFrame.bodies.length; i++) {
+        //     if(bodyFrame.bodies[i].tracked) {
+        //         console.log(bodyFrame.bodies[i]);
+        //     }
+        // }
+    })
 
     kinect.openBodyReader();
 }
