@@ -1,0 +1,1281 @@
+{
+  "Skullcandy": {
+    "amazon_00017": {
+      "originality": "Fake",
+      "brand": "Skullcandy",
+      "objects": [
+        {
+          "width": 0.6875,
+          "top": 0.04322357019064125,
+          "label": "2",
+          "left": 0.11,
+          "height": 0.49166811091854423
+        },
+        {
+          "width": 0.09125,
+          "top": 0.0378206239168111,
+          "label": "3",
+          "left": 0.1075,
+          "height": 0.26474436741767765
+        },
+        {
+          "width": 0.62875,
+          "top": 0.29446057192374353,
+          "label": "2",
+          "left": 0.05875,
+          "height": 0.6861741767764299
+        },
+        {
+          "width": 0.77375,
+          "top": 0.03241767764298094,
+          "label": "1",
+          "left": 0.04,
+          "height": 0.967127383015598
+        },
+        {
+          "width": 0.785,
+          "top": 0.01620883882149047,
+          "label": "4",
+          "left": 0.03125,
+          "height": 0.9833362218370885
+        }
+      ],
+      "size": {
+        "width": 1154,
+        "height": 2494
+      },
+      "filename": "amazon_00017.png"
+    }
+  },
+  "Bang_and_Olufsen": {
+    "amazon_00014": {
+      "originality": "Fake",
+      "brand": "Bang and Olufsen",
+      "objects": [
+        {
+          "width": 0.525,
+          "top": 0.7255603448275862,
+          "label": "2",
+          "left": 0.2425,
+          "height": 0.1423060344827586
+        },
+        {
+          "width": 0.22375,
+          "top": 0.5050862068965517,
+          "label": "1",
+          "left": 0.75625,
+          "height": 0.39284482758620687
+        },
+        {
+          "width": 0.74125,
+          "top": 0.5010775862068966,
+          "label": "4",
+          "left": 0.24,
+          "height": 0.3988577586206897
+        }
+      ],
+      "size": {
+        "width": 406,
+        "height": 651
+      },
+      "filename": "amazon_00014.png"
+    }
+  },
+  "SpyDerco": {
+    "amazon_00069": {
+      "originality": "Fake",
+      "brand": "SpyDerco",
+      "objects": [
+        {
+          "width": 0.6985632183908046,
+          "top": 0.225,
+          "label": "1",
+          "left": 0.20517241379310344,
+          "height": 0.6783333333333333
+        },
+        {
+          "width": 0.7050766283524904,
+          "top": 0.21166666666666667,
+          "label": "4",
+          "left": 0.20028735632183908,
+          "height": 0.6933333333333334
+        }
+      ],
+      "size": {
+        "width": 255,
+        "height": 261
+      },
+      "filename": "amazon_00069.png"
+    }
+  },
+  "Saint": {
+    "amazon_00065": {
+      "originality": "Fake",
+      "brand": "Saint",
+      "objects": [
+        {
+          "width": 0.5575,
+          "top": 0.03777777777777778,
+          "label": "1",
+          "left": 0.205,
+          "height": 0.9644444444444444
+        },
+        {
+          "width": 0.28375,
+          "top": 0.2777777777777778,
+          "label": "3",
+          "left": 0.3375,
+          "height": 0.5111111111111111
+        },
+        {
+          "width": 0.06625,
+          "top": 0.62,
+          "label": "3",
+          "left": 0.45,
+          "height": 0.12666666666666668
+        },
+        {
+          "width": 0.555,
+          "top": 0.02666666666666667,
+          "label": "4",
+          "left": 0.205,
+          "height": 0.9733333333333334
+        }
+      ],
+      "size": {
+        "width": 1080,
+        "height": 1920
+      },
+      "filename": "amazon_00065.png"
+    }
+  },
+  "Dermacol": {
+    "amazon_00071": {
+      "originality": "Fake",
+      "brand": "Dermacol",
+      "objects": [
+        {
+          "width": 0.13875,
+          "top": 0.16227739726027396,
+          "label": "1",
+          "left": 0.145,
+          "height": 0.6896789383561643
+        },
+        {
+          "width": 0.445,
+          "top": 0.30201626712328766,
+          "label": "4",
+          "left": 0.34625,
+          "height": 0.5003553082191781
+        }
+      ],
+      "size": {
+        "width": 584,
+        "height": 2106
+      },
+      "filename": "amazon_00071.png"
+    },
+    "amazon_00019": {
+      "originality": "Fake",
+      "brand": "Dermacol",
+      "objects": [
+        {
+          "width": 0.7,
+          "top": 0.5225176056338028,
+          "label": "2",
+          "left": 0.22875,
+          "height": 0.14291079812206572
+        },
+        {
+          "width": 0.3,
+          "top": 0.7592136150234742,
+          "label": "2",
+          "left": 0.43625,
+          "height": 0.12058098591549295
+        },
+        {
+          "width": 0.715,
+          "top": 0.2232981220657277,
+          "label": "1",
+          "left": 0.2275,
+          "height": 0.290287558685446
+        },
+        {
+          "width": 0.7175,
+          "top": 0.20543427230046946,
+          "label": "4",
+          "left": 0.225,
+          "height": 0.6788262910798122
+        }
+      ],
+      "size": {
+        "width": 426,
+        "height": 1522
+      },
+      "filename": "amazon_00019.png"
+    },
+    "amazon_00046": {
+      "originality": "Fake",
+      "brand": "Dermacol",
+      "objects": [
+        {
+          "width": 0.1475,
+          "top": 0.18072229551451185,
+          "label": "1",
+          "left": 0.16124999999999998,
+          "height": 0.644112796833773
+        },
+        {
+          "width": 0.44249999999999995,
+          "top": 0.30120382585751976,
+          "label": "4",
+          "left": 0.3549999999999999,
+          "height": 0.5328990765171503
+        }
+      ],
+      "size": {
+        "width": 379,
+        "height": 1405
+      },
+      "filename": "amazon_00046.png"
+    }
+  },
+  "BenNye": {
+    "amazon_00034": {
+      "originality": "Fake",
+      "brand": "BenNye",
+      "objects": [
+        {
+          "width": 0.27330712101354304,
+          "top": 0.4633333333333333,
+          "label": "1",
+          "left": 0.4035299257317606,
+          "height": 0.10666666666666667
+        },
+        {
+          "width": 0.6543294014853648,
+          "top": 0.4633333333333333,
+          "label": "4",
+          "left": 0.2089995631280035,
+          "height": 0.48333333333333334
+        }
+      ],
+      "size": {
+        "width": 736,
+        "height": 763
+      },
+      "filename": "amazon_00034.png"
+    }
+  },
+  "deShredding": {
+    "amazon_00062": {
+      "originality": "Fake",
+      "brand": "deShredding",
+      "objects": [
+        {
+          "width": 0.86875,
+          "top": 0.002612559241706161,
+          "label": "1",
+          "left": 0.09625,
+          "height": 0.4963862559241706
+        },
+        {
+          "width": 0.17875,
+          "top": 0,
+          "label": "3",
+          "left": 0.435,
+          "height": 0.23774289099526066
+        },
+        {
+          "width": 0.7325,
+          "top": 0.20639218009478674,
+          "label": "2",
+          "left": 0.16,
+          "height": 0.20639218009478674
+        },
+        {
+          "width": 0.87625,
+          "top": 0,
+          "label": "4",
+          "left": 0.09,
+          "height": 0.4989988151658768
+        }
+      ],
+      "size": {
+        "width": 211,
+        "height": 441
+      },
+      "filename": "amazon_00062.png"
+    }
+  },
+  "BareMinerals": {
+    "amazon_00072": {
+      "originality": "Fake",
+      "brand": "BareMinerals",
+      "objects": [
+        {
+          "width": 0.2957023060796646,
+          "top": 0.5766666666666667,
+          "label": "2",
+          "left": 0.33632075471698114,
+          "height": 0.05
+        },
+        {
+          "width": 0.5426624737945492,
+          "top": 0.46166666666666667,
+          "label": "1",
+          "left": 0.2030922431865828,
+          "height": 0.095
+        },
+        {
+          "width": 0.9862159329140461,
+          "top": 0.01,
+          "label": "4",
+          "left": 0.014622641509433962,
+          "height": 0.9916666666666667
+        }
+      ],
+      "size": {
+        "width": 310,
+        "height": 318
+      },
+      "filename": "amazon_00072.png"
+    }
+  },
+  "iRing": {
+    "amazon_00030": {
+      "originality": "Fake",
+      "brand": "iRing",
+      "objects": [
+        {
+          "width": 0.45680795395081114,
+          "top": 0.33166666666666667,
+          "label": "1",
+          "left": 0.2801517530088959,
+          "height": 0.13833333333333334
+        },
+        {
+          "width": 0.8529461015175301,
+          "top": 0.013333333333333334,
+          "label": "4",
+          "left": 0.09278911564625851,
+          "height": 0.8183333333333334
+        }
+      ],
+      "size": {
+        "width": 682,
+        "height": 637
+      },
+      "filename": "amazon_00030.png"
+    }
+  },
+  "Nikon": {
+    "amazon_00013": {
+      "originality": "Fake",
+      "brand": "Nikon",
+      "objects": [
+        {
+          "width": 0.9125,
+          "top": 0.60328125,
+          "label": "2",
+          "left": 0.02125,
+          "height": 0.3000446428571429
+        },
+        {
+          "width": 0.43375,
+          "top": 0.2234375,
+          "label": "1",
+          "left": 0.24,
+          "height": 0.36707589285714287
+        },
+        {
+          "width": 0.9125,
+          "top": 0.16598214285714286,
+          "label": "4",
+          "left": 0.02125,
+          "height": 0.7405357142857143
+        }
+      ],
+      "size": {
+        "width": 336,
+        "height": 858
+      },
+      "filename": "amazon_00013.png"
+    },
+    "amazon_00040": {
+      "originality": "Fake",
+      "brand": "Nikon",
+      "objects": [
+        {
+          "width": 0.9,
+          "top": 0.5874245689655173,
+          "label": "2",
+          "left": 0.03125,
+          "height": 0.28646012931034487
+        },
+        {
+          "width": 0.435,
+          "top": 0.1305387931034483,
+          "label": "1",
+          "left": 0.2525,
+          "height": 0.39524245689655174
+        },
+        {
+          "width": 0.9025,
+          "top": 0.1269127155172414,
+          "label": "4",
+          "left": 0.03,
+          "height": 0.7542241379310345
+        }
+      ],
+      "size": {
+        "width": 232,
+        "height": 673
+      },
+      "filename": "amazon_00040.png"
+    }
+  },
+  "NY": {
+    "amazon_00016": {
+      "originality": "Fake",
+      "brand": "NY",
+      "objects": [
+        {
+          "width": 0.29375000000000007,
+          "top": 0.2783333333333333,
+          "label": "1",
+          "left": 0.28,
+          "height": 0.5283333333333333
+        },
+        {
+          "width": 0.30750000000000005,
+          "top": 0.26,
+          "label": "4",
+          "left": 0.26875000000000004,
+          "height": 0.5483333333333333
+        }
+      ],
+      "size": {
+        "width": 3864,
+        "height": 5152
+      },
+      "filename": "amazon_00016.png"
+    }
+  },
+  "Jordan": {
+    "amazon_00060": {
+      "originality": "Fake",
+      "brand": "Jordan",
+      "objects": [
+        {
+          "width": 0.8737864077669902,
+          "top": 0.04,
+          "label": "1",
+          "left": 0.09870550161812297,
+          "height": 0.9533333333333334
+        },
+        {
+          "width": 0.8802588996763754,
+          "top": 0.03166666666666667,
+          "label": "4",
+          "left": 0.09546925566343042,
+          "height": 0.9616666666666667
+        }
+      ],
+      "size": {
+        "width": 2000,
+        "height": 2060
+      },
+      "filename": "amazon_00060.png"
+    },
+    "amazon_00023": {
+      "originality": "Fake",
+      "brand": "Jordan",
+      "objects": [
+        {
+          "width": 0.7263082437275985,
+          "top": 0.1683333333333333,
+          "label": "1",
+          "left": 0.2609216589861751,
+          "height": 0.8249999999999998
+        },
+        {
+          "width": 0.7369892473118279,
+          "top": 0.1533333333333333,
+          "label": "4",
+          "left": 0.2563440860215054,
+          "height": 0.8416666666666665
+        }
+      ],
+      "size": {
+        "width": 596,
+        "height": 651
+      },
+      "filename": "amazon_00023.png"
+    }
+  },
+  "Ghostbusters": {
+    "amazon_00005": {
+      "originality": "Fake",
+      "brand": "Ghostbusters",
+      "objects": [
+        {
+          "width": 0.7005678233438486,
+          "top": 0.775,
+          "label": "2",
+          "left": 0.1587223974763407,
+          "height": 0.08833333333333333
+        },
+        {
+          "width": 0.6659043112513144,
+          "top": 0.19166666666666668,
+          "label": "1",
+          "left": 0.16054679284963197,
+          "height": 0.5733333333333334
+        },
+        {
+          "width": 0.7005678233438486,
+          "top": 0.18333333333333332,
+          "label": "4",
+          "left": 0.16054679284963197,
+          "height": 0.68
+        }
+      ],
+      "size": {
+        "width": 347,
+        "height": 317
+      },
+      "filename": "amazon_00005.png"
+    },
+    "amazon_00029": {
+      "originality": "Fake",
+      "brand": "Ghostbusters",
+      "objects": [
+        {
+          "width": 0.9712500000000002,
+          "top": 0.16666666666666666,
+          "label": "4",
+          "left": 0.0025000000000000005,
+          "height": 0.7916666666666666
+        },
+        {
+          "width": 0.4937500000000001,
+          "top": 0.16833333333333333,
+          "label": "1",
+          "left": 0.19500000000000003,
+          "height": 0.7916666666666666
+        }
+      ],
+      "size": {
+        "width": 3864,
+        "height": 5152
+      },
+      "filename": "amazon_00029.png"
+    }
+  },
+  "NBA_basket": {
+    "amazon_00004": {
+      "originality": "Fake",
+      "brand": "NBA basket",
+      "objects": [
+        {
+          "width": 0.24625,
+          "top": 0.28,
+          "label": "1",
+          "left": 0.43375,
+          "height": 0.7
+        },
+        {
+          "width": 0.1475,
+          "top": 0.82,
+          "label": "2",
+          "left": 0.4625,
+          "height": 0.12833333333333333
+        },
+        {
+          "width": 0.245,
+          "top": 0.265,
+          "label": "4",
+          "left": 0.4325,
+          "height": 0.7166666666666667
+        }
+      ],
+      "size": {
+        "width": 480,
+        "height": 640
+      },
+      "filename": "amazon_00004.png"
+    },
+    "amazon_00052": {
+      "originality": "Fake",
+      "brand": "NBA basket",
+      "objects": [
+        {
+          "width": 0.7849152542372883,
+          "top": 0.021666666666666667,
+          "label": "1",
+          "left": 0.09013380909901875,
+          "height": 0.7016666666666667
+        },
+        {
+          "width": 0.4694469223907226,
+          "top": 0.5566666666666666,
+          "label": "2",
+          "left": 0.17275646743978593,
+          "height": 0.13166666666666665
+        },
+        {
+          "width": 0.7999375557537913,
+          "top": 0.013333333333333334,
+          "label": "4",
+          "left": 0.08262265834076718,
+          "height": 0.7116666666666667
+        }
+      ],
+      "size": {
+        "width": 2526,
+        "height": 1121
+      },
+      "filename": "amazon_00052.png"
+    }
+  },
+  "Havaianas": {
+    "amazon_00053": {
+      "originality": "Fake",
+      "brand": "Havaianas",
+      "objects": [
+        {
+          "width": 0.8362500000000002,
+          "top": 0.045077160493827165,
+          "label": "1",
+          "left": 0.04000000000000001,
+          "height": 0.7888503086419754
+        },
+        {
+          "width": 0.6300000000000001,
+          "top": 0.29976311728395066,
+          "label": "2",
+          "left": 0.14250000000000002,
+          "height": 0.20284722222222223
+        },
+        {
+          "width": 0.8350000000000001,
+          "top": 0.03155401234567901,
+          "label": "4",
+          "left": 0.04000000000000001,
+          "height": 0.8001195987654321
+        }
+      ],
+      "size": {
+        "width": 1620,
+        "height": 2921
+      },
+      "filename": "amazon_00053.png"
+    },
+    "amazon_00028": {
+      "originality": "Fake",
+      "brand": "Havaianas",
+      "objects": [
+        {
+          "width": 0.685,
+          "top": 0.34057692307692305,
+          "label": "2",
+          "left": 0.17375,
+          "height": 0.25299999999999995
+        },
+        {
+          "width": 0.8925,
+          "top": 0.03162499999999999,
+          "label": "1",
+          "left": 0.06375,
+          "height": 0.9292884615384615
+        },
+        {
+          "width": 0.895,
+          "top": 0.01946153846153846,
+          "label": "4",
+          "left": 0.0625,
+          "height": 0.9438846153846153
+        }
+      ],
+      "size": {
+        "width": 910,
+        "height": 1771
+      },
+      "filename": "amazon_00028.png"
+    }
+  },
+  "Samsung": {
+    "amazon_00045": {
+      "originality": "Fake",
+      "brand": "Samsung",
+      "objects": [
+        {
+          "width": 0.7225,
+          "top": 0.26134387351778654,
+          "label": "1",
+          "left": 0.1625,
+          "height": 0.6533596837944664
+        },
+        {
+          "width": 0.72625,
+          "top": 0.2433201581027668,
+          "label": "4",
+          "left": 0.16125,
+          "height": 0.6803952569169961
+        }
+      ],
+      "size": {
+        "width": 253,
+        "height": 912
+      },
+      "filename": "amazon_00045.png"
+    },
+    "amazon_00039": {
+      "originality": "Fake",
+      "brand": "Samsung",
+      "objects": [
+        {
+          "width": 0.91375,
+          "top": 0.0924074074074074,
+          "label": "1",
+          "left": 0.07125,
+          "height": 0.7103819444444444
+        },
+        {
+          "width": 0.915,
+          "top": 0.05775462962962962,
+          "label": "4",
+          "left": 0.06875,
+          "height": 0.7508101851851852
+        }
+      ],
+      "size": {
+        "width": 108,
+        "height": 499
+      },
+      "filename": "amazon_00039.png"
+    },
+    "amazon_00066": {
+      "originality": "Fake",
+      "brand": "Samsung",
+      "objects": [
+        {
+          "width": 0.8475,
+          "top": 0.1731214689265537,
+          "label": "1",
+          "left": 0.07625,
+          "height": 0.6110169491525425
+        },
+        {
+          "width": 0.8525,
+          "top": 0.13747881355932204,
+          "label": "4",
+          "left": 0.075,
+          "height": 0.6568432203389831
+        }
+      ],
+      "size": {
+        "width": 177,
+        "height": 721
+      },
+      "filename": "amazon_00066.png"
+    }
+  },
+  "Herchel": {
+    "amazon_00010": {
+      "originality": "Fake",
+      "brand": "Herchel",
+      "objects": [
+        {
+          "width": 0.3950000000000001,
+          "top": 0.40166666666666667,
+          "label": "2",
+          "left": 0.29875,
+          "height": 0.21
+        },
+        {
+          "width": 0.3950000000000001,
+          "top": 0.3466666666666667,
+          "label": "1",
+          "left": 0.29875,
+          "height": 0.40166666666666667
+        },
+        {
+          "width": 0.40875000000000006,
+          "top": 0.34,
+          "label": "4",
+          "left": 0.28875000000000006,
+          "height": 0.4066666666666667
+        }
+      ],
+      "size": {
+        "width": 3864,
+        "height": 5152
+      },
+      "filename": "amazon_00010.png"
+    }
+  },
+  "TrueTouch": {
+    "amazon_00033": {
+      "originality": "Fake",
+      "brand": "TrueTouch",
+      "objects": [
+        {
+          "width": 0.81875,
+          "top": 0.5819295634920635,
+          "label": "2",
+          "left": 0.0925,
+          "height": 0.17805307539682538
+        },
+        {
+          "width": 0.9075,
+          "top": 0.013028273809523809,
+          "label": "1",
+          "left": 0.00875,
+          "height": 0.5385019841269841
+        },
+        {
+          "width": 0.9075,
+          "top": 0,
+          "label": "4",
+          "left": 0.0075,
+          "height": 0.7643253968253968
+        }
+      ],
+      "size": {
+        "width": 1008,
+        "height": 3502
+      },
+      "filename": "amazon_00033.png"
+    }
+  },
+  "Kerastase": {
+    "amazon_00035": {
+      "originality": "Fake",
+      "brand": "Kerastase",
+      "objects": [
+        {
+          "width": 0.796799501867995,
+          "top": 0.135,
+          "label": "1",
+          "left": 0.09909090909090908,
+          "height": 0.6633333333333333
+        },
+        {
+          "width": 0.7900124533001245,
+          "top": 0.15,
+          "label": "2",
+          "left": 0.10316313823163137,
+          "height": 0.22166666666666668
+        },
+        {
+          "width": 0.798156911581569,
+          "top": 0.125,
+          "label": "4",
+          "left": 0.09909090909090908,
+          "height": 0.67
+        }
+      ],
+      "size": {
+        "width": 654,
+        "height": 803
+      },
+      "filename": "amazon_00035.png"
+    }
+  },
+  "Circadia": {
+    "amazon_00006": {
+      "originality": "Fake",
+      "brand": "Circadia",
+      "objects": [
+        {
+          "width": 0.7246434937611408,
+          "top": 0.04666666666666667,
+          "label": "1",
+          "left": 0.08322638146167557,
+          "height": 0.9216666666666666
+        },
+        {
+          "width": 0.7275133689839572,
+          "top": 0.03666666666666667,
+          "label": "4",
+          "left": 0.08035650623885918,
+          "height": 0.9333333333333333
+        }
+      ],
+      "size": {
+        "width": 161,
+        "height": 187
+      },
+      "filename": "amazon_00006.png"
+    }
+  },
+  "Anastasia": {
+    "amazon_00070": {
+      "originality": "Fake",
+      "brand": "Anastasia",
+      "objects": [
+        {
+          "width": 0.14625,
+          "top": 0.16833333333333333,
+          "label": "1",
+          "left": 0.39625,
+          "height": 0.17666666666666667
+        },
+        {
+          "width": 0.49125,
+          "top": 0.36833333333333335,
+          "label": "1",
+          "left": 0.22375,
+          "height": 0.15666666666666668
+        },
+        {
+          "width": 0.495,
+          "top": 0.365,
+          "label": "2",
+          "left": 0.2225,
+          "height": 0.07
+        },
+        {
+          "width": 0.3075,
+          "top": 0.435,
+          "label": "2",
+          "left": 0.32125,
+          "height": 0.09166666666666666
+        },
+        {
+          "width": 0.48625,
+          "top": 0.16333333333333333,
+          "label": "4",
+          "left": 0.2275,
+          "height": 0.6
+        }
+      ],
+      "size": {
+        "width": 1536,
+        "height": 2048
+      },
+      "filename": "amazon_00070.png"
+    },
+    "amazon_00049": {
+      "originality": "Fake",
+      "brand": "Anastasia",
+      "objects": [
+        {
+          "width": 0.38375,
+          "top": 0.6239069952305246,
+          "label": "2",
+          "left": 0.31375,
+          "height": 0.12400635930047695
+        },
+        {
+          "width": 0.86625,
+          "top": 0.3332670906200318,
+          "label": "4",
+          "left": 0.075,
+          "height": 0.4223966613672496
+        },
+        {
+          "width": 0.8625,
+          "top": 0.325516693163752,
+          "label": "1",
+          "left": 0.0775,
+          "height": 0.21701112877583467
+        }
+      ],
+      "size": {
+        "width": 629,
+        "height": 1950
+      },
+      "filename": "amazon_00049.png"
+    },
+    "amazon_00025": {
+      "originality": "Fake",
+      "brand": "Anastasia",
+      "objects": [
+        {
+          "width": 0.14375,
+          "top": 0.31666666666666665,
+          "label": "1",
+          "left": 0.37,
+          "height": 0.19333333333333333
+        },
+        {
+          "width": 0.32875,
+          "top": 0.5183333333333333,
+          "label": "1",
+          "left": 0.26625,
+          "height": 0.095
+        },
+        {
+          "width": 0.3225,
+          "top": 0.5166666666666667,
+          "label": "2",
+          "left": 0.26875,
+          "height": 0.06333333333333334
+        },
+        {
+          "width": 0.1675,
+          "top": 0.5683333333333334,
+          "label": "2",
+          "left": 0.355,
+          "height": 0.04666666666666667
+        },
+        {
+          "width": 0.35375,
+          "top": 0.31166666666666665,
+          "label": "4",
+          "left": 0.24625,
+          "height": 0.5116666666666667
+        }
+      ],
+      "size": {
+        "width": 480,
+        "height": 640
+      },
+      "filename": "amazon_00025.png"
+    },
+    "amazon_00011": {
+      "originality": "Fake",
+      "brand": "Anastasia",
+      "objects": [
+        {
+          "width": 0.285,
+          "top": 0.29833333333333334,
+          "label": "1",
+          "left": 0.33875,
+          "height": 0.38
+        },
+        {
+          "width": 0.53125,
+          "top": 0.14833333333333334,
+          "label": "4",
+          "left": 0.21125,
+          "height": 0.7166666666666667
+        }
+      ],
+      "size": {
+        "width": 1536,
+        "height": 2048
+      },
+      "filename": "amazon_00011.png"
+    },
+    "amazon_00058": {
+      "originality": "Fake",
+      "brand": "Anastasia",
+      "objects": [
+        {
+          "width": 0.91375,
+          "top": 0.19623475609756097,
+          "label": "1",
+          "left": 0.05875,
+          "height": 0.21803861788617884
+        },
+        {
+          "width": 0.9225,
+          "top": 0.17754573170731705,
+          "label": "4",
+          "left": 0.05125,
+          "height": 0.386239837398374
+        }
+      ],
+      "size": {
+        "width": 246,
+        "height": 613
+      },
+      "filename": "amazon_00058.png"
+    }
+  },
+  "Chelsea": {
+    "amazon_00054": {
+      "originality": "Fake",
+      "brand": "Chelsea",
+      "objects": [
+        {
+          "width": 0.9551939513477974,
+          "top": 0.01,
+          "label": "1",
+          "left": 0.04510190664036818,
+          "height": 0.99
+        },
+        {
+          "width": 0.43974358974358974,
+          "top": 0.25833333333333336,
+          "label": "3",
+          "left": 0.31249178172255093,
+          "height": 0.53
+        },
+        {
+          "width": 0.9632478632478632,
+          "top": 0.011666666666666667,
+          "label": "4",
+          "left": 0.03704799474030243,
+          "height": 0.9866666666666667
+        }
+      ],
+      "size": {
+        "width": 980,
+        "height": 1014
+      },
+      "filename": "amazon_00054.png"
+    }
+  },
+  "IdeaVillage": {
+    "amazon_00003": {
+      "originality": "Fake",
+      "brand": "IdeaVillage",
+      "objects": [
+        {
+          "width": 0.7675,
+          "top": 0.03954207920792079,
+          "label": "1",
+          "left": 0.05375,
+          "height": 0.867289603960396
+        },
+        {
+          "width": 0.32,
+          "top": 0.3216089108910891,
+          "label": "2",
+          "left": 0.2,
+          "height": 0.23198019801980196
+        },
+        {
+          "width": 0.375,
+          "top": 0.4718688118811881,
+          "label": "2",
+          "left": 0.43625,
+          "height": 0.2820668316831683
+        },
+        {
+          "width": 0.29125,
+          "top": 0.042178217821782174,
+          "label": "3",
+          "left": 0.055,
+          "height": 0.5404084158415842
+        },
+        {
+          "width": 0.76625,
+          "top": 0.5430445544554455,
+          "label": "3",
+          "left": 0.05375,
+          "height": 0.3585148514851485
+        },
+        {
+          "width": 0.77125,
+          "top": 0.031633663366336634,
+          "label": "4",
+          "left": 0.0475,
+          "height": 0.8804702970297029
+        }
+      ],
+      "size": {
+        "width": 202,
+        "height": 426
+      },
+      "filename": "amazon_00003.png"
+    }
+  },
+  "Yoshi": {
+    "amazon_00031": {
+      "originality": "Fake",
+      "brand": "Yoshi",
+      "objects": [
+        {
+          "width": 0.72,
+          "top": 0.009355106100795757,
+          "label": "1",
+          "left": 0.1525,
+          "height": 0.6486206896551725
+        },
+        {
+          "width": 0.96375,
+          "top": 0.009355106100795757,
+          "label": "4",
+          "left": 0.02375,
+          "height": 0.9729310344827587
+        }
+      ],
+      "size": {
+        "width": 754,
+        "height": 1881
+      },
+      "filename": "amazon_00031.png"
+    }
+  },
+  "Tarteist": {
+    "amazon_00012": {
+      "originality": "Fake",
+      "brand": "Tarteist",
+      "objects": [
+        {
+          "width": 0.39625,
+          "top": 0.5380617977528089,
+          "label": "2",
+          "left": 0.28375,
+          "height": 0.11119943820224718
+        },
+        {
+          "width": 0.15,
+          "top": 0.7389382022471909,
+          "label": "2",
+          "left": 0.42,
+          "height": 0.08967696629213481
+        },
+        {
+          "width": 0.64,
+          "top": 0.260063202247191,
+          "label": "1",
+          "left": 0.1775,
+          "height": 0.29055337078651683
+        },
+        {
+          "width": 0.65125,
+          "top": 0.23854073033707862,
+          "label": "4",
+          "left": 0.17,
+          "height": 0.5936615168539325
+        }
+      ],
+      "size": {
+        "width": 890,
+        "height": 1277
+      },
+      "filename": "amazon_00012.png"
+    }
+  },
+  "Panasonic": {
+    "amazon_00002": {
+      "originality": "Fake",
+      "brand": "Panasonic",
+      "objects": [
+        {
+          "width": 0.3625,
+          "top": 0.8010925449871465,
+          "label": "2",
+          "left": 0.35,
+          "height": 0.15220758354755784
+        },
+        {
+          "width": 0.8125,
+          "top": 0.0907904884318766,
+          "label": "1",
+          "left": 0.1025,
+          "height": 0.35515102827763495
+        },
+        {
+          "width": 0.81875,
+          "top": 0.08812017994858612,
+          "label": "4",
+          "left": 0.10125,
+          "height": 0.8678502570694088
+        }
+      ],
+      "size": {
+        "width": 389,
+        "height": 831
+      },
+      "filename": "amazon_00002.png"
+    }
+  }
+}
