@@ -9,7 +9,7 @@ var kinect = new Kinect2();
 if (kinect.open()) {
     server.listen(3000);
     console.log("Server listening on port 3000");
-    console.log("Point your browser to http://128.2.236.245:3000");
+    console.log("Point your browser to http://localhost:3000");
 
     // app.get('/', function(req, res) {
     //     res.sendFile(__dirname + '/public/index.html');
