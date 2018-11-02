@@ -185,13 +185,13 @@ function draw() {
 
 	var request = new XMLHttpRequest();
 	var jsonData = {};
-	request.open('GET', 'http://ec2-34-228-225-161.compute-1.amazonaws.com:8080/PictureYourself/match?country=korea', true);
+	request.open('GET', 'http://ec2-34-228-225-161.compute-1.amazonaws.com:8080/PictureYourself/match?country=default', true);
 	request.onload = function () {
 	  // Begin accessing JSON data here
 	  jsonData = JSON.parse(this.response);
 	  // console.log(jsonData);
 	  var lastIndex = jsonData.postList.length - 1;
-	  var url = "https://s3.amazonaws.com/picyoubucket/public/" + jsonData.postList[lastIndex].photo;
+	  var url = "https://s3.amazonaws.com/newpicbuck/public/" + jsonData.postList[lastIndex].photo;
 	  var index = Math.floor(Math.random() * count);
 	  json.nodes[index].url = url;
 	  // console.log(json.nodes[index]);
