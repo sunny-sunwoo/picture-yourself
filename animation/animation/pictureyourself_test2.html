@@ -1,0 +1,559 @@
+<!-- START SIGMA IMPORTS -->
+<script src="../src/sigma.core.js"></script>
+<script src="../src/conrad.js"></script>
+<script src="../src/utils/sigma.utils.js"></script>
+<script src="../src/utils/sigma.polyfills.js"></script>
+<script src="../src/sigma.settings.js"></script>
+<script src="../src/classes/sigma.classes.dispatcher.js"></script>
+<script src="../src/classes/sigma.classes.configurable.js"></script>
+<script src="../src/classes/sigma.classes.graph.js"></script>
+<script src="../src/classes/sigma.classes.camera.js"></script>
+<script src="../src/classes/sigma.classes.quad.js"></script>
+<script src="../src/classes/sigma.classes.edgequad.js"></script>
+<script src="../src/captors/sigma.captors.mouse.js"></script>
+<script src="../src/captors/sigma.captors.touch.js"></script>
+<script src="../src/renderers/sigma.renderers.canvas.js"></script>
+<script src="../src/renderers/sigma.renderers.webgl.js"></script>
+<script src="../src/renderers/sigma.renderers.svg.js"></script>
+<script src="../src/renderers/sigma.renderers.def.js"></script>
+<script src="../src/renderers/webgl/sigma.webgl.nodes.def.js"></script>
+<script src="../src/renderers/webgl/sigma.webgl.nodes.fast.js"></script>
+<script src="../src/renderers/webgl/sigma.webgl.edges.def.js"></script>
+<script src="../src/renderers/webgl/sigma.webgl.edges.fast.js"></script>
+<script src="../src/renderers/webgl/sigma.webgl.edges.arrow.js"></script>
+<script src="../src/renderers/canvas/sigma.canvas.labels.def.js"></script>
+<script src="../src/renderers/canvas/sigma.canvas.hovers.def.js"></script>
+<script src="../src/renderers/canvas/sigma.canvas.nodes.def.js"></script>
+<script src="../src/renderers/canvas/sigma.canvas.edges.def.js"></script>
+<script src="../src/renderers/canvas/sigma.canvas.edges.curve.js"></script>
+<script src="../src/renderers/canvas/sigma.canvas.edges.arrow.js"></script>
+<script src="../src/renderers/canvas/sigma.canvas.edges.curvedArrow.js"></script>
+<script src="../src/renderers/canvas/sigma.canvas.edgehovers.def.js"></script>
+<script src="../src/renderers/canvas/sigma.canvas.edgehovers.curve.js"></script>
+<script src="../src/renderers/canvas/sigma.canvas.edgehovers.arrow.js"></script>
+<script src="../src/renderers/canvas/sigma.canvas.edgehovers.curvedArrow.js"></script>
+<script src="../src/renderers/canvas/sigma.canvas.extremities.def.js"></script>
+<script src="../src/renderers/svg/sigma.svg.utils.js"></script>
+<script src="../src/renderers/svg/sigma.svg.nodes.def.js"></script>
+<script src="../src/renderers/svg/sigma.svg.edges.def.js"></script>
+<script src="../src/renderers/svg/sigma.svg.edges.curve.js"></script>
+<script src="../src/renderers/svg/sigma.svg.labels.def.js"></script>
+<script src="../src/renderers/svg/sigma.svg.hovers.def.js"></script>
+<script src="../src/middlewares/sigma.middlewares.rescale.js"></script>
+<script src="../src/middlewares/sigma.middlewares.copy.js"></script>
+<script src="../src/misc/sigma.misc.animation.js"></script>
+<script src="../src/misc/sigma.misc.bindEvents.js"></script>
+<script src="../src/misc/sigma.misc.bindDOMEvents.js"></script>
+<script src="../src/misc/sigma.misc.drawHovers.js"></script>
+<!-- END SIGMA IMPORTS -->
+<script src="../plugins/sigma.parsers.json/sigma.parsers.json.js"></script>
+<script src="../plugins/sigma.plugins.filter/sigma.plugins.filter.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
+<script src="../plugins/sigma.plugins.animate/sigma.plugins.animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+<div id="container">
+  <style>
+    body {
+      color: #333;
+      background-color: RGBA(177, 150, 148, 0.05);
+      background-image: radial-gradient( RGBA(177, 150, 148, 0.05), RGBA(177, 150, 148, 0.50));
+      font-size: 14px;
+      font-family: Lato, sans-serif;
+    }
+    #target-img {
+      display: none;
+      height: 100px;
+      position: absolute;
+    }
+    .big {
+    animation-name: example;
+    animation-duration: 1s;
+    }
+
+    @keyframes example {
+        0%   {transform: scale(1.5,1.5);}
+        50%  {transform: scale(2.5,2.5);}
+        100% {transform: scale(0.5,0.5);}
+    }
+    #message-div {
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      margin-bottom: 10%;
+      margin-right: 15%;
+      font-size: 1.5em;
+      line-height: 1.5;
+      opacity: 0;
+    }
+
+    #graph-container {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      opacity: 0;
+    }
+    #control-pane {
+      top: 10px;
+      /*bottom: 10px;*/
+      right: 10px;
+      position: absolute;
+      width: 230px;
+      background-color: rgb(249, 247, 237);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    #control-pane > div {
+      margin: 10px;
+      overflow-x: auto;
+    }
+    .line {
+      clear: both;
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 12px 0 0 0;
+      border-bottom: 1px solid #aac789;
+      background: transparent;
+    }
+    h2, h3, h4 {
+      padding: 0;
+      font-variant: small-caps;
+    }
+    .green {
+      color: #437356;
+    }
+    h2.underline {
+      color: #437356;
+      background: #f4f0e4;
+      margin: 0;
+      border-radius: 2px;
+      padding: 8px 12px;
+      font-weight: 700;
+    }
+    .hidden {
+      display: none;
+      visibility: hidden;
+    }
+
+    input[type=range] {
+      width: 160px;
+    }
+  </style>
+  
+  <div id="graph-container"></div>
+  <img src="./src/img/img1.png" id="target-img">
+  <div id="control-pane">
+    <h2 class="underline">filters</h2>
+    <div>
+      <button id="click-transition">Transition</button>
+      <button id="click-disappear">Disappear</button>
+      <button id="click-appear">Appear</button>
+      <button id="click-change">Change</button>
+      <button id="click-animation">Animation</button>
+      <h3>min degree <span id="min-degree-val">0</span></h3>
+      0 <input id="min-degree" type="range" min="0" max="0" value="0"> <span id="max-degree-value">0</span><br>
+    </div>
+    
+    <span class="line"></span>
+    
+    <div id="dump" class="hidden"></div>
+  </div>
+  <div id="message-div">
+    <p id="message">Welcome to ETC!<br>You're <span id="visit-num">1st</span> visitor today<br>2018. 11. 04</p>
+  </div>
+</div>
+<script src="../plugins/sigma.layout.forceAtlas2/worker.js"></script>
+<script src="../plugins/sigma.layout.forceAtlas2/supervisor.js"></script>
+<script>s
+
+/**
+ * This is an example on how to use sigma filters plugin on a real-world graph.
+ */
+var filter;
+
+/**
+ * DOM utility functions
+ */
+var _ = {
+  $: function (id) {
+    return document.getElementById(id);
+  },
+
+  all: function (selectors) {
+    return document.querySelectorAll(selectors);
+  },
+
+  removeClass: function(selectors, cssClass) {
+    var nodes = document.querySelectorAll(selectors);
+    var l = nodes.length;
+    for ( i = 0 ; i < l; i++ ) {
+      var el = nodes[i];
+      // Bootstrap compatibility
+      el.className = el.className.replace(cssClass, '');
+    }
+  },
+
+  addClass: function (selectors, cssClass) {
+    var nodes = document.querySelectorAll(selectors);
+    var l = nodes.length;
+    for ( i = 0 ; i < l; i++ ) {
+      var el = nodes[i];
+      // Bootstrap compatibility
+      if (-1 == el.className.indexOf(cssClass)) {
+        el.className += ' ' + cssClass;
+      }
+    }
+  },
+
+  show: function (selectors) {
+    this.removeClass(selectors, 'hidden');
+  },
+
+  hide: function (selectors) {
+    this.addClass(selectors, 'hidden');
+  },
+
+  toggle: function (selectors, cssClass) {
+    var cssClass = cssClass || "hidden";
+    var nodes = document.querySelectorAll(selectors);
+    var l = nodes.length;
+    for ( i = 0 ; i < l; i++ ) {
+      var el = nodes[i];
+      //el.style.display = (el.style.display != 'none' ? 'none' : '' );
+      // Bootstrap compatibility
+      if (-1 !== el.className.indexOf(cssClass)) {
+        el.className = el.className.replace(cssClass, '');
+      } else {
+        el.className += ' ' + cssClass;
+      }
+    }
+  }
+};
+
+
+function updatePane (graph, filter) {
+  // get max degree
+  var maxDegree = 0,
+      categories = {};
+  
+  // read nodes
+  graph.nodes().forEach(function(n) {
+    maxDegree = Math.max(maxDegree, graph.degree(n.id));
+  })
+
+  // min degree
+  _.$('min-degree').max = maxDegree;
+
+  _.$('max-degree-value').textContent = maxDegree;
+  
+}
+
+
+
+
+sigma.utils.pkg('sigma.canvas.nodes');
+sigma.canvas.nodes.image = (function() {
+  var _cache = {},
+      _loading = {},
+      _callbacks = {};
+
+  // Return the renderer itself:
+  var renderer = function(node, context, settings) {
+    var args = arguments,
+        prefix = settings('prefix') || '',
+        size = node[prefix + 'size'],
+        color = node.color || settings('defaultNodeColor'),
+        url = node.url;
+
+    if (_cache[url]) {
+      context.save();
+
+      // Draw the clipping disc:
+      context.beginPath();
+      context.arc(
+        node[prefix + 'x'],
+        node[prefix + 'y'],
+        node[prefix + 'size'],
+        0,
+        Math.PI * 2,
+        true
+      );
+      context.closePath();
+      context.clip();
+
+      // Draw the image
+      context.drawImage(
+        _cache[url],
+        node[prefix + 'x'] - size,
+        node[prefix + 'y'] - size,
+        2 * size,
+        2 * size
+      );
+
+      // Quit the "clipping mode":
+      context.restore();
+
+    } else {
+      sigma.canvas.nodes.image.cache(url);
+      sigma.canvas.nodes.def.apply(
+        sigma.canvas.nodes,
+        args
+      );
+    }
+  };
+
+  // Let's add a public method to cache images, to make it possible to
+  // preload images before the initial rendering:
+  renderer.cache = function(url, callback) {
+    if (callback)
+      _callbacks[url] = callback;
+
+    if (_loading[url])
+      return;
+
+    var img = new Image();
+
+    img.onload = function() {
+      _loading[url] = false;
+      _cache[url] = img;
+
+      if (_callbacks[url]) {
+        _callbacks[url].call(this, img);
+        delete _callbacks[url];
+      }
+    };
+
+    _loading[url] = true;
+    img.src = url;
+  };
+
+  return renderer;
+})();
+
+var i,
+    s,
+    o,
+    C = 100, //node random
+    d = 0.5,
+    cs = [],
+    g = {
+      nodes: [],
+      edges: []
+    },
+    loaded = 0;
+
+s = new sigma({
+  //graph: g,
+  renderer: {
+    
+    container: document.getElementById('graph-container'),
+    type: 'canvas'
+  },
+  settings: {
+    animationsTime: 2000,
+    drawEdges: true,
+    minNodeSize: 3,
+    maxNodeSize: 15
+  }
+});
+
+sigma.parsers.json('data-random.json', s, function (s) {
+  filter = new sigma.plugins.filter(s);
+
+  updatePane(s.graph, filter); // updating UI 
+
+  function applyMinDegreeFilter(e) {
+    var v = e.target.value; // input value of scroller
+    _.$('min-degree-val').textContent = v;
+    _.$('min-degree-val').value = v;
+
+    filter
+      .undo('min-degree')
+      .nodesBy(function(n) {
+        return this.degree(n.id) >= v;
+      }, 'min-degree')
+      .apply();
+  }
+
+  _.$('min-degree').addEventListener("input", applyMinDegreeFilter);  // for Chrome and FF
+  _.$('min-degree').addEventListener("change", applyMinDegreeFilter); // 
+
+});
+//sigma.parsers.json('data.json', s.graph);
+//s.startForceAtlas2({worker: true, barnesHutOptimize: false});
+
+function myMessageIn(){
+  var opacityDegree = 0;
+  
+    var i = setInterval(function(){
+    if(opacityDegree >= 0.99){
+      _.$('message-div').style.opacity = 1;
+      clearInterval(i);
+    } else {
+      opacityDegree += 0.01;
+      _.$('message-div').style.opacity =  opacityDegree;
+      console.log("message in");
+    }
+  }, 10);
+
+  
+  
+}
+
+function myMessageOut(){
+  opacityDegree = 1;
+  
+    var j = setInterval(function(){
+    if(opacityDegree <= 0.05){
+      _.$('message-div').style.opacity = 0;
+      clearInterval(j);
+    } else {
+      opacityDegree -= 0.01;
+      _.$('message-div').style.opacity =  opacityDegree;
+      console.log("message out");
+    }
+  }, 10);
+}
+
+function myTransition(before, after){
+  var step = 0;
+  setInterval(function() {
+    var prefix = [after, before][step = +!step];
+    sigma.plugins.animate(
+      s,
+      {
+        x: prefix + 'x',
+        y: prefix + 'y'
+      }
+    );
+  }, 1000);
+}
+
+
+function myAppear(graph) {
+  
+  var maxDegree = 0;
+  console.log("appear");
+  graph.nodes().forEach(function(n) {
+    maxDegree = Math.max(maxDegree, graph.degree(n.id));
+  })
+  
+  _.$('min-degree').max = maxDegree;
+  
+  var v = maxDegree; 
+
+  var opacityDegree = 0;
+  var opacityAnim = setInterval(function(){
+    if(opacityDegree >= 0.99){
+      _.$('graph-container').style.opacity = 1;
+      clearInterval(opacityAnim);
+    } else {
+      opacityDegree += 0.01;
+      _.$('graph-container').style.opacity =  opacityDegree;
+    }
+  }, 20);
+
+  var interval = setInterval(frame, 200);
+    function frame(){
+      if( v == 0){
+        clearInterval(interval);
+      } else {
+        v -= 0.5;
+        filter
+          .undo('min-degree')
+          .nodesBy(function(n) {
+            return this.degree(n.id) >= v;
+          }, 'min-degree')
+          .apply();
+      }
+    }
+  }
+  function myDisappear(graph) {
+  var maxDegree = 0;
+  console.log("disappear");
+  graph.nodes().forEach(function(n) {
+    maxDegree = Math.max(maxDegree, graph.degree(n.id));
+  })
+  
+  var opacityDegree = 1;
+  var opacityAnim = setInterval(function(){
+    if(opacityDegree <= 0.05){
+      _.$('graph-container').style.opacity = 0;
+      clearInterval(opacityAnim);
+    } else {
+      opacityDegree -= 0.01;
+      _.$('graph-container').style.opacity =  opacityDegree;
+          }
+  }, 20);
+
+
+  _.$('min-degree').max = maxDegree;
+  var v = 0; 
+  var interval = setInterval(frame, 200);
+    function frame(){
+      if( v == maxDegree){
+        clearInterval(interval);
+      } else {
+        v += 0.5;
+        filter
+          .undo('min-degree')
+          .nodesBy(function(n) {
+            return this.degree(n.id) >= v;
+          }, 'min-degree')
+          .apply();
+      }
+    }
+  }
+
+  function myAnimation(graph, before, after){
+
+      console.log("hey");
+      setTimeout( function() {myAppear(graph)},  0);
+      setTimeout( myNew, 4000)
+      setTimeout( function() {myTransition(before, after)}, 4500);
+      setTimeout( myMessageIn, 5000);
+      setTimeout( myMessageOut, 13000);
+      setTimeout( function() {myDisappear(graph)}, 15000);
+      
+
+  }
+
+  function myNew(){
+      $("#target-img").css("border-radius", "50%");
+      $("#target-img").addClass("big").css({"display": "initial"});
+  }
+
+  jQuery.fn.center = function() {
+  this.css("position", "absolute");
+  this.css("top", ($(window).height() - this.height()) / 2 + $(window).scrollTop() + "px");
+  this.css("left", ($(window).width() - this.width()) / 2 + $(window).scrollLeft() + "px");
+  return this;
+  }
+
+$("#target-img").on('animationend', function(e) { 
+    $("#target-img").removeClass("big").css({"display": "none"});
+  });
+
+//Center
+$("#target-img").center()
+
+//Zoom in / out
+$("#click-change").on("click", function() {
+  $("#target-img").css("border-radius", "50%");
+  $("#target-img").addClass("big").css({"display": "initial"});
+});
+
+
+
+_.$('click-appear').addEventListener("click", function(){ myAppear(s.graph); });
+_.$('click-disappear').addEventListener("click", function(){ myDisappear(s.graph); });
+_.$('click-transition').addEventListener("click", function (){myTransition('random_', 'cmu_');});
+_.$('click-animation').addEventListener("click", function(){myAnimation(s.graph, 'random_', 'cmu_');});
+
+//_.$('click-change').addEventListener("click", function(){ myChange(s.graph);});
+
+
+</script>

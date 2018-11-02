@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="ipad-layout.css">
+<script src="ipad-click.js"></script>
+<head>
+	<title>Picture Yourself
+	</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+	<nav>
+		<button class="nav-button"><img src="back-button.png"></button>
+	</nav>
+	<div id="title-div" class="content-div"> <!-- home -->
+		<h1>Picture Yourself</h1>
+		<button onclick="introToTerms()" class="ui-button">Tap to Start</button>
+	</div>
+	<div id="terms-div" class="content-div"> <!-- terms and conditions -->
+		<h2>Terms & Conditions</h2>
+		<div id="terms_and_conds"></div>
+		<label class="check-container">I read and agree to terms and conditions.
+			<input type="checkbox" id="terms-check"  onclick="handleCheckbox('terms-check')">
+			<span class="checkmark"></span>
+		</label>
+		<button onclick="termsToCamera()" class="ui-button">SUBMIT</button>
+	</div>
+	<div id="photo-div" class="content-div"> <!-- photo review -->
+		<p>Please review your photo!</p>
+		<img src="./examples/src/img/img1.png">
+		<button class="ui-button">TRY AGAIN</button>
+		<button onclick="photoToInstruction()" class="ui-button">SUBMIT</button>
+	</div>
+	<div id="instruction-div" class="content-div">
+		<h1>Walk closer to the wall</h1>
+	</div>
+</body>	
+
+</html>

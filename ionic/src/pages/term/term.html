@@ -1,0 +1,26 @@
+<!--
+  Generated template for the TermPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Term</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div id="terms-div" class="content-div"> <!-- terms and conditions -->
+    <h2>Terms & Conditions</h2>
+    <div id="terms_and_conds"></div>
+    <label class="check-container">I read and agree to terms and conditions.
+      <input type="checkbox" id="terms-check" (click)="handleCheckbox()">
+      <span class="checkmark"></span>
+    </label>
+    <button (click)="termsToCamera()" class="ui-button" [disabled]="!checked">SUBMIT</button>
+  </div>
+</ion-content>
