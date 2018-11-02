@@ -77,12 +77,15 @@
     }
     .big {
     animation-name: example;
-    animation-duration: 1s;
+    animation-duration: 4s;
     }
 
     @keyframes example {
         0%   {transform: scale(1.5,1.5);}
-        50%  {transform: scale(2.5,2.5);}
+        10%  {transform: scale(0.6, 0.6);}
+        25%  {transform: scale(2.5,2.5);}
+        50%  {transform: scale(1,1);}
+        75%  {transform: scale(2,2);}
         100% {transform: scale(0.5,0.5);}
     }
     #message-div {
@@ -102,7 +105,7 @@
       left: 0;
       right: 0;
       position: absolute;
-      opacity: 0;
+      opacity: 1;
     }
     #control-pane {
       top: 10px;
@@ -447,6 +450,10 @@ function myTransition(before, after){
 }
 
 
+function myDefault(){
+  _.$('graph-container').style.opacity = 1;
+}
+
 
 function myAppear(graph) {
   var maxDegree = 0;
@@ -520,6 +527,7 @@ function myAppear(graph) {
           .apply();
       }
     }
+
   }
 
   function myAnimation(graph, before, after){
@@ -528,8 +536,8 @@ function myAppear(graph) {
       setTimeout( myNew, 4000)
       setTimeout( function() {myTransition(before, after)}, 4500);
       setTimeout( myMessageIn, 5000);
-      setTimeout( myMessageOut, 13000);
-      setTimeout( function() {myDisappear(graph)}, 15000);
+      setTimeout( myMessageOut, 15000);
+      setTimeout( function() {myDisappear(graph)}, 20000);
   }
 
   function myNew(){
