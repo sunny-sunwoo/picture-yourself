@@ -389,13 +389,17 @@ sigma.parsers.json('data-random.json', s, function (s) {
 });
 //sigma.parsers.json('data.json', s.graph);
 //s.startForceAtlas2({worker: true, barnesHutOptimize: false});
-var newGraph;
+//var newGraph = sigma.classes.graph();
 var newSrc;
 function getJSON(jsonInput, newUrl) {
-  newSrc = newUrl
+  newSrc = newUrl;
   console.log(jsonInput);
-  newGraph = jsonInput;
-    // console.log(s);
+  s.graph.clear();
+  s.graph.read(jsonInput);
+  console.log(s);
+  $("#target-img").attr("src",newSrc);
+  myAnimation(s.graph, 'random_', 'cmu_');
+
   }
 
 function myMessageIn(){
@@ -443,6 +447,7 @@ function myTransition(before, after){
 }
 
 
+
 function myAppear(graph) {
   var maxDegree = 0;
   // console.log("appear");
@@ -453,7 +458,7 @@ function myAppear(graph) {
   _.$('min-degree').max = maxDegree;
   
   var v = maxDegree; 
-
+  _.$('graph-container').style.opacity = 0;
   var opacityDegree = 0;
   var opacityAnim = setInterval(function(){
     if(opacityDegree >= 0.99){
@@ -548,8 +553,6 @@ $("#target-img").center()
 
 //Zoom in / out
 $("#click-change").on("click", function() {
-  console.log(newSrc);
-  $("#target-img").attr("src",newSrc);
   $("#target-img").css("border-radius", "50%");
   $("#target-img").addClass("big").css({"display": "initial"});
 });
