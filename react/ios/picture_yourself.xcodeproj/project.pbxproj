@@ -1311,7 +1311,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = picture_yourself;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1335,7 +1335,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = picture_yourself;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

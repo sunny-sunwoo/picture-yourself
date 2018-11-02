@@ -22,7 +22,10 @@ export default class PostStore {
   }
   readFile(filePath) {
     return RNFetchBlob.fs.readFile(filePath, 'base64')
-      .then(data => new Buffer(data, 'base64'));
+      .then(data => {
+        console.log(data);
+        return new Buffer(data, 'base64')
+      });
   }
   answerQuestion(text, cb) {
     this.country = text
