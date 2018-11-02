@@ -1,4 +1,4 @@
-const HOST = "https://s3.amazonaws.com/picyoubucket/public/";
+const HOST = "https://s3.amazonaws.com/newpicbuck/public/";
 const IMAGES = document.querySelector("ul");
 
 console.log(window.location.href);
@@ -6,7 +6,7 @@ var href = new URL(window.location.href);
 var country = href.searchParams.get("country");
 console.log(country);
 if (!country)
-  country = "korea";
+  country = "default";
 fetchPictureList(country);
 var nodes = [];
 
@@ -47,7 +47,7 @@ function checkUpdate() {
   fetch(url)
     .then((response) => response.json())
     .then((responseJson) => {
-      console.log(responseJson)
+      //console.log(responseJson)
       if (responseJson.update == 1) {
         fetchPictureList(responseJson.country);
       }
@@ -58,3 +58,25 @@ function checkUpdate() {
 }
 
 var interval = setInterval(checkUpdate, 1000);
+
+// var socket = io.connect("");
+//
+// var oldspeed = 0;
+// function interpretData(bodyFrame) {
+//   console.log(bodyFrame);
+//
+//   var user = bodyFrame.bodies[0];
+//   var rightHandPosition = user.joints[11].depthX;
+//   var torsoPosition = user.joints[1].depthX;
+//   var rightHandRelativePostion = rightHandPosition - torsoPosition;
+//   var rightHandRelativeSpeed = rightHandRelativePostion - oldspeed;
+//   oldspeed = rightHandRelativePostion;
+//   if (rightHandRelativeSpeed < -20) {
+//     console.log("Swipe left");
+//   }
+//   if (rightHandRelativeSpeed > 20) {
+//     console.log("Swipe right");
+//   }
+// }
+//
+// socket.on("bodyFrame", interpretData);
