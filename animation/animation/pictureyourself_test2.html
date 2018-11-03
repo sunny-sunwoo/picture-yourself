@@ -72,8 +72,13 @@
     }
     #target-img {
       display: none;
+      height: 100%;
       height: 100px;
+      width: 100px;
+      overflow: hidden;
+      border-radius: 50%;
       position: absolute;
+
     }
     .big {
     animation-name: example;
@@ -108,6 +113,7 @@
       opacity: 1;
     }
     #control-pane {
+      display: none;
       top: 10px;
       /*bottom: 10px;*/
       right: 10px;
@@ -155,7 +161,7 @@
   </style>
   
   <div id="graph-container"></div>
-  <img src="./src/img/img1.png" id="target-img">
+  <img src="./src/img/img2.png" id="target-img">
   <div id="control-pane">
     <h2 class="underline">filters</h2>
     <div>
@@ -437,7 +443,7 @@ function myMessageOut(){
 
 function myTransition(before, after){
   var step = 0;
-  setInterval(function() {
+  var transition = setInterval(function() {
     var prefix = [after, before][step = +!step];
     sigma.plugins.animate(
       s,
@@ -447,10 +453,12 @@ function myTransition(before, after){
       }
     );
   }, 1000);
+  setTimeout ( function() {clearInterval(transition);}, 2000);
 }
 
 
 function myDefault(){
+  console.log("default");
   _.$('graph-container').style.opacity = 1;
 }
 
@@ -517,6 +525,7 @@ function myAppear(graph) {
     function frame(){
       if( v == maxDegree){
         clearInterval(interval);
+        myDefault();
       } else {
         v += 0.5;
         filter
@@ -537,7 +546,9 @@ function myAppear(graph) {
       setTimeout( function() {myTransition(before, after)}, 4500);
       setTimeout( myMessageIn, 5000);
       setTimeout( myMessageOut, 15000);
-      setTimeout( function() {myDisappear(graph)}, 20000);
+      //setTimeout( function() {myDisappear(graph)}, 20000);
+      setTimeout( function() {myTransition(after, before)}, 18000);
+     
   }
 
   function myNew(){
