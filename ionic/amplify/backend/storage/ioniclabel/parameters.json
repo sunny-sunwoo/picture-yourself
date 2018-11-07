@@ -1,0 +1,9 @@
+{
+    "bucketName": "ionicbucket",
+    "authPolicyName": "s3_amplify_60063c3f",
+    "unauthPolicyName": "s3_amplify_60063c3f",
+    "authRoleName": "ionic-20181031084216-authRole",
+    "unauthRoleName": "ionic-20181031084216-unauthRole",
+    "authPermissions": "rw",
+    "unauthPermissions": "rw"
+}

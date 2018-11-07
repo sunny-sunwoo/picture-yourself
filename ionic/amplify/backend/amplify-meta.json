@@ -1,0 +1,51 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "ionic-20181031085031-authRole",
+			"UnauthRoleArn": "arn:aws:iam::156151112802:role/ionic-20181031085031-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::156151112802:role/ionic-20181031085031-authRole",
+			"Region": "us-east-1",
+			"DeploymentBucketName": "ionic-20181031085031-deployment",
+			"UnauthRoleName": "ionic-20181031085031-unauthRole",
+			"StackName": "ionic-20181031085031",
+			"StackId": "arn:aws:cloudformation:us-east-1:156151112802:stack/ionic-20181031085031/8cef6c80-dd0b-11e8-92f8-500c3d441629"
+		}
+	},
+	"auth": {
+		"cognito5057c931": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/ionic-20181031085031-deployment/amplify-cfn-templates/auth/cognito5057c931-cloudformation-template.yml",
+				"logicalId": "authcognito5057c931"
+			},
+			"lastPushTimeStamp": "2018-10-31T12:56:58.568Z",
+			"output": {
+				"AppClientSecret": "1tq9k0vfojfi9k391de5n6ehjumfdhbjhb93k6dj7rm6h36d2r99",
+				"UserPoolId": "us-east-1_4QeOKadco",
+				"AppClientIDWeb": "1jhksf1rn70lnpn16jbtp8f1ae",
+				"AppClientID": "4ijrclcq1l5s9e8u45letqr63b",
+				"IdentityPoolId": "us-east-1:d9420771-067d-4673-8338-436fbd1af427",
+				"IdentityPoolName": "cognito5057c931_identitypool_5057c931",
+				"UserPoolName": "cognito5057c931_userpool_5057c931"
+			},
+			"lastPushDirHash": "4eRsYPqx1THwthiU4bBnJ2SQ4E4="
+		}
+	},
+	"storage": {
+		"newpiclab": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/ionic-20181031085031-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+				"logicalId": "storagenewpiclab"
+			},
+			"lastPushTimeStamp": "2018-10-31T12:56:58.568Z",
+			"output": {
+				"BucketName": "newpicbuck",
+				"Region": "us-east-1"
+			},
+			"lastPushDirHash": "Z6LNi/88QTdmj1yNbvNTOSw+vSc="
+		}
+	}
+}

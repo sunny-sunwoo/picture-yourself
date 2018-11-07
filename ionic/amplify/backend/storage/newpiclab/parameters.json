@@ -1,0 +1,9 @@
+{
+    "bucketName": "newpicbuck",
+    "authPolicyName": "s3_amplify_a90ac78a",
+    "unauthPolicyName": "s3_amplify_a90ac78a",
+    "authRoleName": "ionic-20181031085031-authRole",
+    "unauthRoleName": "ionic-20181031085031-unauthRole",
+    "authPermissions": "rw",
+    "unauthPermissions": "rw"
+}
