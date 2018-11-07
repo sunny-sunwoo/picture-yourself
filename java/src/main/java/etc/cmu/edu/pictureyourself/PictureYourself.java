@@ -31,7 +31,9 @@ public class PictureYourself {
                             servlet("QuestionServlet", QuestionServlet.class)
                             .addMapping("/question"),
                             servlet("MatchServlet", MatchServlet.class)
-                            .addMapping("/match")
+                            .addMapping("/match"),
+                            servlet("CheckUpdateServlet", CheckUpdateServlet.class)
+                            .addMapping("/checkupdate")
                     );
             DeploymentManager manager = defaultContainer().addDeployment(servletBuilder);
             manager.deploy();

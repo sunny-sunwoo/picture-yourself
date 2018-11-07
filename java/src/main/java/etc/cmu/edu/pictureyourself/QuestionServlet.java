@@ -35,23 +35,30 @@ public class QuestionServlet extends HttpServlet {
         JSONObject result = new JSONObject();
         String country = request.getParameter("country");
         int id = Integer.valueOf(request.getParameter("id"));
-        System.out.println("country " + country);
-        System.out.println("id " + id);
+        //System.out.println("country " + country);
+        //System.out.println("id " + id);
         String query = "update users set country = ? where id = ?";
         try {
             PreparedStatement pstmt = conn.prepareStatement(query);
             pstmt.setString(1, country);
             pstmt.setInt(2, id);
             int row = pstmt.executeUpdate();
-            System.out.println("row " + row);
+            //System.out.println("row " + row);
             if (row != 0)
                 result.put("ok", 1);
             else
                 result.put("ok", 0);
+
+            if (row != 0) {
+                Model.instance().isUpdate = true;
+                Model.instance().country = country;
+            }
         } catch (SQLException e) {
             e.printStackTrace();
             result.put("ok", 0);
         }
+
+        response.addHeader("Access-Control-Allow-Origin", "*");
 
         PrintWriter writer = response.getWriter();
         writer.write(result.toString());

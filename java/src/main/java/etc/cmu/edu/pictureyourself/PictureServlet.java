@@ -35,16 +35,20 @@ public class PictureServlet extends HttpServlet {
         JSONObject result = new JSONObject();
         String photo = request.getParameter("photo");
         System.out.println("photo " + photo);
-        String query = "insert into users (photo) values (?);";
+        String query = "insert into users (photo, country) values (?, ?);";
+        String country = "default";
         try {
             PreparedStatement pstmt = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             pstmt.setString(1, photo);
+            pstmt.setString(2, country);
             int row = pstmt.executeUpdate();
             System.out.println("row " + row);
             ResultSet rs = pstmt.getGeneratedKeys();
             if (rs.next()) {
                 System.out.println(rs.getInt(1));
                 result.put("id", rs.getInt(1));
+                Model.instance().isUpdate = true;
+                Model.instance().country = country;
             }
             else {
                 System.out.println("insert err");
@@ -53,6 +57,8 @@ public class PictureServlet extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        response.addHeader("Access-Control-Allow-Origin", "*");
 
         PrintWriter writer = response.getWriter();
         writer.write(result.toString());

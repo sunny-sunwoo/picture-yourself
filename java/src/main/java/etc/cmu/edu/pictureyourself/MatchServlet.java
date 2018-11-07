@@ -37,7 +37,7 @@ public class MatchServlet extends HttpServlet {
         JSONArray users = new JSONArray();
         result.put("postList", users);
         String country = request.getParameter("country");
-        System.out.println("country " + country);
+        //System.out.println("country " + country);
         String query = "select photo, id from users where country = ?";
         try {
             PreparedStatement pstmt = conn.prepareStatement(query);
@@ -46,8 +46,8 @@ public class MatchServlet extends HttpServlet {
             while (rs.next()) {
                 String photo = rs.getString("photo");
                 int id = rs.getInt("id");
-                System.out.println("photo " + photo);
-                System.out.println("id " + id);
+                //System.out.println("photo " + photo);
+                //System.out.println("id " + id);
                 JSONObject user = new JSONObject();
                 user.put("photo", photo);
                 user.put("country", country);
@@ -57,6 +57,8 @@ public class MatchServlet extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        response.addHeader("Access-Control-Allow-Origin", "*");
 
         PrintWriter writer = response.getWriter();
         writer.write(result.toString());
