@@ -1,0 +1,37 @@
+var callback = function (s) {
+  filter = new sigma.plugins.filter(s);
+  updatePane(s.graph, filter); // updating UI 
+  console.log(s);
+  function applyMinDegreeFilter(e) {
+    var v = e.target.value; // input value of scroller
+    _.$('min-degree-val').textContent = v;
+    _.$('min-degree-val').value = v;
+
+    filter
+      .undo('min-degree')
+      .nodesBy(function(n) {
+        return this.degree(n.id) >= v;
+      }, 'min-degree')
+      .apply();
+  }
+
+  _.$('min-degree').addEventListener("input", applyMinDegreeFilter);  // for Chrome and FF
+  _.$('min-degree').addEventListener("change", applyMinDegreeFilter); // 
+
+}
+
+var xhr = sigma.utils.xhr();
+xhr.open('GET', 'data-random.json', true);
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4) {
+    var graph = JSON.parse(xhr.responseText);
+
+    // Update the instance's graph:
+    s.graph.clear();
+    s.graph.read(graph);
+
+    // Call the callback if specified:
+    callback(s);
+  }
+};
+xhr.send();

@@ -57,7 +57,32 @@ function checkUpdate() {
     })
 }
 
-var interval = setInterval(checkUpdate, 1000);
+//var interval = setInterval(checkUpdate, 1000);
+
+function test() {
+  ws.send("test");
+}
+
+//var interval = setInterval(test, 1000);
+
+function send(message) {
+  ws.send(message);
+}
+
+var ws = new WebSocket("ws://ec2-34-228-225-161.compute-1.amazonaws.com:8080/WebSocket")
+
+ws.onopen = function() {
+  console.log("Connected to websocket server")
+}
+
+ws.onclose = function() {
+  console.log("DISCONNECTED")
+}
+
+ws.onmessage = function(payload) {
+  console.log(payload.data)
+  fetchPictureList(payload.data);
+}
 
 // var socket = io.connect("");
 //

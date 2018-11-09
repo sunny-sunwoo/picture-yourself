@@ -199,6 +199,7 @@ function fetchPictureList(country) {
     })
 }
 
+/*
 function checkUpdate() {
   const url = "http://ec2-34-228-225-161.compute-1.amazonaws.com:8080/PictureYourself/checkupdate";
   fetch(url)
@@ -214,5 +215,26 @@ function checkUpdate() {
       console.error(error)
     })
 }
+*/
+
+function checkUpdate() {
+	ws.send("checkUpdate");
+}
 
 var interval = setInterval(checkUpdate, 1000);
+
+var ws = new WebSocket("ws://ec2-34-228-225-161.compute-1.amazonaws.com:8080/WebSocket")
+
+ws.onopen = function() {
+  console.log("Connected to websocket server")
+}
+
+ws.onclose = function() {
+  console.log("DISCONNECTED")
+}
+
+ws.onmessage = function(payload) {
+  console.log(payload.data)
+	//fetchPictureList(payload.data);
+	updateJSON();
+}
