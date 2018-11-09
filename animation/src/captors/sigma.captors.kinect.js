@@ -98,10 +98,10 @@
           newRatio;
 
       newRatio = Math.max(
-        0.1,
-        1 - 2 * (_startKinectZ - head.cameraZ)
+        0.01,
+        1 - 0.5 * (_startKinectZ - head.cameraZ)
       );
-      console.log(head.cameraZ, _startKinectZ, newRatio);
+      //console.log(head.cameraZ, _startKinectZ, newRatio);
 
       if (newRatio != _camera.ratio) {
         ratio = newRatio / camera.ratio;
