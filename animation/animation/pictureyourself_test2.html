@@ -277,6 +277,7 @@ sigma.canvas.nodes.image = (function() {
 
   // Return the renderer itself:
   var renderer = function(node, context, settings) {
+    console.log("here");
     var args = arguments,
         prefix = settings('prefix') || '',
         size = node[prefix + 'size'],
@@ -284,6 +285,7 @@ sigma.canvas.nodes.image = (function() {
         url = node.url;
 
     if (_cache[url]) {
+      console.log("1");
       context.save();
 
       // Draw the clipping disc:
@@ -312,6 +314,7 @@ sigma.canvas.nodes.image = (function() {
       context.restore();
 
     } else {
+      console.log("2");
       sigma.canvas.nodes.image.cache(url);
       sigma.canvas.nodes.def.apply(
         sigma.canvas.nodes,
@@ -323,19 +326,22 @@ sigma.canvas.nodes.image = (function() {
   // Let's add a public method to cache images, to make it possible to
   // preload images before the initial rendering:
   renderer.cache = function(url, callback) {
+    console.log("3");
     if (callback)
       _callbacks[url] = callback;
 
     if (_loading[url])
       return;
+    console.log("4");
 
     var img = new Image();
-
     img.onload = function() {
+      console.log("5");
       _loading[url] = false;
       _cache[url] = img;
 
       if (_callbacks[url]) {
+        console.log("6");
         _callbacks[url].call(this, img);
         delete _callbacks[url];
       }
@@ -376,6 +382,7 @@ s = new sigma({
 });
 
 sigma.parsers.json('data-random.json', s, function (s) {
+  console.log("parser");
   filter = new sigma.plugins.filter(s);
   updatePane(s.graph, filter); // updating UI 
   console.log(s);
@@ -399,6 +406,12 @@ sigma.parsers.json('data-random.json', s, function (s) {
 //sigma.parsers.json('data.json', s.graph);
 //s.startForceAtlas2({worker: true, barnesHutOptimize: false});
 //var newGraph = sigma.classes.graph();
+
+function initialJSON(jsonInput) {
+  s.graph.clear();
+  s.graph.read(jsonInput);
+}
+
 var newSrc;
 function getJSON(jsonInput, newUrl) {
   newSrc = newUrl;

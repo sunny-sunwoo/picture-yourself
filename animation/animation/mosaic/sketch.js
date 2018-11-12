@@ -27,9 +27,7 @@ N = 100;
 // create nodes
 var positionList = [];
 var urls = [];
-for(var i = 1; i <74; i++){
-  urls.push('src/img/'+i+'.png');
-}
+
 var img = (Math.random() >= 0.2);
 
 var data = {};
@@ -106,6 +104,11 @@ function draw() {
 		}
 	}
 
+	createSigmaObj();
+	noLoop();
+}
+
+function createSigmaObj(){
 	for (i=0; i < count ; i++){
 	   var obj = {
 	       label: i,
@@ -153,7 +156,9 @@ function draw() {
 	}
 	// json.nodes = data.nodes;
 	json.edges = data.edges;
-	noLoop();
+	console.log(json);
+	// saveJSON(json, 'data.json');
+
 }
 
 function updateJSON() {
@@ -177,7 +182,7 @@ function updateJSON() {
 const HOST = "https://s3.amazonaws.com/newpicbuck/public/";
 const IMAGES = document.querySelector("ul");
 
-console.log(window.location.href);
+// console.log(window.location.href);
 var href = new URL(window.location.href);
 var country = href.searchParams.get("country");
 // console.log(country);
@@ -191,7 +196,16 @@ function fetchPictureList(country) {
   fetch(url)
     .then((response) => response.json())
     .then((responseJson) => {
-      console.log(responseJson)
+    	//initial json from api
+      console.log(responseJson);
+      for(var i = 1; i < responseJson.postList.length; i++){
+      	eachUrl = "https://s3.amazonaws.com/newpicbuck/public/" + responseJson.postList[i].photo;
+        urls.push(eachUrl);
+      }
+      console.log(urls);
+      createSigmaObj();
+      initialJSON(json);
+
       //updateList(responseJson.postList)
     })
     .catch((error) => {
