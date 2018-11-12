@@ -166,8 +166,9 @@ function updateJSON() {
 	  var lastIndex = jsonData.postList.length - 1;
 	  var newUrl = "https://s3.amazonaws.com/newpicbuck/public/" + jsonData.postList[lastIndex].photo;
 	  var index = Math.floor(Math.random() * count);
+	  currentIndex = index;
 	  json.nodes[index].url = newUrl;
-	  console.log(json.nodes[index]);
+	 
 	  // saveJSON(json, 'data.json');
 	  getJSON(json, newUrl);
 	}
