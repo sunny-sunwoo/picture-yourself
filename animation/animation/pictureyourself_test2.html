@@ -285,7 +285,7 @@ sigma.canvas.nodes.image = (function() {
 
   // Return the renderer itself:
   var renderer = function(node, context, settings) {
-    console.log("here");
+    // console.log("here");
     var args = arguments,
         prefix = settings('prefix') || '',
         size = node[prefix + 'size'],
@@ -293,7 +293,7 @@ sigma.canvas.nodes.image = (function() {
         url = node.url;
 
     if (_cache[url]) {
-      console.log("1");
+      // console.log("1");
       context.save();
 
       // Draw the clipping disc:
@@ -340,7 +340,7 @@ sigma.canvas.nodes.image = (function() {
       context.stroke();
 
     } else {
-      console.log("2");
+      // console.log("2");
       sigma.canvas.nodes.image.cache(url);
       sigma.canvas.nodes.def.apply(
         sigma.canvas.nodes,
@@ -352,22 +352,22 @@ sigma.canvas.nodes.image = (function() {
   // Let's add a public method to cache images, to make it possible to
   // preload images before the initial rendering:
   renderer.cache = function(url, callback) {
-    console.log("3");
+    // console.log("3");
     if (callback)
       _callbacks[url] = callback;
 
     if (_loading[url])
       return;
-    console.log("4");
+    // console.log("4");
 
     var img = new Image();
     img.onload = function() {
-      console.log("5");
+      // console.log("5");
       _loading[url] = false;
       _cache[url] = img;
 
       if (_callbacks[url]) {
-        console.log("6");
+        // console.log("6");
         _callbacks[url].call(this, img);
         delete _callbacks[url];
       }
@@ -409,8 +409,8 @@ s = new sigma({
   }
 });
 
-sigma.parsers.json('data-random.json', s, function (s) {
-  console.log("parser");
+sigma.parsers.json('data.json', s, function (s) {
+  // console.log("parser");
   filter = new sigma.plugins.filter(s);
   updatePane(s.graph, filter); // updating UI 
  
@@ -479,7 +479,7 @@ function getJSON(jsonInput, newUrl) {
   s.graph.read(jsonInput);
   console.log(s);
   $("#target-img").attr("src",newSrc);
-  myAnimation(s.graph, 'random_', 'cmu_');
+  myAnimation(s.graph, 'random_', 'abc_');
 
   }
 function grayScale(context) {
@@ -692,8 +692,8 @@ $("#click-change").on("click", function() {
 
 _.$('click-appear').addEventListener("click", function(){ myAppear(s.graph); });
 _.$('click-disappear').addEventListener("click", function(){ myDisappear(s.graph); });
-_.$('click-transition').addEventListener("click", function (){myTransition('random_', 'cmu_');});
-_.$('click-animation').addEventListener("click", function(){myAnimation(s.graph, 'random_', 'cmu_');});
+_.$('click-transition').addEventListener("click", function (){myTransition('random_', 'abc_');});
+_.$('click-animation').addEventListener("click", function(){myAnimation(s.graph, 'random_', 'abc_');});
 
 //_.$('click-change').addEventListener("click", function(){ myChange(s.graph);});
 
