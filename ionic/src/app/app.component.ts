@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { WelcomePage } from "../pages/welcome/welcome";
 import { TermPage } from "../pages/term/term";
+import { Question_1Page } from "../pages/question-1/question-1";
 import { InstructionPage } from "../pages/instruction/instruction";
 
 @Component({
@@ -27,7 +28,8 @@ export class MyApp {
       { title: 'Welcome', component: WelcomePage },
       { title: 'Term', component: TermPage },
       { title: 'Post', component: HomePage },
-      { title: 'Instruction', component: InstructionPage }
+      { title: 'Instruction', component: InstructionPage },
+      { title: 'Question_1', component: Question_1Page }
     ];
 
   }

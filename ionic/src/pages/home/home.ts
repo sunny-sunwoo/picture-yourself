@@ -3,7 +3,7 @@ import { NavController, normalizeURL } from 'ionic-angular';
 import { Camera, CameraOptions } from "@ionic-native/camera";
 import { PostProvider } from "../../providers/post/post";
 import { File } from "@ionic-native/file";
-import { InstructionPage } from "../instruction/instruction";
+import { Question_1Page } from "../question-1/question-1";
 
 @Component({
   selector: 'page-home',
@@ -56,7 +56,7 @@ export class HomePage {
   share() {
     this.postProvider.postImage(this.filePath, this.base64Image, () => {
       console.log('postImageComplete');
-      this.navCtrl.push(InstructionPage);
+      this.navCtrl.push(Question_1Page);
     });
   }
 
