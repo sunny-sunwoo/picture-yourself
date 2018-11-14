@@ -1,3 +1,4 @@
+
 <!-- START SIGMA IMPORTS -->
 <script src="../src/sigma.core.js"></script>
 <script src="../src/conrad.js"></script>
@@ -53,6 +54,9 @@
 <script src="../plugins/sigma.plugins.animate/sigma.plugins.animate.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="../src/socket.io-client.min.js"></script>
+<script src="../plugins/sigma.layout.forceAtlas2/worker.js"></script>
+<script src="../plugins/sigma.layout.forceAtlas2/supervisor.js"></script>
+<script src="../plugins/sigma.layout.noverlap/sigma.layout.noverlap.js"></script>
 <!-- MOSAIC GENERATOR -->
 <script src="mosaic/libraries/p5.js"></script>
 <script src="mosaic/libraries/p5.dom.js"></script>
@@ -112,8 +116,13 @@
       position: absolute;
       opacity: 1;
     }
+    #graph-container img {
+      -webkit-filter: grayscale(100%);
+      -webkit-filter: grayscale(1);
+      filter: grayscale(100%);
+    }
     #control-pane {
-      display: none;
+      
       top: 10px;
       /*bottom: 10px;*/
       right: 10px;
@@ -182,8 +191,7 @@
     <p id="message">Welcome to ETC!<br>You're <span id="visit-num">1st</span> visitor today<br>2018. 11. 04</p>
   </div>
 </div>
-<script src="../plugins/sigma.layout.forceAtlas2/worker.js"></script>
-<script src="../plugins/sigma.layout.forceAtlas2/supervisor.js"></script>
+
 
 <script>
 
@@ -277,6 +285,7 @@ sigma.canvas.nodes.image = (function() {
 
   // Return the renderer itself:
   var renderer = function(node, context, settings) {
+    // console.log("here");
     var args = arguments,
         prefix = settings('prefix') || '',
         size = node[prefix + 'size'],
@@ -284,6 +293,7 @@ sigma.canvas.nodes.image = (function() {
         url = node.url;
 
     if (_cache[url]) {
+      // console.log("1");
       context.save();
 
       // Draw the clipping disc:
@@ -308,10 +318,29 @@ sigma.canvas.nodes.image = (function() {
         2 * size
       );
 
+      //grayscale 
+      //grayScale(context);
+
       // Quit the "clipping mode":
       context.restore();
 
+
+      // Draw the border:
+      context.beginPath();
+      context.arc(
+        node[prefix + 'x'],
+        node[prefix + 'y'],
+        node[prefix + 'size'],
+        0,
+        Math.PI * 2,
+        true
+      );
+      context.lineWidth = size / 10;
+      context.strokeStyle = node.color || settings('defaultNodeColor');
+      context.stroke();
+
     } else {
+      // console.log("2");
       sigma.canvas.nodes.image.cache(url);
       sigma.canvas.nodes.def.apply(
         sigma.canvas.nodes,
@@ -323,19 +352,22 @@ sigma.canvas.nodes.image = (function() {
   // Let's add a public method to cache images, to make it possible to
   // preload images before the initial rendering:
   renderer.cache = function(url, callback) {
+    // console.log("3");
     if (callback)
       _callbacks[url] = callback;
 
     if (_loading[url])
       return;
+    // console.log("4");
 
     var img = new Image();
-
     img.onload = function() {
+      // console.log("5");
       _loading[url] = false;
       _cache[url] = img;
 
       if (_callbacks[url]) {
+        // console.log("6");
         _callbacks[url].call(this, img);
         delete _callbacks[url];
       }
@@ -363,22 +395,25 @@ var i,
 s = new sigma({
   //graph: g,
   renderer: {
-    
     container: document.getElementById('graph-container'),
     type: 'canvas'
   },
   settings: {
+    //edgeColor: '#bbbbbb',
+    //defaultEdgeColor: '#bbbbbb',
+    //defaultNodeColor: '#111111',
     animationsTime: 2000,
     drawEdges: true,
-    minNodeSize: 8,
-    maxNodeSize: 18
+    minNodeSize: 6,
+    maxNodeSize: 17
   }
 });
 
-sigma.parsers.json('data-random.json', s, function (s) {
+sigma.parsers.json('data.json', s, function (s) {
+  // console.log("parser");
   filter = new sigma.plugins.filter(s);
   updatePane(s.graph, filter); // updating UI 
-  console.log(s);
+ 
   function applyMinDegreeFilter(e) {
     var v = e.target.value; // input value of scroller
     _.$('min-degree-val').textContent = v;
@@ -394,21 +429,71 @@ sigma.parsers.json('data-random.json', s, function (s) {
 
   _.$('min-degree').addEventListener("input", applyMinDegreeFilter);  // for Chrome and FF
   _.$('min-degree').addEventListener("change", applyMinDegreeFilter); // 
-
+  //s.startForceAtlas2({worker: true, barnesHutOptimize: false});
 });
+
+
+
+// Configure the noverlap layout:
+var noverlapListener = s.configNoverlap({
+  nodeMargin: 8.0,
+  scaleNodes: 5,
+  gridSize: 500,
+  easing: 'quadraticInOut', // animation transition function
+  duration: 3000,   // animation duration. Long here for the purposes of this example only
+  maxIterations: 500
+});
+// Bind the events:
+noverlapListener.bind('start stop interpolate', function(e) {
+  console.log(e.type);
+  console.log(s.isNoverlapRunning());
+  /*if(e.type === 'start') {
+    console.time('noverlap');
+  }
+  if(e.type === 'interpolate') {
+    console.timeEnd('noverlap');
+  }*/
+});
+// Start the layout:
+s.startNoverlap();
+
+
+/*s.startForceAtlas2();
+  s.configForceAtlas2({worker: true, barnesHutOptimize: false, slowDown: 1, scalingRatio: 1, edgeWeightInfluence: 0.8, gravity: 0});*/
 //sigma.parsers.json('data.json', s.graph);
-//s.startForceAtlas2({worker: true, barnesHutOptimize: false});
+
 //var newGraph = sigma.classes.graph();
+
+function initialJSON(jsonInput) {
+  s.graph.clear();
+  s.graph.read(jsonInput);
+}
+
 var newSrc;
+var newGraph;
 function getJSON(jsonInput, newUrl) {
   newSrc = newUrl;
+  newGraph = jsonInput;
   console.log(jsonInput);
   s.graph.clear();
   s.graph.read(jsonInput);
   console.log(s);
   $("#target-img").attr("src",newSrc);
-  myAnimation(s.graph, 'random_', 'cmu_');
+  myAnimation(s.graph, 'random_', 'abc_');
 
+  }
+function grayScale(context) {
+    var imgData = context.getImageData(0, 0, 500, 500);
+        var pixels  = imgData.data;
+        for (var i = 0, n = pixels.length; i < n; i += 4) {
+        var grayscale = pixels[i] * .3 + pixels[i+1] * .59 + pixels[i+2] * .11;
+        pixels[i  ] = grayscale;        // red
+        pixels[i+1] = grayscale;        // green
+        pixels[i+2] = grayscale;        // blue
+        //pixels[i+3]              is alpha
+    }
+    //redraw the image in black & white
+    context.putImageData(imgData, 0, 0);
   }
 
 function myMessageIn(){
@@ -442,6 +527,7 @@ function myMessageOut(){
 }
 
 function myTransition(before, after){
+ // s.stopForceAtlas2();
   var step = 0;
   var transition = setInterval(function() {
     var prefix = [after, before][step = +!step];
@@ -453,8 +539,24 @@ function myTransition(before, after){
       }
     );
   }, 1000);
+
+  /*var nodes = s.graph.nodes();
+  var after_x = after + 'x';
+  var after_y = after + 'y';
+  nodes[100].x = 123;
+
+  nodes.forEach( function(node) {
+    
+    node.x = node[after_x];
+    node.y = node[after_y];
+    
+  });*/
+
   setTimeout ( function() {clearInterval(transition);}, 2000);
+  //s.startForceAtlas2();
 }
+
+
 
 
 function myDefault(){
@@ -550,9 +652,21 @@ function myAppear(graph) {
       setTimeout( function() {myTransition(after, before)}, 18000);
      
   }
-
+var currentIndex;
   function myNew(){
-      $("#target-img").css("border-radius", "50%");
+      var currentNodes = s.graph.nodes();
+       
+      s.graph.nodes().forEach(function(n) {
+        //n.css = ("filter", "grayscale(1)");
+        n.strokeStyle = n.color;
+        
+      });
+     currentNodes[currentIndex].color ="#B50A0D";
+     currentNodes[currentIndex].label = "You're Here!";
+      console.log(currentNodes[currentIndex].label);
+     currentNodes[currentIndex].strokeStyle = currentNodes[currentIndex].color;
+      console.log(currentNodes[currentIndex]);
+     
       $("#target-img").addClass("big").css({"display": "initial"});
   }
 
@@ -578,8 +692,8 @@ $("#click-change").on("click", function() {
 
 _.$('click-appear').addEventListener("click", function(){ myAppear(s.graph); });
 _.$('click-disappear').addEventListener("click", function(){ myDisappear(s.graph); });
-_.$('click-transition').addEventListener("click", function (){myTransition('random_', 'cmu_');});
-_.$('click-animation').addEventListener("click", function(){myAnimation(s.graph, 'random_', 'cmu_');});
+_.$('click-transition').addEventListener("click", function (){myTransition('random_', 'abc_');});
+_.$('click-animation').addEventListener("click", function(){myAnimation(s.graph, 'random_', 'abc_');});
 
 //_.$('click-change').addEventListener("click", function(){ myChange(s.graph);});
 
