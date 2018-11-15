@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { WelcomePage } from "../pages/welcome/welcome";
 import { TermPage } from "../pages/term/term";
+import { Question_1Page } from "../pages/question-1/question-1";
 import { InstructionPage } from "../pages/instruction/instruction";
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -24,6 +25,7 @@ import { PostProvider } from '../providers/post/post';
     ListPage,
     WelcomePage,
     TermPage,
+    Question_1Page,
     InstructionPage
   ],
   imports: [
@@ -38,6 +40,7 @@ import { PostProvider } from '../providers/post/post';
     ListPage,
     WelcomePage,
     TermPage,
+    Question_1Page,
     InstructionPage
   ],
   providers: [

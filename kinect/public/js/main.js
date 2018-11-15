@@ -1,5 +1,5 @@
 
-var socket = io("http://128.2.236.245:3000");
+var socket = io("http://localhost:3000");
 
 socket.on("disconnect", function() {
 	console.log("Disconnected");

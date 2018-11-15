@@ -10,7 +10,6 @@ imgBrightness = [],
 brightLevels = [];
 
 var imageNumber = 74, 
-scl = 32, 
 w, 
 h, 
 count = 0, 
@@ -20,6 +19,18 @@ tempX,
 tempY, 
 tempW;
 
+// image scale : should be dynamic later.
+// OrigImage.width/scl shouldn't have any floating point.
+// OrigImage.height/scl shouldn't have any floating point.
+// default img size for OrigImg: 640 * 640
+var scl = 32; 
+
+// refactoring for multiple images
+var origImages = [];
+var convImages = [];
+var LETTER_NUM = 26; 
+var charCount = 0;
+
 //animate test
 var L = 30,
 N = 100;
@@ -27,9 +38,7 @@ N = 100;
 // create nodes
 var positionList = [];
 var urls = [];
-for(var i = 1; i <74; i++){
-  urls.push('src/img/'+i+'.png');
-}
+
 var img = (Math.random() >= 0.2);
 
 var data = {};
@@ -41,9 +50,11 @@ json.nodes = [];
 
 // preload
 function preload() {
-	origImg = loadImage('mosaic/src/cmu-letter-4.png');
+	for(var i = 0; i < LETTER_NUM; i++) {
+		var currLetter = String.fromCharCode(i + 65);
+		origImages[i] = loadImage(`mosaic/src/characters/edited-final/${currLetter}.png`);
+	}
 	data = loadJSON('mosaic/json/input.json');
-	test = loadImage('mosaic/src/img/20.png')
 	centerImg = loadImage('mosaic/src/headshot-2020/edited-square/21.png');
 	for(var i = 0; i < imageNumber; i++) {
 		imgFiles[i] = loadImage(`mosaic/src/img/${i}.png`);
@@ -51,71 +62,61 @@ function preload() {
 }
 
 function setup() {
-	createCanvas(origImg.width, origImg.height);
+	createCanvas(origImages[0].width * 3, origImages[0].height);
 	pixelDensity(1);
-	w = origImg.width/scl;
-	h = origImg.height/scl;
-	convImg = createImage(w, h);
-	convImg.copy(origImg, 0, 0, origImg.width, origImg.height, 0, 0, w, h);
-	convImg.loadPixels();
+	w = origImages[0].width/scl;
+	h = origImages[0].height/scl;
+	for(var i = 0; i < LETTER_NUM; i++) {
+		convImages[i] = createImage(w, h);
+		convImages[i].copy(origImages[i], 0, 0, origImages[i].width, origImages[i].height, 0, 0, w, h);
+		convImages[i].loadPixels();
+	}
 }
 
 function draw() {
-	background('rgba(0,255,0, 0)');
-	// image(test, 0, 0);
+	var charLength = 3;
 
-	for(var i = 0; i < imageNumber; i++) {
-		imgFiles[i].loadPixels();
-		var avg = 0;
-		for(var j=0; j < imgFiles[i].pixels.length; j++) {
-			var b = imgFiles[i].pixels[j];
-			avg += b;
-		}
-		avg /= imgFiles[i].pixels.length;
-		imgBrightness[i] = Math.floor(avg);
-	} 
+	while(charCount < charLength) {
+		for(var y = 0; y < convImages[charCount].height; y++) {
+			for(var x = 0; x < convImages[charCount].width; x++) {	
+				var index = (x + y * convImages[charCount].width) * 4;
+				var r = convImages[charCount].pixels[index];
+				var g = convImages[charCount].pixels[index+1];
+				var b = convImages[charCount].pixels[index+2];
 
-	for(var i = 0; i < imageNumber; i++) {
-		brightLevels[imgBrightness[i]] = i;
-	}
-	var xPos = 0;
-	var yPos = 0;
+				var bright = (r+g+b)/3;
+				var w = map(bright, 0, 255, 0, scl);
 
-	for(var y = 0; y < convImg.height; y++) {
-		for(var x = 0; x < convImg.width; x++) {
-			
-			var index = (x + y * convImg.width) * 4;
-			var r = convImg.pixels[index];
-			var g = convImg.pixels[index+1];
-			var b = convImg.pixels[index+2];
-
-			var bright = (r+g+b)/3;
-			var w = map(bright, 0, 255, 0, scl);
-
-			if(w != 0) {
-				var i = Math.floor(Math.random() * imageNumber);
-				// image(imgFiles[i], x * scl, y * scl, w, w);
-				// console.log(count + " // x: " + x * scl + "// y: " + y * scl);
-				var positionPair = {
-					x: x * scl, 
-					y: y * scl
+				if(w != 0) {
+					var i = Math.floor(Math.random() * imageNumber);
+					// image(imgFiles[i], charCount * 640 + x * scl, y * scl, w, w);
+					// console.log(count + " // x: " + x * scl + "// y: " + y * scl);
+					var positionPair = {
+						x: charCount * 640 + x * scl, 
+						y: y * scl
+					}
+					positionList.push(positionPair);
+					count++;
 				}
-				positionList.push(positionPair);
-				count++;
 			}
 		}
+		charCount++;
 	}
+	createSigmaObj();
+	noLoop();
+}
 
+function createSigmaObj(){
 	for (i=0; i < count ; i++){
 	   var obj = {
 	       label: i,
 	       id: 'n' +  i,
 	       type: img ? 'image' : 'def',
 	       url: img ? urls[Math.floor(Math.random() * urls.length)] : null,
-	       cmu_x: positionList[i].x,
-	       cmu_y: positionList[i].y,
-	       cmu_color: "#ddd",
-	       cmu_size: Math.random()*20 + 15,
+	       abc_x: positionList[i].x,
+	       abc_y: positionList[i].y,
+	       abc_color: "#ddd",
+	       abc_size: Math.random()*20 + 15,
 	       // circular_x: L * Math.cos(Math.PI * 2 * i / N - Math.PI / 2),
 	       // circular_y: L * Math.sin(Math.PI * 2 * i / N - Math.PI / 2),
 	       // circular_size: Math.random(),
@@ -153,7 +154,9 @@ function draw() {
 	}
 	// json.nodes = data.nodes;
 	json.edges = data.edges;
-	noLoop();
+	console.log(json);
+	// saveJSON(json, 'data.json');
+
 }
 
 function updateJSON() {
@@ -166,8 +169,9 @@ function updateJSON() {
 	  var lastIndex = jsonData.postList.length - 1;
 	  var newUrl = "https://s3.amazonaws.com/newpicbuck/public/" + jsonData.postList[lastIndex].photo;
 	  var index = Math.floor(Math.random() * count);
+	  currentIndex = index;
 	  json.nodes[index].url = newUrl;
-	  console.log(json.nodes[index]);
+	 
 	  // saveJSON(json, 'data.json');
 	  getJSON(json, newUrl);
 	}
@@ -177,7 +181,7 @@ function updateJSON() {
 const HOST = "https://s3.amazonaws.com/newpicbuck/public/";
 const IMAGES = document.querySelector("ul");
 
-console.log(window.location.href);
+// console.log(window.location.href);
 var href = new URL(window.location.href);
 var country = href.searchParams.get("country");
 // console.log(country);
@@ -191,7 +195,16 @@ function fetchPictureList(country) {
   fetch(url)
     .then((response) => response.json())
     .then((responseJson) => {
-      console.log(responseJson)
+    	//initial json from api
+      console.log(responseJson);
+      for(var i = 1; i < responseJson.postList.length; i++){
+      	eachUrl = "https://s3.amazonaws.com/newpicbuck/public/" + responseJson.postList[i].photo;
+        urls.push(eachUrl);
+      }
+      console.log(urls);
+      createSigmaObj();
+      initialJSON(json);
+
       //updateList(responseJson.postList)
     })
     .catch((error) => {
@@ -199,6 +212,7 @@ function fetchPictureList(country) {
     })
 }
 
+/*
 function checkUpdate() {
   const url = "http://ec2-34-228-225-161.compute-1.amazonaws.com:8080/PictureYourself/checkupdate";
   fetch(url)
@@ -214,5 +228,26 @@ function checkUpdate() {
       console.error(error)
     })
 }
+*/
+
+function checkUpdate() {
+	ws.send("checkUpdate");
+}
 
 var interval = setInterval(checkUpdate, 1000);
+
+var ws = new WebSocket("ws://ec2-34-228-225-161.compute-1.amazonaws.com:8080/WebSocket")
+
+ws.onopen = function() {
+  console.log("Connected to websocket server")
+}
+
+ws.onclose = function() {
+  console.log("DISCONNECTED")
+}
+
+ws.onmessage = function(payload) {
+  console.log(payload.data)
+	//fetchPictureList(payload.data);
+	updateJSON();
+}

@@ -67,14 +67,16 @@
 
     socket.on("bodyFrame", function(bodyFrame) {
       //console.log(bodyFrame);
-      var realBody,
+      var realBody = null,
           head;
 
       for (var i = 0; i < bodyFrame.bodies.length; i++) {
         var body = bodyFrame.bodies[i];
         if (body.tracked) {
-          realBody = body;
-          break;
+          if (realBody == null || body.joints[3].cameraZ < realBody.joints[3].cameraZ) {
+            realBody = body;
+          }
+          //break;
         }
       }
 
@@ -93,16 +95,18 @@
 
     function _kinectWheelHandler(head) {
       var pos,
-          dRatio,
           ratio,
           coordinates,
-          newStageRatio;
-      
-      dRatio = head.cameraZ / _startKinectZ;
-      newStageRatio = _startCameraRatio * dRatio;
+          newRatio;
 
-      if (newStageRatio != _camera.ratio) {
-        ratio = newStageRatio / camera.ratio;
+      newRatio = Math.max(
+        0.01,
+        1 - 0.5 * (_startKinectZ - head.cameraZ)
+      );
+      //console.log(head.cameraZ, _startKinectZ, newRatio);
+
+      if (newRatio != _camera.ratio) {
+        ratio = newRatio / camera.ratio;
         pos = _camera.cameraPosition(
           (head.depthX - 0.5) * 1000,
           (head.depthY - 0.5) * 1000,
@@ -111,7 +115,7 @@
         coordinates = {
           x: pos.x * (1 - ratio) + _camera.x,
           y: pos.y * (1 - ratio) + _camera.y,
-          ratio: newStageRatio
+          ratio: newRatio
         };
         _camera.goTo(coordinates);
       }
@@ -129,9 +133,11 @@
 
         _camera.isMoving = true;
 
+        var scale = 1000 + 8000 * (_startKinectZ - head.cameraZ);
+
         pos = _camera.cameraPosition(
-          _startMouseX - head.depthX * 1000,
-          _startMouseY - head.depthY * 1000,
+          (_startMouseX - head.depthX) * scale,
+          (_startMouseY - head.depthY) * scale,
           true
         );
 
@@ -160,8 +166,8 @@
       _lastKinectZ = head.cameraZ;
       _lastCameraRatio = 1;
 
-      _startMouseX = head.depthX * 1000;
-      _startMouseY = head.depthY * 1000;
+      _startMouseX = head.depthX;
+      _startMouseY = head.depthY;
       _startKinectZ = head.cameraZ;
 
       _isMouseDown = true;
