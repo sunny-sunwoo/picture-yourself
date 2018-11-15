@@ -56,13 +56,14 @@ public class PictureYourself {
 							channel.getReceiveSetter().set(new AbstractReceiveListener() {
 								@Override
 								protected void onFullTextMessage(WebSocketChannel channel, BufferedTextMessage message) {
-									//String data = message.getData();
+									String data = message.getData();
 									//System.out.println(data);
 									//WebSockets.sendText(data, channel, null);
 //									for (WebSocketChannel session : channel.getPeerConnections()) {
 //										WebSockets.sendText(data, session, null);
 //									}
 									if (Model.instance().isUpdate) {
+                                        //System.out.println("isUpdate");
 										for (WebSocketChannel session : channel.getPeerConnections()) {
 											//WebSockets.sendText(data, session, null);
 											WebSockets.sendText(Model.instance().country, session, null);

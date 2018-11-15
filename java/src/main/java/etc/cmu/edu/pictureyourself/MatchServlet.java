@@ -38,10 +38,26 @@ public class MatchServlet extends HttpServlet {
         result.put("postList", users);
         String country = request.getParameter("country");
         //System.out.println("country " + country);
-        String query = "select photo, id from users where country = ?";
+        String query = "select photo, id from users where country = ?;";
+        
         try {
+            String queryLatest = "select photo, id from users order by id desc limit 1;";
+            PreparedStatement pstmtLatest = conn.prepareStatement(queryLatest);
+            ResultSet rsLatest = pstmtLatest.executeQuery();
+            int idLatest = -1;
+            if (rsLatest.next()) {
+                idLatest = rsLatest.getInt("id");
+                //System.out.println("idLatest= " + idLatest);
+            }
+            if (country.equals("default")) {
+                query = "select photo, id from users where id between 0 and ? order by rand() limit 300;";
+            }
+
             PreparedStatement pstmt = conn.prepareStatement(query);
-            pstmt.setString(1, country);
+            if (!country.equals("default"))
+                pstmt.setString(1, country);
+            else
+                pstmt.setInt(1, idLatest - 1);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
                 String photo = rs.getString("photo");
@@ -53,6 +69,13 @@ public class MatchServlet extends HttpServlet {
                 user.put("country", country);
                 user.put("id", id);
                 users.put(user);
+            }
+            if (idLatest != -1) {
+                JSONObject userLatest = new JSONObject();
+                userLatest.put("photo", rsLatest.getString("photo"));
+                userLatest.put("country", country);
+                userLatest.put("id", idLatest);
+                users.put(userLatest);
             }
         } catch (SQLException e) {
             e.printStackTrace();
