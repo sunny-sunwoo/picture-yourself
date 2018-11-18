@@ -40,5 +40,10 @@
       Math.round(node[prefix + 'x'] + size + 3),
       Math.round(node[prefix + 'y'] + fontSize / 3)
     );
+
+    /*context.fillStyle = "#ffffff";
+    context.fillRect(Math.round(node[prefix + 'x'] + size + 3),
+      Math.round(node[prefix + 'y'] + fontSize / 3),100,50);
+    console.log("new version");*/
   };
 }).call(this);

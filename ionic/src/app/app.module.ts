@@ -10,6 +10,7 @@ import { WelcomePage } from "../pages/welcome/welcome";
 import { TermPage } from "../pages/term/term";
 import { Question_1Page } from "../pages/question-1/question-1";
 import { InstructionPage } from "../pages/instruction/instruction";
+import { SharePage } from "../pages/share/share";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,7 +27,8 @@ import { PostProvider } from '../providers/post/post';
     WelcomePage,
     TermPage,
     Question_1Page,
-    InstructionPage
+    InstructionPage,
+    SharePage
   ],
   imports: [
     HttpClientModule,
@@ -41,7 +43,8 @@ import { PostProvider } from '../providers/post/post';
     WelcomePage,
     TermPage,
     Question_1Page,
-    InstructionPage
+    InstructionPage,
+    SharePage
   ],
   providers: [
     File,

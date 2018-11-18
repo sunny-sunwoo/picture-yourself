@@ -15,6 +15,7 @@ const API: string = "http://ec2-34-228-225-161.compute-1.amazonaws.com:8080/Pict
 @Injectable()
 export class PostProvider {
   public photoId = -1;
+  public base64Image: string;
 
   constructor(
     private file: File,

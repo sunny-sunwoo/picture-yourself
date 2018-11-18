@@ -13,6 +13,7 @@ export class HomePage {
   public base64Image: string;
   public filePath: string;
 
+
   constructor(
     private file: File,
     private postProvider: PostProvider,

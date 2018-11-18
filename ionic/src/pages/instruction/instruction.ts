@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { WelcomePage } from "../welcome/welcome";
+import { SharePage } from "../share/share";
 
 /**
  * Generated class for the InstructionPage page.
@@ -25,6 +26,10 @@ export class InstructionPage {
 
   backToWelcome() {
     this.navCtrl.setRoot(WelcomePage);
+  }
+
+  toShare(){
+    this.navCtrl.setRoot(SharePage);
   }
 
 }
