@@ -10,7 +10,6 @@ imgBrightness = [],
 brightLevels = [];
 
 var imageNumber = 74, 
-scl = 32, 
 w, 
 h, 
 count = 0, 
@@ -19,6 +18,18 @@ centerImg,
 tempX, 
 tempY, 
 tempW;
+
+// image scale : should be dynamic later.
+// OrigImage.width/scl shouldn't have any floating point.
+// OrigImage.height/scl shouldn't have any floating point.
+// default img size for OrigImg: 640 * 640
+var scl = 32; 
+
+// refactoring for multiple images
+var origImages = [];
+var convImages = [];
+var LETTER_NUM = 26; 
+var charCount = 0;
 
 //animate test
 var L = 30,
@@ -39,9 +50,11 @@ json.nodes = [];
 
 // preload
 function preload() {
-	origImg = loadImage('mosaic/src/cmu-letter-4.png');
+	for(var i = 0; i < LETTER_NUM; i++) {
+		var currLetter = String.fromCharCode(i + 65);
+		origImages[i] = loadImage(`mosaic/src/characters/edited-final/${currLetter}.png`);
+	}
 	data = loadJSON('mosaic/json/input.json');
-	test = loadImage('mosaic/src/img/20.png')
 	centerImg = loadImage('mosaic/src/headshot-2020/edited-square/21.png');
 	for(var i = 0; i < imageNumber; i++) {
 		imgFiles[i] = loadImage(`mosaic/src/img/${i}.png`);
@@ -49,61 +62,46 @@ function preload() {
 }
 
 function setup() {
-	createCanvas(origImg.width, origImg.height);
+	createCanvas(origImages[0].width * 3, origImages[0].height);
 	pixelDensity(1);
-	w = origImg.width/scl;
-	h = origImg.height/scl;
-	convImg = createImage(w, h);
-	convImg.copy(origImg, 0, 0, origImg.width, origImg.height, 0, 0, w, h);
-	convImg.loadPixels();
+	w = origImages[0].width/scl;
+	h = origImages[0].height/scl;
+	for(var i = 0; i < LETTER_NUM; i++) {
+		convImages[i] = createImage(w, h);
+		convImages[i].copy(origImages[i], 0, 0, origImages[i].width, origImages[i].height, 0, 0, w, h);
+		convImages[i].loadPixels();
+	}
 }
 
 function draw() {
-	background('rgba(0,255,0, 0)');
-	// image(test, 0, 0);
+	var charLength = 3;
 
-	for(var i = 0; i < imageNumber; i++) {
-		imgFiles[i].loadPixels();
-		var avg = 0;
-		for(var j=0; j < imgFiles[i].pixels.length; j++) {
-			var b = imgFiles[i].pixels[j];
-			avg += b;
-		}
-		avg /= imgFiles[i].pixels.length;
-		imgBrightness[i] = Math.floor(avg);
-	} 
+	while(charCount < charLength) {
+		for(var y = 0; y < convImages[charCount].height; y++) {
+			for(var x = 0; x < convImages[charCount].width; x++) {	
+				var index = (x + y * convImages[charCount].width) * 4;
+				var r = convImages[charCount].pixels[index];
+				var g = convImages[charCount].pixels[index+1];
+				var b = convImages[charCount].pixels[index+2];
 
-	for(var i = 0; i < imageNumber; i++) {
-		brightLevels[imgBrightness[i]] = i;
-	}
-	var xPos = 0;
-	var yPos = 0;
+				var bright = (r+g+b)/3;
+				var w = map(bright, 0, 255, 0, scl);
 
-	for(var y = 0; y < convImg.height; y++) {
-		for(var x = 0; x < convImg.width; x++) {
-			
-			var index = (x + y * convImg.width) * 4;
-			var r = convImg.pixels[index];
-			var g = convImg.pixels[index+1];
-			var b = convImg.pixels[index+2];
-
-			var bright = (r+g+b)/3;
-			var w = map(bright, 0, 255, 0, scl);
-
-			if(w != 0) {
-				var i = Math.floor(Math.random() * imageNumber);
-				// image(imgFiles[i], x * scl, y * scl, w, w);
-				// console.log(count + " // x: " + x * scl + "// y: " + y * scl);
-				var positionPair = {
-					x: x * scl, 
-					y: y * scl
+				if(w != 0) {
+					var i = Math.floor(Math.random() * imageNumber);
+					// image(imgFiles[i], charCount * 640 + x * scl, y * scl, w, w);
+					// console.log(count + " // x: " + x * scl + "// y: " + y * scl);
+					var positionPair = {
+						x: charCount * 640 + x * scl, 
+						y: y * scl
+					}
+					positionList.push(positionPair);
+					count++;
 				}
-				positionList.push(positionPair);
-				count++;
 			}
 		}
+		charCount++;
 	}
-
 	createSigmaObj();
 	noLoop();
 }
@@ -115,10 +113,10 @@ function createSigmaObj(){
 	       id: 'n' +  i,
 	       type: img ? 'image' : 'def',
 	       url: img ? urls[Math.floor(Math.random() * urls.length)] : null,
-	       cmu_x: positionList[i].x,
-	       cmu_y: positionList[i].y,
-	       cmu_color: "#ddd",
-	       cmu_size: Math.random()*20 + 15,
+	       abc_x: positionList[i].x,
+	       abc_y: positionList[i].y,
+	       abc_color: "#ddd",
+	       abc_size: Math.random()*20 + 15,
 	       // circular_x: L * Math.cos(Math.PI * 2 * i / N - Math.PI / 2),
 	       // circular_y: L * Math.sin(Math.PI * 2 * i / N - Math.PI / 2),
 	       // circular_size: Math.random(),

@@ -55,7 +55,7 @@
 
     sigma.classes.dispatcher.extend(this);
 
-    var socket = io("http://localhost:3000");
+    var socket = io("http://128.2.236.245:3000");
 
     socket.on("disconnect", function() {
       console.log("Disconnected");
@@ -67,19 +67,21 @@
 
     socket.on("bodyFrame", function(bodyFrame) {
       //console.log(bodyFrame);
-      var realBody,
+      var realBody = null,
           head;
 
       for (var i = 0; i < bodyFrame.bodies.length; i++) {
         var body = bodyFrame.bodies[i];
         if (body.tracked) {
-          realBody = body;
-          break;
+          if (realBody == null || body.joints[3].cameraZ < realBody.joints[3].cameraZ) {
+            realBody = body;
+          }
+          //break;
         }
       }
 
       if (realBody == null) return;
-      head = body.joints[3];
+      head = realBody.joints[3];
       //console.log(head);
 
       if (_bodyFrame == null) {

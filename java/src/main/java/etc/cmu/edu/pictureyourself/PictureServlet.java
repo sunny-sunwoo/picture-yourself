@@ -34,7 +34,7 @@ public class PictureServlet extends HttpServlet {
             throws ServletException, IOException {
         JSONObject result = new JSONObject();
         String photo = request.getParameter("photo");
-        System.out.println("photo " + photo);
+        //System.out.println("photo " + photo);
         String query = "insert into users (photo, country) values (?, ?);";
         String country = "default";
         try {
@@ -42,10 +42,10 @@ public class PictureServlet extends HttpServlet {
             pstmt.setString(1, photo);
             pstmt.setString(2, country);
             int row = pstmt.executeUpdate();
-            System.out.println("row " + row);
+            //System.out.println("row " + row);
             ResultSet rs = pstmt.getGeneratedKeys();
             if (rs.next()) {
-                System.out.println(rs.getInt(1));
+                //System.out.println(rs.getInt(1));
                 result.put("id", rs.getInt(1));
                 Model.instance().isUpdate = true;
                 Model.instance().country = country;
