@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { WelcomePage } from "../welcome/welcome";
 import * as html2canvas from 'html2canvas';
 import { PostProvider } from "../../providers/post/post";
+import { EmailComposer } from '@ionic-native/email-composer';
 
 /**
  * Generated class for the SharePage page.
@@ -18,11 +19,14 @@ import { PostProvider } from "../../providers/post/post";
 })
 export class SharePage {
 	public base64Image: string;
+  public email: string;
 
   constructor(
+    private postProvider: PostProvider,
+    private emailComposer: EmailComposer,
     public navCtrl: NavController,
-    public navParams: NavParams,
-    private postProvider: PostProvider) {
+    public navParams: NavParams) {
+
   }
 
   ionViewDidLoad() {
@@ -35,14 +39,25 @@ export class SharePage {
   }
 
   captureCanvas(){
- 	html2canvas(document.getElementById('capture')).then(canvas => {
-    	//document.body.appendChild(canvas)
-    	var a = document.createElement('a');
-    	a.href = canvas.toDataURL("image/png");
-    	a.download = 'compiled.png';
-    	a.click();
-    	console.log('yay');
-	});
+    let e = {
+      to: this.email,
+      attachments: [
+        'base64:PictureYourself.jpg//' + this.postProvider.emailImage
+      ],
+      subject: 'PictureYourself',
+      body: 'How are you? Nice greetings from PictureYourself',
+      isHtml: true
+    };
 
+    this.emailComposer.open(e);
+
+   	// html2canvas(document.getElementById('capture')).then(canvas => {
+    //   	//document.body.appendChild(canvas)
+    //   	var a = document.createElement('a');
+    //   	a.href = canvas.toDataURL("image/png");
+    //   	a.download = 'compiled.png';
+    //   	a.click();
+    //   	console.log('yay');
+  	// });
   }
 }

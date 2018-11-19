@@ -17,6 +17,7 @@ export class PostProvider {
   public photoId = -1;
   public base64Image: string;
   public country = "";
+  public emailImage: string;
 
 
   constructor(
@@ -49,6 +50,7 @@ export class PostProvider {
     const fileName = filePath.substring(index);
 
     const data = base64Image.substring(23);
+    this.emailImage = data;
     let buffer = new Buffer(data, 'base64');
 
     Storage.put(fileName, buffer, {

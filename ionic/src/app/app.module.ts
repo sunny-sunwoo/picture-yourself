@@ -16,6 +16,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Camera } from "@ionic-native/camera";
 import { File } from "@ionic-native/file";
+import { EmailComposer } from '@ionic-native/email-composer';
 
 import { PostProvider } from '../providers/post/post';
 
@@ -49,6 +50,7 @@ import { PostProvider } from '../providers/post/post';
   providers: [
     File,
     Camera,
+    EmailComposer,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
