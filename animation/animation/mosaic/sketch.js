@@ -240,9 +240,13 @@ function updateJSON(combination) {
 		        charSet = [6, 1, 17]; // GBR
 		        LETTER_SIZE = 3;
 		        break;
+		    case "": 
+			    charSet = [2, 12, 20]; // CMU
+			    LETTER_SIZE = 3;
 		    default:
-		        charSet = [2, 12, 20]; // CMU
-		        LETTER_SIZE = 3;
+		        // charSet = [2, 12, 20]; // CMU
+		        // LETTER_SIZE = 3;
+		        break;
 		}
 		if(LETTER_SIZE > 5) {
 			scl = 64;
@@ -253,6 +257,7 @@ function updateJSON(combination) {
 			edge_gen = 2;
 			setup();
 		}
+		// console.log(combination);
 		draw(charSet);
 		// Begin accessing JSON data here
 		jsonData = JSON.parse(this.response);
@@ -261,9 +266,14 @@ function updateJSON(combination) {
 		var index = Math.floor(Math.random() * count);
 		currentIndex = index;
 		json.nodes[index].url = newUrl;
-		 
-		// saveJSON(json, 'data.json');
-		getJSON(json, newUrl);
+		
+		if(combination != "default"){
+			// saveJSON(json, 'data.json');
+			getJSON(json, newUrl);
+		} else {
+			console.log("cmu animation removed");
+		}
+		
 	}
 	request.send();
 }
