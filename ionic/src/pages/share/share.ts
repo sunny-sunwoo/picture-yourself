@@ -4,6 +4,8 @@ import { WelcomePage } from "../welcome/welcome";
 import * as html2canvas from 'html2canvas';
 import { PostProvider } from "../../providers/post/post";
 import { EmailComposer } from '@ionic-native/email-composer';
+import { ViewChild } from '@angular/core';
+import { Slides } from 'ionic-angular';
 
 /**
  * Generated class for the SharePage page.
@@ -20,6 +22,8 @@ import { EmailComposer } from '@ionic-native/email-composer';
 export class SharePage {
 	public base64Image: string;
   public email: string;
+  @ViewChild(Slides) slides: Slides;
+  public currentIndex: number;
 
   constructor(
     private postProvider: PostProvider,
@@ -38,9 +42,20 @@ export class SharePage {
     this.navCtrl.setRoot(WelcomePage);
   }
 
+  slideChanged() {
+    let currentIndex = this.slides.getActiveIndex();
+    if (currentIndex >= this.slides.length()) {
+      currentIndex = this.slides.length() - 1;
+    } else if (currentIndex < 0) {
+      currentIndex = 0;
+    }
+    this.currentIndex = currentIndex;
+    console.log('Current index is', currentIndex);
+  }
+
   captureCanvas(){
 
-   	html2canvas(document.getElementById('capture')).then(canvas => {
+   	html2canvas(document.getElementById('capture' + this.currentIndex)).then(canvas => {
       	//document.body.appendChild(canvas)
       	//var a = document.createElement('a');
       	//a.href = canvas.toDataURL("image/png");
@@ -61,6 +76,8 @@ export class SharePage {
         };
 
         this.emailComposer.open(e);
-  	});
+  	}).catch((error) => {
+      console.error(error)
+    });
   }
 }

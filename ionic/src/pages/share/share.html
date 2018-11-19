@@ -21,9 +21,9 @@
 <ion-content padding>
 	<div class="content-div">
 		<p>Choose the backdrop by sliding it</p>
-		<ion-slides pager>
+		<ion-slides (ionSlideDidChange)="slideChanged()" pager>
 			<ion-slide>
-				<div id="capture">
+				<div id="capture0">
 				<img  class="my-picture" style="-webkit-clip-path: circle(40px at center); clip-path: circle(40px at center);
 				width: 11%; overflow: hidden;" [src]="postProvider.base64Image"
             *ngIf="postProvider.base64Image">
@@ -33,10 +33,12 @@
 			</ion-slide>
 
 			<ion-slide>
+        <div id="capture1">
 				<img class="my-picture" style="-webkit-clip-path: circle(40px at center); clip-path: circle(40px at center);
 				width: 11%; overflow: hidden;" [src]="postProvider.base64Image"
             *ngIf="postProvider.base64Image">
 				<img class="my-backdrop" src="../assets/imgs/backdrop3.png">
+        </div>
 				<p></p>
 			</ion-slide>
 
