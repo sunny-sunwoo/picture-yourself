@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { WelcomePage } from "../welcome/welcome";
+import { SuccessPage } from "../success/success";
 import * as html2canvas from 'html2canvas';
 import { PostProvider } from "../../providers/post/post";
 import { EmailComposer } from '@ionic-native/email-composer';
@@ -76,8 +77,10 @@ export class SharePage {
         };
 
         this.emailComposer.open(e);
+        this.navCtrl.push(SuccessPage);
   	}).catch((error) => {
       console.error(error)
     });
+
   }
 }
