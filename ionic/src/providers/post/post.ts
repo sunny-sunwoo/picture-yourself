@@ -53,6 +53,18 @@ export class PostProvider {
     this.emailImage = data;
     let buffer = new Buffer(data, 'base64');
 
+    Storage.remove(fileName)
+      .then(result => {
+        console.log("remove result", result);
+        this.put(fileName, buffer, cb);
+      })
+      .catch(err => {
+        console.log("remove err", err);
+        this.put(fileName, buffer, cb);
+      });
+  }
+
+  put(fileName, buffer, cb) {
     Storage.put(fileName, buffer, {
       contentType: "image/jpeg"
     })
