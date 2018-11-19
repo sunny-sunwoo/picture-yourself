@@ -24,13 +24,14 @@ tempW;
 // OrigImage.height/scl shouldn't have any floating point.
 // default img size for OrigImg: 640 * 640
 var scl = 32; 
+var edge_gen = 2;
 
 // refactoring for multiple images
 var origImages = [];
 var convImages = [];
 var LETTER_NUM = 26; 
 var charCount = 0;
-var LETTER_SIZE = 5;
+var LETTER_SIZE = 3;
 
 // default character set
 var charSet = [2, 12, 20];// index of CMU
@@ -67,7 +68,7 @@ function preload() {
 }
 
 function setup() {
-	createCanvas(origImages[0].width * 3, origImages[0].height);
+	createCanvas(origImages[0].width * LETTER_SIZE, origImages[0].height);
 	pixelDensity(1);
 	w = origImages[0].width/scl;
 	h = origImages[0].height/scl;
@@ -81,7 +82,7 @@ function setup() {
 
 function draw(newInput) {
 	count = 0;
-	var charLength = 3;
+	var charLength = LETTER_SIZE;
 	charCount = 0;
 	if (newInput) {
 		charSet = newInput;
@@ -117,7 +118,7 @@ function draw(newInput) {
 		}
 		charCount++;
 	}
-	console.log(count);
+	// console.log(count);
 	createSigmaObj();
 	noLoop();
 }
@@ -165,7 +166,7 @@ function createSigmaObj(){
 	}
 
 	data.edges = [];
-	for (i=0; i < count * 2 ; i++){
+	for (i=0; i < count * edge_gen ; i++){
 	   var obj = {
 	       source: 'n' + ((Math.random() * count) | 0),
 	       target: 'n' + ((Math.random() * count) | 0),
@@ -187,44 +188,70 @@ function updateJSON(combination) {
 	request.open('GET', 'http://ec2-34-228-225-161.compute-1.amazonaws.com:8080/PictureYourself/match?country=default', true);
 	request.onload = function () {
 		switch(combination) {
+
+// A	B	C	D	E	F	G	H	I	J	K	L	M	N	O	P	Q	R	S	T	U	V	W	X	Y	Z
+// 0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25
+
 		    case "United States":
 		        charSet = [20, 18, 0]; // USA
+		        LETTER_SIZE = 3;
 		        break;
 		    case "India":
-		        charSet = [8, 13, 3]; // IND
+		        charSet = [8, 13, 3, 8, 0]; // IND
+		        LETTER_SIZE = 5;
 		        break;
 		    case "Korea, Republic of":
-		        charSet = [10, 14, 17]; // KOR
+		        charSet = [10, 14, 17, 4, 0]; // KOR
+		        LETTER_SIZE = 5;
 		        break;
 		    case "China":
-		        charSet = [2, 7, 13]; // CHN
+		        charSet = [2, 7, 8, 13, 0]; // CHN
+		        LETTER_SIZE = 5;
 		        break;
 		    case "Taiwan, Province of China":
-		        charSet = [19, 22, 13]; // TWN
+		        charSet = [19, 0, 8, 22, 0, 13]; // TWN
+		        LETTER_SIZE = 6;
 		        break;
 		    case "Hong Kong":
-		        charSet = [7, 10, 6]; // HKG
+		        charSet = [7, 14, 13, 6, 10, 14, 13, 6]; // HKG
+		        LETTER_SIZE = 8;
 		        break;
 		    case "Italy":
-		        charSet = [8, 19, 0]; // ITA
+		        charSet = [8, 19, 0, 11, 24]; // ITA
+		        LETTER_SIZE = 5;
 		        break;
 		    case "Viet Nam":
-		        charSet = [21, 13, 12]; // VNM
+		        charSet = [21, 8, 4, 19, 13, 0, 12]; // VNM
+		        LETTER_SIZE = 7;
 		        break;
 		    case "Singapore":
-		        charSet = [18, 6, 15]; // SGP
+		        charSet = [18, 8, 13, 6, 0, 15, 14, 17, 4]; // SGP
+		        LETTER_SIZE = 9;
 		        break;
 		    case "Canada":
-		        charSet = [2, 0, 13]; // CAN
+		        charSet = [2, 0, 13, 0 , 3, 0]; // CAN
+		        LETTER_SIZE = 6;
 		        break;
 		    case "Japan":
-		        charSet = [9, 15, 13]; // JPN
+		        charSet = [9, 0, 15, 0, 13]; // JPN
+		        LETTER_SIZE = 5;
 		        break;
 		    case "United Kingdom":
 		        charSet = [6, 1, 17]; // GBR
+		        LETTER_SIZE = 3;
 		        break;
 		    default:
 		        charSet = [2, 12, 20]; // CMU
+		        LETTER_SIZE = 3;
+		}
+		if(LETTER_SIZE > 5) {
+			scl = 64;
+			edge_gen = 1.5;
+			setup();
+		} else {
+			scl = 32;
+			edge_gen = 2;
+			setup();
 		}
 		draw(charSet);
 		// Begin accessing JSON data here
@@ -270,24 +297,6 @@ function fetchPictureList(country) {
       console.error(error)
     })
 }
-
-/*
-function checkUpdate() {
-  const url = "http://ec2-34-228-225-161.compute-1.amazonaws.com:8080/PictureYourself/checkupdate";
-  fetch(url)
-    .then((response) => response.json())
-    .then((responseJson) => {
-      if (responseJson.update == 1) {
-      	console.log(responseJson)
-        fetchPictureList(responseJson.country);
-        updateJSON();
-      }
-    })
-    .catch((error) => {
-      console.error(error)
-    })
-}
-*/
 
 function checkUpdate() {
 	ws.send("checkUpdate");
