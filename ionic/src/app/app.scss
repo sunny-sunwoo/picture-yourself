@@ -107,6 +107,12 @@ body {
 		
 		display: block;
 		margin-top:40%;
+		margin-left: 80px;
+		margin-right: 80px;
+	}
+
+	#title-div p {
+		font-size: 1.3em;
 	}
 
 	#title-div h1 {
@@ -171,11 +177,34 @@ body {
 		background-position: center;
 	}
 
-
+	#success-div{
+		margin-top: 45%;
+	}
 	
+	#success-div h1 {
+		color: RGBA(181, 10, 13, 1.00);
+	}
 
 	#start-button{
 		margin-top:50px;
+	}
+
+	
+	
+	.my-picture {
+		position: absolute;
+		right:3.6%;
+		top: 1.2%;
+		
+		
+	}
+
+	
+	.my-backdrop {
+		position: relative;
+		top: 0px;
+		right:0px;
+		z-index: 100;
 	}
   
   	.ui-button {

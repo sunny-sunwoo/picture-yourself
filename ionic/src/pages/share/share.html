@@ -1,0 +1,59 @@
+<!--
+  Generated template for the SharePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+  	<ion-buttons end>
+      <button ion-button (click)="backToWelcome()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>share</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<div class="content-div">
+		<p>Choose the backdrop by sliding it</p>
+		<ion-slides (ionSlideDidChange)="slideChanged()" pager>
+			<ion-slide>
+				<div #capture id="capture0">
+				<img  class="my-picture" style="-webkit-clip-path: circle(40px at center); clip-path: circle(40px at center);
+				width: 11%; overflow: hidden;" [src]="postProvider.base64Image"
+            *ngIf="postProvider.base64Image">
+				<img class="my-backdrop" src="../assets/imgs/backdrop2.png">
+				</div>
+				<p></p>
+			</ion-slide>
+
+			<ion-slide>
+        <div #capture id="capture1">
+				<img class="my-picture" style="-webkit-clip-path: circle(40px at center); clip-path: circle(40px at center);
+				width: 11%; overflow: hidden;" [src]="postProvider.base64Image"
+            *ngIf="postProvider.base64Image">
+				<img class="my-backdrop" src="../assets/imgs/backdrop3.png">
+        </div>
+				<p></p>
+			</ion-slide>
+
+		</ion-slides>
+
+		<p>Please enter your email address to share your picture</p>
+		<form #loginForm="ngForm">
+		<ion-list>
+		<ion-item>
+		<ion-label floating>Email Address</ion-label>
+		<ion-input type="email"  [(ngModel)]="email" name="email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})">
+		</ion-input>
+	</ion-item>
+</ion-list>
+<button class="ui-button" [disabled]="!loginForm.form.valid"  (click)="captureCanvas()">SUBMIT</button>
+</form>
+	</div>
+</ion-content>

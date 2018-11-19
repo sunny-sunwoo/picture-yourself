@@ -9,6 +9,8 @@ import { WelcomePage } from "../pages/welcome/welcome";
 import { TermPage } from "../pages/term/term";
 import { Question_1Page } from "../pages/question-1/question-1";
 import { InstructionPage } from "../pages/instruction/instruction";
+import { SharePage } from "../pages/share/share";
+import { SuccessPage } from "../pages/success/success";
 
 @Component({
   templateUrl: 'app.html'
@@ -29,7 +31,9 @@ export class MyApp {
       { title: 'Term', component: TermPage },
       { title: 'Post', component: HomePage },
       { title: 'Instruction', component: InstructionPage },
-      { title: 'Question_1', component: Question_1Page }
+      { title: 'Question_1', component: Question_1Page },
+      { title: 'Share', component: SharePage },
+      { title: 'Success', component: SuccessPage }
     ];
 
   }

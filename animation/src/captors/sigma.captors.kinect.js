@@ -81,7 +81,7 @@
       }
 
       if (realBody == null) return;
-      head = body.joints[3];
+      head = realBody.joints[3];
       //console.log(head);
 
       if (_bodyFrame == null) {
