@@ -167,6 +167,28 @@
     input[type=range] {
       width: 160px;
     }
+
+    .main {
+        display: flex;
+        padding: 2em;
+        height: 90vh;
+        justify-content: center;
+        align-items: middle;
+    }
+    
+    .mid-circle {
+      fill: rgb(255, 0, 0);
+    }
+
+    .clockbox,
+    #clock {
+        height: 100%;
+    }
+
+    #hour {
+        transform-origin: 600px 600px;
+        /*transition: transform .1s;*/
+    }
   </style>
   
   <div id="graph-container"></div>
@@ -190,6 +212,15 @@
   <div id="message-div">
     <p id="message">Welcome to ETC!<br>You're <span id="visit-num">1st</span> visitor today<br>2018. 11. 04</p>
   </div>
+  <!-- <main class="main">
+    <div class="clockbox">
+      <svg id="clock" xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+        <g id="hour">
+          <circle class="mid-circle" cx="600" cy="600" r="16.2"/>
+        </g>
+      </svg>
+    </div>
+  </main> -->
 </div>
 
 
