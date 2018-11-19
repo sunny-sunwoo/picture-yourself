@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { File } from "@ionic-native/file";
 import { Buffer } from 'buffer';
 import { Storage } from 'aws-amplify';
+import { UniqueDeviceID } from '@ionic-native/unique-device-id';
 
 /*
   Generated class for the PostProvider provider.
@@ -22,6 +23,7 @@ export class PostProvider {
 
   constructor(
     private file: File,
+    private uniqueDeviceID: UniqueDeviceID,
     public http: HttpClient) {
       console.log('Hello PostProvider Provider');
   }
@@ -53,19 +55,11 @@ export class PostProvider {
     this.emailImage = data;
     let buffer = new Buffer(data, 'base64');
 
-    Storage.remove(fileName)
-      .then(result => {
-        console.log("remove result", result);
-        this.put(fileName, buffer, cb);
-      })
-      .catch(err => {
-        console.log("remove err", err);
-        this.put(fileName, buffer, cb);
-      });
-  }
+    var uniqid = require('uniqid');
+    let id = uniqid();
+    console.log(id)
 
-  put(fileName, buffer, cb) {
-    Storage.put(fileName, buffer, {
+    Storage.put(id + fileName, buffer, {
       contentType: "image/jpeg"
     })
     .then((result) => {
