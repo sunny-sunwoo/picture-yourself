@@ -77,7 +77,7 @@ export class SharePage {
             data
           ],
           subject: 'PictureYourself',
-          body: 'How are you? Nice greetings from PictureYourself',
+          body: 'Hello.  You look nice today.  Thank you for using Picture Yourself.',
           isHtml: true
         };
 
