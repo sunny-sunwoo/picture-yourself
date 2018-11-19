@@ -177,6 +177,21 @@ body {
 	#start-button{
 		margin-top:50px;
 	}
+
+	
+	.my-picture {
+		position: absolute;
+		right:27px;
+		top: 20px;
+		z-index: 100;
+	}
+
+	
+	.my-backdrop {
+		position: relative;
+		top: 0px;
+		right:0px;
+	}
   
   	.ui-button {
   		font-family: "lightFont" !important;
