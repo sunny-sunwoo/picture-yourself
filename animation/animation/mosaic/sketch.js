@@ -30,6 +30,7 @@ var origImages = [];
 var convImages = [];
 var LETTER_NUM = 26; 
 var charCount = 0;
+var LETTER_SIZE = 5;
 
 // default character set
 var charSet = [2, 12, 20];// index of CMU
