@@ -107,6 +107,12 @@ body {
 		
 		display: block;
 		margin-top:40%;
+		margin-left: 80px;
+		margin-right: 80px;
+	}
+
+	#title-div p {
+		font-size: 1.3em;
 	}
 
 	#title-div h1 {
@@ -179,11 +185,13 @@ body {
 	}
 
 	
+	
 	.my-picture {
 		position: absolute;
-		right:27px;
-		top: 20px;
+		right:3.6%;
+		top: 1.2%;
 		z-index: 100;
+		
 	}
 
 	
