@@ -20,10 +20,12 @@
 
 <ion-content padding>
 	<div class="content-div">
+		<p>Choose the backdrop by sliding it</p>
 		<ion-slides pager>
 			<ion-slide>
 				<div id="capture">
-				<img  class="my-picture" style="height: 92px;" [src]="postProvider.base64Image"
+				<img  class="my-picture" style="-webkit-clip-path: circle(40px at center); 
+				width: 11%; overflow: hidden;" [src]="postProvider.base64Image"
             *ngIf="postProvider.base64Image">
 				<img class="my-backdrop" src="../assets/imgs/backdrop2.png">
 				</div>
@@ -31,14 +33,16 @@
 			</ion-slide>
 
 			<ion-slide>
-				<img class="my-picture" style="height: 92px;" src="../assets/imgs/pic.png">
+				<img class="my-picture" style="-webkit-clip-path: circle(40px at center); 
+				width: 11%; overflow: hidden;" [src]="postProvider.base64Image"
+            *ngIf="postProvider.base64Image">
 				<img class="my-backdrop" src="../assets/imgs/backdrop3.png">
 				<p></p>
 			</ion-slide>
 
 		</ion-slides>
 
-		<p>Please submit your email for share</p>
+		<p>Please enter your email address to share your picture</p>
 		<form #loginForm="ngForm">
 		<ion-list>
 		<ion-item>
