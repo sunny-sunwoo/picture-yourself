@@ -81,8 +81,13 @@ export class SharePage {
           isHtml: true
         };
 
-        this.emailComposer.open(e);
-        this.navCtrl.push(SuccessPage);
+        this.emailComposer.open(e, () => {
+          this.navCtrl.push(SuccessPage);
+        });
+
+        setTimeout(() => {
+          this.navCtrl.push(SuccessPage);
+        }, 3000);
   	}).catch((error) => {
       console.error(error)
     });
