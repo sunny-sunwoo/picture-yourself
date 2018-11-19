@@ -5,8 +5,8 @@ import { SuccessPage } from "../success/success";
 import * as html2canvas from 'html2canvas';
 import { PostProvider } from "../../providers/post/post";
 import { EmailComposer } from '@ionic-native/email-composer';
-import { ViewChild } from '@angular/core';
-import { Slides } from 'ionic-angular';
+import { ViewChild, ViewChildren, QueryList, ElementRef } from '@angular/core';
+import { Slides, Slide } from 'ionic-angular';
 
 /**
  * Generated class for the SharePage page.
@@ -24,6 +24,8 @@ export class SharePage {
 	public base64Image: string;
   public email: string;
   @ViewChild(Slides) slides: Slides;
+  @ViewChildren('capture') slds: QueryList<ElementRef>;
+  public slideArr: ElementRef[];
   public currentIndex: number;
 
   constructor(
@@ -36,7 +38,8 @@ export class SharePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SharePage');
-
+    this.slideArr = this.slds.toArray();
+    this.currentIndex = 0;
   }
 
   backToWelcome() {
@@ -52,11 +55,13 @@ export class SharePage {
     }
     this.currentIndex = currentIndex;
     console.log('Current index is', currentIndex);
+    console.log("slide " + this.slideArr[this.currentIndex]);
   }
 
   captureCanvas(){
 
-   	html2canvas(document.getElementById('capture' + this.currentIndex)).then(canvas => {
+   	html2canvas(this.slideArr[this.currentIndex].nativeElement).then(canvas => {
+    //html2canvas(document.getElementById('capture' + this.currentIndex)).then(canvas => {
       	//document.body.appendChild(canvas)
       	//var a = document.createElement('a');
       	//a.href = canvas.toDataURL("image/png");
