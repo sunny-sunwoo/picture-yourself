@@ -31,6 +31,9 @@ var convImages = [];
 var LETTER_NUM = 26; 
 var charCount = 0;
 
+// default character set
+var charSet = [2, 12, 20];// index of CMU
+
 //animate test
 var L = 30,
 N = 100;
@@ -44,9 +47,11 @@ var img = (Math.random() >= 0.2);
 var data = {};
 data.nodes = [];
 
+
 // write json
 var json = {}; // new  JSON Object
 json.nodes = [];
+json.edges = [];
 
 // preload
 function preload() {
@@ -54,7 +59,6 @@ function preload() {
 		var currLetter = String.fromCharCode(i + 65);
 		origImages[i] = loadImage(`mosaic/src/characters/edited-final/${currLetter}.png`);
 	}
-	data = loadJSON('mosaic/json/input.json');
 	centerImg = loadImage('mosaic/src/headshot-2020/edited-square/21.png');
 	for(var i = 0; i < imageNumber; i++) {
 		imgFiles[i] = loadImage(`mosaic/src/img/${i}.png`);
@@ -66,6 +70,7 @@ function setup() {
 	pixelDensity(1);
 	w = origImages[0].width/scl;
 	h = origImages[0].height/scl;
+	
 	for(var i = 0; i < LETTER_NUM; i++) {
 		convImages[i] = createImage(w, h);
 		convImages[i].copy(origImages[i], 0, 0, origImages[i].width, origImages[i].height, 0, 0, w, h);
@@ -73,16 +78,25 @@ function setup() {
 	}
 }
 
-function draw() {
+function draw(newInput) {
+	count = 0;
 	var charLength = 3;
-
+	charCount = 0;
+	if (newInput) {
+		charSet = newInput;
+	}
+	for (let i = positionList.length - 1; i >= 0; i--) {
+		positionList.splice(i, 1);
+	}
+	// console.log(charSet);
 	while(charCount < charLength) {
-		for(var y = 0; y < convImages[charCount].height; y++) {
-			for(var x = 0; x < convImages[charCount].width; x++) {	
-				var index = (x + y * convImages[charCount].width) * 4;
-				var r = convImages[charCount].pixels[index];
-				var g = convImages[charCount].pixels[index+1];
-				var b = convImages[charCount].pixels[index+2];
+		var imgIndex = charSet[charCount];
+		for(var y = 0; y < convImages[imgIndex].height; y++) {
+			for(var x = 0; x < convImages[imgIndex].width; x++) {	
+				var index = (x + y * convImages[imgIndex].width) * 4;
+				var r = convImages[imgIndex].pixels[index];
+				var g = convImages[imgIndex].pixels[index+1];
+				var b = convImages[imgIndex].pixels[index+2];
 
 				var bright = (r+g+b)/3;
 				var w = map(bright, 0, 255, 0, scl);
@@ -102,21 +116,28 @@ function draw() {
 		}
 		charCount++;
 	}
+	console.log(count);
 	createSigmaObj();
 	noLoop();
 }
 
 function createSigmaObj(){
+	for (let i = data.nodes.length - 1; i >= 0; i--) {
+		data.nodes.splice(i, 1);
+	}
+	for (let i = json.nodes.length - 1; i >= 0; i--) {
+		json.nodes.splice(i, 1);
+	}
 	for (i=0; i < count ; i++){
 	   var obj = {
 	       label: i,
 	       id: 'n' +  i,
 	       type: img ? 'image' : 'def',
 	       url: img ? urls[Math.floor(Math.random() * urls.length)] : null,
-	       abc_x: positionList[i].x,
-	       abc_y: positionList[i].y,
-	       abc_color: "#ddd",
-	       abc_size: Math.random()*20 + 15,
+	       typo_x: positionList[i].x,
+	       typo_y: positionList[i].y,
+	       typo_color: "#ddd",
+	       typo_size: Math.random()*20 + 15,
 	       // circular_x: L * Math.cos(Math.PI * 2 * i / N - Math.PI / 2),
 	       // circular_y: L * Math.sin(Math.PI * 2 * i / N - Math.PI / 2),
 	       // circular_size: Math.random(),
@@ -139,10 +160,10 @@ function createSigmaObj(){
 	}
 
 	for(i=0; i<count; i++) {
-		json.nodes[i] = data.nodes[i + 100];
+		json.nodes[i] = data.nodes[i];
 	}
 
-	data.edges = []
+	data.edges = [];
 	for (i=0; i < count * 2 ; i++){
 	   var obj = {
 	       source: 'n' + ((Math.random() * count) | 0),
@@ -150,30 +171,71 @@ function createSigmaObj(){
 	       id: 'e' + i
 	       // id: 'e' + i * i
 	   }
-	   data.edges.push(obj)
+	   data.edges.push(obj);
 	}
-	// json.nodes = data.nodes;
 	json.edges = data.edges;
-	console.log(json);
+	// console.log(data);
+	// console.log(json);
 	// saveJSON(json, 'data.json');
 
 }
 
-function updateJSON() {
+function updateJSON(combination) {
 	var request = new XMLHttpRequest();
 	var jsonData = {};
 	request.open('GET', 'http://ec2-34-228-225-161.compute-1.amazonaws.com:8080/PictureYourself/match?country=default', true);
 	request.onload = function () {
-	  // Begin accessing JSON data here
-	  jsonData = JSON.parse(this.response);
-	  var lastIndex = jsonData.postList.length - 1;
-	  var newUrl = "https://s3.amazonaws.com/newpicbuck/public/" + jsonData.postList[lastIndex].photo;
-	  var index = Math.floor(Math.random() * count);
-	  currentIndex = index;
-	  json.nodes[index].url = newUrl;
-	 
-	  // saveJSON(json, 'data.json');
-	  getJSON(json, newUrl);
+		switch(combination) {
+		    case "United States":
+		        charSet = [20, 18, 0]; // USA
+		        break;
+		    case "India":
+		        charSet = [8, 13, 3]; // IND
+		        break;
+		    case "Korea, Republic of":
+		        charSet = [10, 14, 17]; // KOR
+		        break;
+		    case "China":
+		        charSet = [2, 7, 13]; // CHN
+		        break;
+		    case "Taiwan, Province of China":
+		        charSet = [19, 22, 13]; // TWN
+		        break;
+		    case "Hong Kong":
+		        charSet = [7, 10, 6]; // HKG
+		        break;
+		    case "Italy":
+		        charSet = [8, 19, 0]; // ITA
+		        break;
+		    case "Viet Nam":
+		        charSet = [21, 13, 12]; // VNM
+		        break;
+		    case "Singapore":
+		        charSet = [18, 6, 15]; // SGP
+		        break;
+		    case "Canada":
+		        charSet = [2, 0, 13]; // CAN
+		        break;
+		    case "Japan":
+		        charSet = [9, 15, 13]; // JPN
+		        break;
+		    case "United Kingdom":
+		        charSet = [6, 1, 17]; // GBR
+		        break;
+		    default:
+		        charSet = [2, 12, 20]; // CMU
+		}
+		draw(charSet);
+		// Begin accessing JSON data here
+		jsonData = JSON.parse(this.response);
+		var lastIndex = jsonData.postList.length - 1;
+		var newUrl = "https://s3.amazonaws.com/newpicbuck/public/" + jsonData.postList[lastIndex].photo;
+		var index = Math.floor(Math.random() * count);
+		currentIndex = index;
+		json.nodes[index].url = newUrl;
+		 
+		// saveJSON(json, 'data.json');
+		getJSON(json, newUrl);
 	}
 	request.send();
 }
@@ -181,10 +243,8 @@ function updateJSON() {
 const HOST = "https://s3.amazonaws.com/newpicbuck/public/";
 const IMAGES = document.querySelector("ul");
 
-// console.log(window.location.href);
 var href = new URL(window.location.href);
 var country = href.searchParams.get("country");
-// console.log(country);
 if (!country)
   country = "default";
 fetchPictureList(country);
@@ -196,16 +256,14 @@ function fetchPictureList(country) {
     .then((response) => response.json())
     .then((responseJson) => {
     	//initial json from api
-      console.log(responseJson);
+      // console.log(responseJson);
       for(var i = 1; i < responseJson.postList.length; i++){
       	eachUrl = "https://s3.amazonaws.com/newpicbuck/public/" + responseJson.postList[i].photo;
         urls.push(eachUrl);
       }
-      console.log(urls);
+      // console.log(urls);
       createSigmaObj();
       initialJSON(json);
-
-      //updateList(responseJson.postList)
     })
     .catch((error) => {
       console.error(error)
@@ -236,18 +294,18 @@ function checkUpdate() {
 
 var interval = setInterval(checkUpdate, 1000);
 
-var ws = new WebSocket("ws://ec2-34-228-225-161.compute-1.amazonaws.com:8080/WebSocket")
+var ws = new WebSocket("ws://ec2-34-228-225-161.compute-1.amazonaws.com:8080/WebSocket");
 
 ws.onopen = function() {
-  console.log("Connected to websocket server")
+  console.log("Connected to websocket server");
 }
 
 ws.onclose = function() {
-  console.log("DISCONNECTED")
+  console.log("DISCONNECTED");
 }
 
 ws.onmessage = function(payload) {
-  console.log(payload.data)
+  console.log(payload.data);
 	//fetchPictureList(payload.data);
-	updateJSON();
+	updateJSON(payload.data);
 }
