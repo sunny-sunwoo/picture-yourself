@@ -125,7 +125,7 @@
       filter: grayscale(100%);
     }
     #control-pane {
-      
+      display: none;
       top: 10px;
       /*bottom: 10px;*/
       right: 10px;
@@ -683,10 +683,11 @@ function myAppear(graph) {
       setTimeout( myNew, 4000)
       setTimeout( function() {myTransition(before, after)}, 4500);
       setTimeout( myMessageIn, 5000);
-      setTimeout( myMessageOut, 15000);
+      setTimeout( myMessageOut, 22000);
       //setTimeout( function() {myDisappear(graph)}, 20000);
-      setTimeout( function() {myTransition(after, before)}, 18000);
-     
+      setTimeout( function() {myTransition(after, before)}, 10000);
+      setTimeout( function() {myTransition(before, after)}, 18000);
+      setTimeout( function() {myTransition(after, before)}, 25000);
   }
 
 
