@@ -24,7 +24,7 @@
 		<ion-slides pager>
 			<ion-slide>
 				<div id="capture">
-				<img  class="my-picture" style="-webkit-clip-path: circle(40px at center); 
+				<img  class="my-picture" style="-webkit-clip-path: circle(40px at center); clip-path: circle(40px at center);
 				width: 11%; overflow: hidden;" [src]="postProvider.base64Image"
             *ngIf="postProvider.base64Image">
 				<img class="my-backdrop" src="../assets/imgs/backdrop2.png">
@@ -33,7 +33,7 @@
 			</ion-slide>
 
 			<ion-slide>
-				<img class="my-picture" style="-webkit-clip-path: circle(40px at center); 
+				<img class="my-picture" style="-webkit-clip-path: circle(40px at center); clip-path: circle(40px at center);
 				width: 11%; overflow: hidden;" [src]="postProvider.base64Image"
             *ngIf="postProvider.base64Image">
 				<img class="my-backdrop" src="../assets/imgs/backdrop3.png">

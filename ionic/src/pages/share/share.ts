@@ -39,25 +39,28 @@ export class SharePage {
   }
 
   captureCanvas(){
-    let e = {
-      to: this.email,
-      attachments: [
-        'base64:PictureYourself.jpg//' + this.postProvider.emailImage
-      ],
-      subject: 'PictureYourself',
-      body: 'How are you? Nice greetings from PictureYourself',
-      isHtml: true
-    };
 
-    this.emailComposer.open(e);
+   	html2canvas(document.getElementById('capture')).then(canvas => {
+      	//document.body.appendChild(canvas)
+      	//var a = document.createElement('a');
+      	//a.href = canvas.toDataURL("image/png");
+      	//a.download = 'compiled.png';
+      	//a.click();
+      	//console.log('yay');
+        let image = canvas.toDataURL("image/jpeg");
+        const data = 'base64:PictureYourself.jpg//' + image.substring(23);
 
-   	// html2canvas(document.getElementById('capture')).then(canvas => {
-    //   	//document.body.appendChild(canvas)
-    //   	var a = document.createElement('a');
-    //   	a.href = canvas.toDataURL("image/png");
-    //   	a.download = 'compiled.png';
-    //   	a.click();
-    //   	console.log('yay');
-  	// });
+        let e = {
+          to: this.email,
+          attachments: [
+            data
+          ],
+          subject: 'PictureYourself',
+          body: 'How are you? Nice greetings from PictureYourself',
+          isHtml: true
+        };
+
+        this.emailComposer.open(e);
+  	});
   }
 }
