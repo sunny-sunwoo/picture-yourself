@@ -492,7 +492,6 @@ sigma.parsers.json('data-random.json', s, function (s) {
     // Start the layout:
 
       s.startNoverlap(); */
-
 });
 
 
@@ -515,9 +514,8 @@ function getJSON(jsonInput, newUrl) {
  
   s.graph.clear();
   s.graph.read(jsonInput);
-
   $("#target-img").attr("src",newSrc);
-  myAnimation(s.graph, 'random_', 'abc_');
+  myAnimation(s.graph, 'random_', 'typo_');
 
   }
 function grayScale(context) {
@@ -703,9 +701,9 @@ var currentIndex;
       });*/
      currentNodes[currentIndex].color ="#B50A0D";
      currentNodes[currentIndex].label = "You're Here!";
-      console.log(currentNodes[currentIndex].label);
+      // console.log(currentNodes[currentIndex].label);
      currentNodes[currentIndex].strokeStyle = currentNodes[currentIndex].color;
-      $("#target-img").addClass("big").css({"display": "initial"});
+     $("#target-img").addClass("big").css({"display": "initial"});
 
      
   var currentNode = currentNodes[currentIndex];
@@ -847,8 +845,8 @@ $("#click-change").on("click", function() {
 
 _.$('click-appear').addEventListener("click", function(){ myAppear(s.graph); });
 _.$('click-disappear').addEventListener("click", function(){ myDisappear(s.graph); });
-_.$('click-transition').addEventListener("click", function (){myTransition('random_', 'abc_');});
-_.$('click-animation').addEventListener("click", function(){myAnimation(s.graph, 'random_', 'abc_');});
+_.$('click-transition').addEventListener("click", function (){myTransition('random_', 'typo_');});
+_.$('click-animation').addEventListener("click", function(){myAnimation(s.graph, 'random_', 'typo_');});
 
 //_.$('click-change').addEventListener("click", function(){ myChange(s.graph);});
 
