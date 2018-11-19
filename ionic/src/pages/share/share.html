@@ -23,7 +23,8 @@
 		<ion-slides pager>
 			<ion-slide>
 				<div id="capture">
-				<img  class="my-picture" style="height: 92px;" src="../assets/imgs/pic.png">
+				<img  class="my-picture" style="height: 92px;" [src]="postProvider.base64Image"
+            *ngIf="postProvider.base64Image">
 				<img class="my-backdrop" src="../assets/imgs/backdrop2.png">
 				</div>
 				<p></p>
@@ -50,4 +51,3 @@
 </form>
 	</div>
 </ion-content>
-

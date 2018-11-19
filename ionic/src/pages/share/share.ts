@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { WelcomePage } from "../welcome/welcome";
 import * as html2canvas from 'html2canvas';
+import { PostProvider } from "../../providers/post/post";
 
 /**
  * Generated class for the SharePage page.
@@ -18,12 +19,15 @@ import * as html2canvas from 'html2canvas';
 export class SharePage {
 	public base64Image: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private postProvider: PostProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SharePage');
-  
+
   }
 
   backToWelcome() {

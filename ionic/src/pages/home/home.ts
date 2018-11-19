@@ -46,7 +46,7 @@ export class HomePage {
         const fileName = imageData.substring(index);
         this.file.readAsDataURL(dir, fileName)
           .then(res => {
-            this.base64Image = res;
+            this.postProvider.base64Image = res;
           })
           .catch(err => console.log(err));
       }, err => {
@@ -55,7 +55,7 @@ export class HomePage {
   }
 
   share() {
-    this.postProvider.postImage(this.filePath, this.base64Image, () => {
+    this.postProvider.postImage(this.filePath, this.postProvider.base64Image, () => {
       console.log('postImageComplete');
       this.navCtrl.push(Question_1Page);
     });
