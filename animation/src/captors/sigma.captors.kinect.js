@@ -55,7 +55,8 @@
 
     sigma.classes.dispatcher.extend(this);
 
-    var socket = io("http://localhost:3000");
+    //var socket = io("http://localhost:3000");
+    var socket = io("http://128.2.236.245:3000");
 
     socket.on("disconnect", function() {
       console.log("Disconnected");
@@ -90,7 +91,7 @@
       _bodyFrame = bodyFrame;
 
       _kinectMoveHandler(head);
-      _kinectWheelHandler(head);
+      //_kinectWheelHandler(head);
     })
 
     function _kinectWheelHandler(head) {
@@ -112,6 +113,8 @@
           (head.depthY - 0.5) * 1000,
           true
         );
+        pos.x = 0;
+        pos.y = 0;
         coordinates = {
           x: pos.x * (1 - ratio) + _camera.x,
           y: pos.y * (1 - ratio) + _camera.y,
@@ -124,6 +127,7 @@
     function _kinectMoveHandler(head) {
       var x,
           y,
+          newRatio,
           pos;
 
       if (_isMouseDown) {
@@ -136,21 +140,27 @@
         var scale = 1000 + 8000 * (_startKinectZ - head.cameraZ);
 
         pos = _camera.cameraPosition(
-          (_startMouseX - head.depthX) * scale,
-          (_startMouseY - head.depthY) * scale,
+          (_startMouseX - head.cameraX) * scale,
+          -(_startMouseY - head.cameraY) * scale,
           true
         );
 
         x = _startCameraX - pos.x;
         y = _startCameraY - pos.y;
 
-        if (x !== _camera.x || y !== _camera.y) {
+        newRatio = Math.max(
+          0.01,
+          1 - 0.5 * (_startKinectZ - head.cameraZ)
+        );
+
+        if (x !== _camera.x || y !== _camera.y || newRatio != _camera.ratio) {
           _lastCameraX = _camera.x;
           _lastCameraY = _camera.y;
 
           _camera.goTo({
             x: x,
-            y: y
+            y: y,
+            ratio: newRatio
           });
         }
       }
@@ -166,8 +176,8 @@
       _lastKinectZ = head.cameraZ;
       _lastCameraRatio = 1;
 
-      _startMouseX = head.depthX;
-      _startMouseY = head.depthY;
+      _startMouseX = head.cameraX;
+      _startMouseY = head.cameraY;
       _startKinectZ = head.cameraZ;
 
       _isMouseDown = true;
