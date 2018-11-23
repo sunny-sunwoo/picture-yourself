@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { WelcomePage } from "../welcome/welcome";
-import { SharePage } from "../share/share";
 
 /**
- * Generated class for the InstructionPage page.
+ * Generated class for the SuccessPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,24 +11,29 @@ import { SharePage } from "../share/share";
 
 @IonicPage()
 @Component({
-  selector: 'page-instruction',
-  templateUrl: 'instruction.html',
+  selector: 'page-success',
+  templateUrl: 'success.html',
 })
-export class InstructionPage {
+export class SuccessPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad InstructionPage');
+    console.log('ionViewDidLoad SuccessPage');
+    this.goHome();
   }
 
-  backToWelcome() {
-    this.navCtrl.setRoot(WelcomePage);
+  goHome(){
+	setTimeout(() => {
+		this.navCtrl.push(WelcomePage);
+	}, 5000);
   }
 
-  toShare(){
-    this.navCtrl.setRoot(SharePage);
+  navigate() {
+  this.navCtrl.push(WelcomePage);
   }
+
+
 
 }

@@ -41,7 +41,6 @@
    */
   function Noverlap() {
     var self = this;
-
     this.init = function (sigInst, options) {
       options = options || {};
 
@@ -101,7 +100,7 @@
 
       this.iterCount--;
       this.running = false;
-
+     
       for (i=0; i < nodesCount; i++) {
         n = nodes[i];
         n.dn.dx = 0;
@@ -136,7 +135,7 @@
       //Place nodes in grid
       for (i=0; i < nodesCount; i++) {
         n = nodes[i];
-
+       // console.log(n);
         nxmin = n.dn_x - (n.dn_size*self.config.scaleNodes + self.config.nodeMargin);
         nxmax = n.dn_x + (n.dn_size*self.config.scaleNodes + self.config.nodeMargin);
         nymin = n.dn_y - (n.dn_size*self.config.scaleNodes + self.config.nodeMargin);
@@ -146,9 +145,13 @@
         maxXBox = Math.floor(self.config.gridSize* (nxmax - xmin) / (xmax - xmin) );
         minYBox = Math.floor(self.config.gridSize* (nymin - ymin) / (ymax - ymin) );
         maxYBox = Math.floor(self.config.gridSize* (nymax - ymin) / (ymax - ymin) );
+        //console.log(minXBox);
+        //console.log("///////" + nxmin + ", " + xmin + ", " + xmax + ", " + xmin);
+        //console.log("^^^^^^^" + n.dn_x + ", " + n.dn_size + ", " + self.config.scaleNodes + ", " + self.config.nodeMargin );
         for(col = minXBox; col <= maxXBox; col++) {
           for(row = minYBox; row <= maxYBox; row++) {
             grid[row][col].push(n.id);
+            
           }
         }
       }
@@ -178,6 +181,8 @@
       //If two nodes overlap then repulse them
       for (i=0; i < nodesCount; i++) {
         n1 = nodes[i];
+        console.log(adjacentNodes[n1.id]);
+        //if(adjacentNodes[n1.id] != null){ // added this line
         adjacentNodes[n1.id].forEach(function(nodeId) {
           var n2 = self.sigInst.graph.nodes(nodeId);
           var xDist = n2.dn_x - n1.dn_x;
@@ -195,6 +200,7 @@
             }
           }
         });
+
       }
 
       for (i=0; i < nodesCount; i++) {
@@ -226,13 +232,15 @@
       if (this.running) return;
 
       var nodes = this.sigInst.graph.nodes();
-
+      console.log(this.sigInst.renderers[self.config.rendererIndex].options.prefix);
       var prefix = this.sigInst.renderers[self.config.rendererIndex].options.prefix;
+      //var prefix = 'random_';
 
       this.running = true;
 
       // Init nodes
       for (var i = 0; i < nodes.length; i++) {
+        
         nodes[i].dn_x = nodes[i][prefix + 'x'];
         nodes[i].dn_y = nodes[i][prefix + 'y'];
         nodes[i].dn_size = nodes[i][prefix + 'size'];

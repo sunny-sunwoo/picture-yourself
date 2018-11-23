@@ -11,7 +11,7 @@
   <div id="photo-div" class="content-div"> <!-- photo review -->
 		<h2>Please review your photo!</h2>
     <p>Inappropriate photos will be removed without notice.</p>
-		<img [src]="base64Image" *ngIf="base64Image">
+		<img [src]="postProvider.base64Image" *ngIf="postProvider.base64Image" />
 		<button (click)="tryAgain()" class="ui-button">TRY AGAIN</button>
 		<button (click)="share()" class="ui-button">SUBMIT</button>
 	</div>

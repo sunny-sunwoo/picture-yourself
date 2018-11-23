@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { File } from "@ionic-native/file";
 import { Buffer } from 'buffer';
 import { Storage } from 'aws-amplify';
+import { UniqueDeviceID } from '@ionic-native/unique-device-id';
 
 /*
   Generated class for the PostProvider provider.
@@ -15,11 +16,34 @@ const API: string = "http://ec2-34-228-225-161.compute-1.amazonaws.com:8080/Pict
 @Injectable()
 export class PostProvider {
   public photoId = -1;
+  public base64Image: string;
+  public country = "";
+  public emailImage: string;
+
 
   constructor(
     private file: File,
+    private uniqueDeviceID: UniqueDeviceID,
     public http: HttpClient) {
       console.log('Hello PostProvider Provider');
+  }
+
+  answerQuestion(text, cb) {
+    this.country = text
+    let url = API
+              + 'question?country='
+              + text
+              + '&id='
+              + this.photoId;
+    fetch(url)
+      .then((response) => response.json())
+      .then((responseJson) => {
+        console.log(responseJson)
+        cb(responseJson.ok)
+      })
+      .catch((error) => {
+        console.error(error)
+      })
   }
 
   postImage(filePath, base64Image, cb) {
@@ -28,9 +52,14 @@ export class PostProvider {
     const fileName = filePath.substring(index);
 
     const data = base64Image.substring(23);
+    this.emailImage = data;
     let buffer = new Buffer(data, 'base64');
 
-    Storage.put(fileName, buffer, {
+    var uniqid = require('uniqid');
+    let id = uniqid();
+    console.log(id)
+
+    Storage.put(id + fileName, buffer, {
       contentType: "image/jpeg"
     })
     .then((result) => {

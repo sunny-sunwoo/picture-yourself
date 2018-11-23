@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { InstructionPage } from "../instruction/instruction";
+import { Question_2Page } from "../question-2/question-2";
+import { PostProvider } from "../../providers/post/post";
 
 /**
  * Generated class for the Question_1Page page.
@@ -15,16 +16,23 @@ import { InstructionPage } from "../instruction/instruction";
   templateUrl: 'question-1.html',
 })
 export class Question_1Page {
+  public country = "";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    private postProvider: PostProvider,
+    public navCtrl: NavController,
+    public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Question_1Page');
   }
 
-  instruction(){
-  	
-      this.navCtrl.push(InstructionPage);
+  nextQuestion(){
+    console.log("answerQuestion", this.country);
+    this.postProvider.answerQuestion(this.country, () => {
+      this.navCtrl.push(Question_2Page);
+    })
+      //this.navCtrl.push(InstructionPage);
   }
 }
