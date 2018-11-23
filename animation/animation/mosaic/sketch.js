@@ -183,11 +183,13 @@ function createSigmaObj(){
 }
 
 function updateJSON(combination) {
+	var obj = JSON.parse(combination);
+	console.log(obj);
 	var request = new XMLHttpRequest();
 	var jsonData = {};
 	request.open('GET', 'http://ec2-34-228-225-161.compute-1.amazonaws.com:8080/PictureYourself/match?country=default', true);
 	request.onload = function () {
-		switch(combination) {
+		switch(obj.country) {
 
 // A	B	C	D	E	F	G	H	I	J	K	L	M	N	O	P	Q	R	S	T	U	V	W	X	Y	Z
 // 0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25
@@ -267,7 +269,7 @@ function updateJSON(combination) {
 		currentIndex = index;
 		json.nodes[index].url = newUrl;
 		
-		if(combination != "default"){
+		if(obj.country != "default"){
 			// saveJSON(json, 'data.json');
 			getJSON(json, newUrl);
 		} else {
