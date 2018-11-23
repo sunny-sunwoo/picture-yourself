@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { InstructionPage } from "../instruction/instruction";
+import { Question_2Page } from "../question-2/question-2";
 import { PostProvider } from "../../providers/post/post";
 
 /**
@@ -28,10 +28,10 @@ export class Question_1Page {
     console.log('ionViewDidLoad Question_1Page');
   }
 
-  instruction(){
-    console.log("answerQuestion", this.country)
+  nextQuestion(){
+    console.log("answerQuestion", this.country);
     this.postProvider.answerQuestion(this.country, () => {
-      this.navCtrl.push(InstructionPage);
+      this.navCtrl.push(Question_2Page);
     })
       //this.navCtrl.push(InstructionPage);
   }

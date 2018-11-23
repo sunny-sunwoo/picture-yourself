@@ -49,6 +49,7 @@ public class PictureServlet extends HttpServlet {
                 result.put("id", rs.getInt(1));
                 Model.instance().isUpdate = true;
                 Model.instance().country = country;
+                Model.instance().interest = null;
             }
             else {
                 System.out.println("insert err");

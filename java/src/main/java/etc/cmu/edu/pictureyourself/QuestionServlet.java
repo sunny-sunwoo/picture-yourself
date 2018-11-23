@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -34,28 +35,43 @@ public class QuestionServlet extends HttpServlet {
             throws ServletException, IOException {
         JSONObject result = new JSONObject();
         String country = request.getParameter("country");
+        String interest = request.getParameter("interest");
         int id = Integer.valueOf(request.getParameter("id"));
         //System.out.println("country " + country);
         //System.out.println("id " + id);
-        String query = "update users set country = ? where id = ?";
-        try {
-            PreparedStatement pstmt = conn.prepareStatement(query);
-            pstmt.setString(1, country);
-            pstmt.setInt(2, id);
-            int row = pstmt.executeUpdate();
-            //System.out.println("row " + row);
-            if (row != 0)
-                result.put("ok", 1);
-            else
-                result.put("ok", 0);
-
-            if (row != 0) {
-                Model.instance().isUpdate = true;
-                Model.instance().country = country;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        //String query = "update users set country = ? where id = ?";
+        List<String> queries = new ArrayList<>();
+        if (country != null) queries.add("country = ?");
+        if (interest != null) queries.add("interest = ?");
+        if (queries.size() == 0) {
             result.put("ok", 0);
+        } else {
+            try {
+                String query = "update users set " + String.join(", ", queries) + " where id = ?";
+                //System.out.println(country);
+                //System.out.println(interest);
+                //System.out.println(query);
+                PreparedStatement pstmt = conn.prepareStatement(query);
+                int i = 1;
+                if (country != null) pstmt.setString(i++, country);
+                if (interest != null) pstmt.setString(i++, interest);
+                pstmt.setInt(i, id);
+                int row = pstmt.executeUpdate();
+                //System.out.println("row " + row);
+                if (row != 0)
+                    result.put("ok", 1);
+                else
+                    result.put("ok", 0);
+
+                if (row != 0) {
+                    Model.instance().isUpdate = true;
+                    if (country != null) Model.instance().country = country;
+                    if (interest != null) Model.instance().interest = interest;
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+                result.put("ok", 0);
+            }
         }
 
         response.addHeader("Access-Control-Allow-Origin", "*");
