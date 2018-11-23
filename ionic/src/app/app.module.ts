@@ -9,6 +9,7 @@ import { ListPage } from '../pages/list/list';
 import { WelcomePage } from "../pages/welcome/welcome";
 import { TermPage } from "../pages/term/term";
 import { Question_1Page } from "../pages/question-1/question-1";
+import { Question_2Page } from "../pages/question-2/question-2";
 import { InstructionPage } from "../pages/instruction/instruction";
 import { SharePage } from "../pages/share/share";
 import { SuccessPage } from "../pages/success/success";
@@ -30,6 +31,7 @@ import { PostProvider } from '../providers/post/post';
     WelcomePage,
     TermPage,
     Question_1Page,
+    Question_2Page,
     InstructionPage,
     SharePage,
     SuccessPage
@@ -47,6 +49,7 @@ import { PostProvider } from '../providers/post/post';
     WelcomePage,
     TermPage,
     Question_1Page,
+    Question_2Page,
     InstructionPage,
     SharePage,
     SuccessPage
