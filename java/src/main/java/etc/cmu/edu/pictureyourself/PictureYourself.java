@@ -20,6 +20,8 @@ import static io.undertow.servlet.Servlets.servlet;
 import static io.undertow.Handlers.websocket;
 import io.undertow.Handlers;
 
+import org.json.JSONObject;
+
 public class PictureYourself {
     public PictureYourself() throws Exception {
     }
@@ -64,9 +66,14 @@ public class PictureYourself {
 //									}
 									if (Model.instance().isUpdate) {
                                         //System.out.println("isUpdate");
+                                        JSONObject result = new JSONObject();
+                                        if (Model.instance().country != null)
+                                            result.put("country", Model.instance().country);
+                                        if (Model.instance().interest != null)
+                                            result.put("interest", Model.instance().interest);
 										for (WebSocketChannel session : channel.getPeerConnections()) {
 											//WebSockets.sendText(data, session, null);
-											WebSockets.sendText(Model.instance().country, session, null);
+											WebSockets.sendText(result.toString(), session, null);
 										}
 										Model.instance().isUpdate = false;
 									}

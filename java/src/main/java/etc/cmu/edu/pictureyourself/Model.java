@@ -11,4 +11,5 @@ public class Model {
 
     public boolean isUpdate;
     public String country;
+    public String interest;
 }
