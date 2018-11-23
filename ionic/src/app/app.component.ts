@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 import { WelcomePage } from "../pages/welcome/welcome";
 import { TermPage } from "../pages/term/term";
 import { Question_1Page } from "../pages/question-1/question-1";
+import { Question_2Page } from "../pages/question-2/question-2";
 import { InstructionPage } from "../pages/instruction/instruction";
 import { SharePage } from "../pages/share/share";
 import { SuccessPage } from "../pages/success/success";
@@ -32,6 +33,7 @@ export class MyApp {
       { title: 'Post', component: HomePage },
       { title: 'Instruction', component: InstructionPage },
       { title: 'Question_1', component: Question_1Page },
+      { title: 'Question_2', component: Question_2Page },
       { title: 'Share', component: SharePage },
       { title: 'Success', component: SuccessPage }
     ];
