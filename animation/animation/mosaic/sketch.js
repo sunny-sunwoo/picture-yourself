@@ -281,14 +281,14 @@ function updateJSON(combination) {
 		currentIndex = index;
 		json.nodes[index].url = newUrl;
 		// update label texts (instead of using "you're here")
-		// var currentLabel = "";
-		// if(answer1 != "default") {
-		// 	currentLabel += "#" + answer1;
-		// 	if(answer2 != null) {
-		// 		currentLabel += " #" + answer2;
-		// 	}
-		// }
-		// json.nodes[index].label = currentLabel;
+		var currentLabel = "";
+		if(answer1 != "default") {
+			currentLabel += "#" + answer1;
+			if(answer2 != null) {
+				currentLabel += " #" + answer2;
+			}
+		}
+		json.nodes[index].label = currentLabel;
 		console.log(currentLabel);
 
 		// saveJSON(json, 'data.json');
