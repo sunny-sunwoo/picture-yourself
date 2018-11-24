@@ -509,14 +509,16 @@ function initialJSON(jsonInput) {
 var newSrc;
 var newGraph;
 function getJSON(jsonInput, newUrl) {
+  // console.log(jsonInput);
   newSrc = newUrl;
   newGraph = jsonInput;
  
   s.graph.clear();
   s.graph.read(jsonInput);
   $("#target-img").attr("src",newSrc);
-  myAnimation(s.graph, 'random_', 'typo_');
-
+  
+  //render the animation
+  myAnimation(s.graph, 'random_', 'q1_');
   }
 function grayScale(context) {
     var imgData = context.getImageData(0, 0, 500, 500);
@@ -846,8 +848,8 @@ $("#click-change").on("click", function() {
 
 _.$('click-appear').addEventListener("click", function(){ myAppear(s.graph); });
 _.$('click-disappear').addEventListener("click", function(){ myDisappear(s.graph); });
-_.$('click-transition').addEventListener("click", function (){myTransition('random_', 'typo_');});
-_.$('click-animation').addEventListener("click", function(){myAnimation(s.graph, 'random_', 'typo_');});
+_.$('click-transition').addEventListener("click", function (){myTransition('random_', 'q1_');});
+_.$('click-animation').addEventListener("click", function(){myAnimation(s.graph, 'random_', 'q1_');});
 
 //_.$('click-change').addEventListener("click", function(){ myChange(s.graph);});
 

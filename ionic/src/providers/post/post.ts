@@ -18,6 +18,7 @@ export class PostProvider {
   public photoId = -1;
   public base64Image: string;
   public country = "";
+  public interest = "";
   public emailImage: string;
 
 
@@ -26,6 +27,26 @@ export class PostProvider {
     private uniqueDeviceID: UniqueDeviceID,
     public http: HttpClient) {
       console.log('Hello PostProvider Provider');
+  }
+
+  answerInterest(interest, cb) {
+    this.interest = interest;
+    let url = API
+              + 'question?country='
+              + this.country
+              + '&interest='
+              + this.interest
+              + '&id='
+              + this.photoId;
+    fetch(url)
+      .then((response) => response.json())
+      .then((responseJson) => {
+        console.log(responseJson)
+        cb(responseJson.ok)
+      })
+      .catch((error) => {
+        console.error(error)
+      })
   }
 
   answerQuestion(text, cb) {
