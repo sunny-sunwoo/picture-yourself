@@ -94,6 +94,11 @@
       //_kinectWheelHandler(head);
     })
 
+    window.addEventListener('show_picture', function() {
+      console.log("show_picture");
+      _bodyFrame = null;
+    });
+
     function _kinectWheelHandler(head) {
       var pos,
           ratio,
@@ -171,6 +176,11 @@
     }
 
     function _kinectDownHandler(head) {
+      console.log("_kinectDownHandler")
+      _camera.goTo({
+        x:0,
+        y:0
+      });
       _startCameraX = _camera.x;
       _startCameraY = _camera.y;
       _startCameraRatio = _camera.ratio;
