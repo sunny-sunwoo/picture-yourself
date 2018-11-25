@@ -23,7 +23,7 @@
 <script src="../src/renderers/webgl/sigma.webgl.edges.def.js"></script>
 <script src="../src/renderers/webgl/sigma.webgl.edges.fast.js"></script>
 <script src="../src/renderers/webgl/sigma.webgl.edges.arrow.js"></script>
-<script src="../src/renderers/canvas/sigma.canvas.labels.def.js"></script>
+<!--script src="../src/renderers/canvas/sigma.canvas.labels.def.js"></script-->
 <script src="../src/renderers/canvas/sigma.canvas.hovers.def.js"></script>
 <script src="../src/renderers/canvas/sigma.canvas.nodes.def.js"></script>
 <script src="../src/renderers/canvas/sigma.canvas.edges.def.js"></script>
@@ -76,11 +76,12 @@
     }
     #target-img {
       display: none;
-      height: 100%;
-      height: 100px;
+      -webkit-clip-path: circle(50px at center); 
+      clip-path: circle(50px at center);
+       
       width: 100px;
       overflow: hidden;
-      border-radius: 50%;
+    
       position: absolute;
 
     }
@@ -88,6 +89,7 @@
     animation-name: example;
     animation-duration: 4s;
     }
+
 
     @keyframes example {
         0%   {transform: scale(1.5,1.5);}
@@ -383,6 +385,9 @@ sigma.canvas.nodes.image = (function() {
     }
   };
 
+
+
+
   // Let's add a public method to cache images, to make it possible to
   // preload images before the initial rendering:
   renderer.cache = function(url, callback) {
@@ -442,6 +447,7 @@ s = new sigma({
     maxEdgeSize: 3,
     labelSizeRatio: 30,
     labelColor: '#B50A0D',
+    labelThreshold: 25,
     font: "Lato"
   }
 });
@@ -498,8 +504,6 @@ sigma.parsers.json('data-random.json', s, function (s) {
 /*s.startForceAtlas2();
   s.configForceAtlas2({worker: true, barnesHutOptimize: false, slowDown: 1, scalingRatio: 1, edgeWeightInfluence: 0.8, gravity: 0});*/
 //sigma.parsers.json('data.json', s.graph);
-
-//var newGraph = sigma.classes.graph();
 
 function initialJSON(jsonInput) {
   s.graph.clear();
@@ -696,25 +700,16 @@ function myAppear(graph) {
 var currentIndex;
   function myNew(){
       var currentNodes = s.graph.nodes(); 
-      
-      
-      /*s.graph.nodes().forEach(function(n) {
-        n.strokeStyle = n.color;
-        
-      });*/
      currentNodes[currentIndex].color ="#B50A0D";
      currentNodes[currentIndex].label = "You're Here!";
-      // console.log(currentNodes[currentIndex].label);
      currentNodes[currentIndex].strokeStyle = currentNodes[currentIndex].color;
      $("#target-img").addClass("big").css({"display": "initial"});
-
-     
-  var currentNode = currentNodes[currentIndex];
-    // Initialize packages:
-  sigma.utils.pkg('sigma.canvas.labels');
+    var currentNode = currentNodes[currentIndex];
+      
+      sigma.utils.pkg('sigma.canvas.labels');
 
   /**
-   * This hover renderer will basically display the label with a background.
+   * This label renderer will just display the label on the right of the node.
    *
    * @param  {object}                   node     The node object.
    * @param  {CanvasRenderingContext2D} context  The canvas context.
@@ -727,98 +722,101 @@ var currentIndex;
         h,
         e,
         fontStyle = settings('fontStyle'),
-        prefix = settings('prefix') || '',
-        size = currentNode[prefix + 'size'],
         fontSize = (settings('labelSize') === 'fixed') ?
           settings('defaultLabelSize') :
-          settings('labelSizeRatio') * size;
+          settings('labelSizeRatio') * size,
+        prefix = settings('prefix') || '',
+        size = currentNode[prefix + 'size'];
 
-    // Label background:
-    context.font = (fontStyle ? fontStyle + ' ' : '') +
-      fontSize + 'px ' + settings('font');
+    
+    if(currentNode.label == "You're Here!"){
+       // Label background:
+        /*context.font = (fontStyle ? fontStyle + ' ' : '') +
+          fontSize + 'px ' + settings('font');
 
-    context.beginPath();
-    context.fillStyle = settings('labelHoverBGColor') === 'node' ?
-      (currentNode.color || settings('defaultNodeColor')) :
-      settings('defaultHoverLabelBGColor');
+        context.beginPath();
+        context.fillStyle = '#B50A0D';
+          x = Math.round(currentNode[prefix + 'x'] - fontSize / 2 + 20);
+          y = Math.round(currentNode[prefix + 'y'] - fontSize / 2 - 2);
+          w = Math.round(
+            context.measureText(currentNode.label).width + fontSize / 2 + size -2
+          );
+          h = Math.round(fontSize - 15);
+          e = Math.round(fontSize / 2 + 15);
 
-    /*if (node.label && settings('labelHoverShadow')) {
-      context.shadowOffsetX = 0;
-      context.shadowOffsetY = 0;
-      context.shadowBlur = 8;
-      context.shadowColor = settings('labelHoverShadowColor');
-    }*/
+          context.moveTo(x, y + e);
+          context.lineTo(x + w, y + e);
+          context.lineTo(x + w, y + h);
+          context.lineTo(x, y + h );
+          context.lineTo(x, y + e);
+          context.closePath();
+          context.fill();
+        */
+        // Label background:
+      context.font = (fontStyle ? fontStyle + ' ' : '') +
+        fontSize + 'px ' + (settings('hoverFont') || settings('font'));
 
-
-    if (currentNode.label && typeof currentNode.label === 'string') {
-      x = Math.round(currentNode[prefix + 'x'] - fontSize / 2 + 20);
-      y = Math.round(currentNode[prefix + 'y'] - fontSize / 2 - 2);
-      w = Math.round(
-        context.measureText(currentNode.label).width + fontSize / 2 + size + 4
-      );
-      h = Math.round(fontSize - 15);
-      e = Math.round(fontSize / 2 + 15);
-
-      /*context.moveTo(x, y + e);
-      context.arcTo(x, y, x + e, y, e);
-      context.lineTo(x + w, y);
-      context.lineTo(x + w, y + h);
-      context.lineTo(x + e, y + h);
-      context.arcTo(x, y + h, x, y + h - e, e);
-      context.lineTo(x, y + e);
-      */
-
-      context.moveTo(x, y + e);
-      context.lineTo(x + w, y + e);
-      context.lineTo(x + w, y + h);
-      context.lineTo(x, y + h );
-      context.lineTo(x, y + e);
-      context.closePath();
-      context.fill();
-
-      context.shadowOffsetX = 0;
-      context.shadowOffsetY = 0;
-      context.shadowBlur = 0;
-    }
-
-    // Node border:
-    /*if (settings('borderSize') > 0) {
       context.beginPath();
+      context.fillStyle = '#B50A0D';
+
+      
+        x = Math.round(currentNode[prefix + 'x'] - fontSize / 2 - 2);
+        y = Math.round(currentNode[prefix + 'y'] - fontSize / 2 - 2);
+        w = Math.round(
+          context.measureText(currentNode.label).width + fontSize / 2 + size + 7
+        );
+        h = Math.round(fontSize + 4);
+        e = Math.round(fontSize / 2 + 2);
+
+        context.moveTo(x, y + e);
+        context.arcTo(x, y, x + e, y, e);
+        context.lineTo(x + w, y);
+        context.lineTo(x + w, y + h);
+        context.lineTo(x + e, y + h);
+        context.arcTo(x, y + h, x, y + h - e, e);
+        context.lineTo(x, y + e);
+
+        context.closePath();
+        context.fill();
+
+        context.shadowOffsetX = 0;
+        context.shadowOffsetY = 0;
+        context.shadowBlur = 0;
+      
+
+       // Node:
+    var nodeRenderer = sigma.canvas.nodes[currentNode.type] || sigma.canvas.nodes.def;
+    nodeRenderer(currentNode, context, settings);
+            
+    }else {
+      if (size < settings('labelThreshold')){
+        return;
+      }
+    }
+    
+    if (!currentNode.label || typeof currentNode.label !== 'string')
+      return;
+
+    fontSize = (settings('labelSize') === 'fixed') ?
+      settings('defaultLabelSize') :
+      settings('labelSizeRatio') * size;
+
+    context.font = (settings('fontStyle') ? settings('fontStyle') + ' ' : '') +
+      fontSize + 'px ' + settings('font');
+    if(currentNode.label =="You're Here!"){
+    context.fillStyle = 'white';
+    }else{
       context.fillStyle = settings('nodeBorderColor') === 'node' ?
         (node.color || settings('defaultNodeColor')) :
         settings('defaultNodeBorderColor');
-      context.arc(
-        node[prefix + 'x'],
-        node[prefix + 'y'],
-        size + settings('borderSize'),
-        0,
-        Math.PI * 2,
-        true
-      );
-      context.closePath();
-      context.fill();
-    }
-  */
-    // Node:
-    //var nodeRenderer = sigma.canvas.nodes[currentNode.type] || sigma.canvas.nodes.def;
-    //nodeRenderer(currentNode, context, settings);
-
-    // Display the label:
-    if (currentNode.label && typeof currentNode.label === 'string') {
-      context.fillStyle = (settings('labelHoverColor') === 'node') ?
-        (currentNode.color || settings('defaultNodeColor')) :
-        settings('defaultLabelHoverColor');
-
-      context.fillText(
-        currentNode.label,
-        Math.round(currentNode[prefix + 'x'] + size + 3),
-        Math.round(currentNode[prefix + 'y'] + fontSize / 3)
-      );
     }
 
-
+    context.fillText(
+      currentNode.label,
+      Math.round(currentNode[prefix + 'x'] + size + 3),
+      Math.round(currentNode[prefix + 'y'] + fontSize / 3)
+    );
   };
-  
   }
 
 
@@ -842,7 +840,7 @@ $("#target-img").center()
 
 //Zoom in / out
 $("#click-change").on("click", function() {
-  $("#target-img").css("border-radius", "50%");
+  
   $("#target-img").addClass("big").css({"display": "initial"});
 });
 
