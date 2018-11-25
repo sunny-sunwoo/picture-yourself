@@ -684,6 +684,7 @@ function myAppear(graph) {
   }
 
   function myAnimation(graph, before, after){
+	    window.dispatchEvent(new Event("show_picture"));
       // console.log("hey");
       setTimeout( function() {myAppear(graph)},  0);
       setTimeout( myNew, 4000)
