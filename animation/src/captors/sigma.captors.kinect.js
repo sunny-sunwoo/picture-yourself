@@ -55,8 +55,8 @@
 
     sigma.classes.dispatcher.extend(this);
 
-    //var socket = io("http://localhost:3000");
-    var socket = io("http://128.2.236.245:3000");
+    var socket = io("http://localhost:3000");
+    //var socket = io("http://128.2.236.245:3000");
 
     socket.on("disconnect", function() {
       console.log("Disconnected");
@@ -139,9 +139,12 @@
 
         var scale = 1000 + 8000 * (_startKinectZ - head.cameraZ);
 
+        let depthY = head.depthY;
+        depthY -= (_startKinectZ - head.cameraZ) / 20;
+
         pos = _camera.cameraPosition(
-          (_startMouseX - head.cameraX) * scale,
-          -(_startMouseY - head.cameraY) * scale,
+          (_startMouseX - head.depthX) * scale,
+          (_startMouseY - depthY) * scale,
           true
         );
 
@@ -149,9 +152,10 @@
         y = _startCameraY - pos.y;
 
         newRatio = Math.max(
-          0.01,
-          1 - 0.5 * (_startKinectZ - head.cameraZ)
+          0.05,
+          1 - 0.65 * (_startKinectZ - head.cameraZ)
         );
+        //console.log(head.depthY, depthY, newRatio)
 
         if (x !== _camera.x || y !== _camera.y || newRatio != _camera.ratio) {
           _lastCameraX = _camera.x;
@@ -176,8 +180,8 @@
       _lastKinectZ = head.cameraZ;
       _lastCameraRatio = 1;
 
-      _startMouseX = head.cameraX;
-      _startMouseY = head.cameraY;
+      _startMouseX = head.depthX;
+      _startMouseY = head.depthY;
       _startKinectZ = head.cameraZ;
 
       _isMouseDown = true;
