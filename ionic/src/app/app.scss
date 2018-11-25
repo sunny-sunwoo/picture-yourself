@@ -154,6 +154,10 @@ body {
 	#question_1-div {
 		margin-top:40%;
 	}
+	#question_1-div h1{
+		font-size: 3.3em;
+		padding-bottom: 30px;
+	}
 
 	#question_1-div input {
 		font-family: "lightFont" !important;
@@ -168,6 +172,27 @@ body {
 		border: 1px solid RGBA(181, 10, 13, 1.00);
 		border-radius: 15px;
 	}
+
+	#question_2-div {
+		margin-top:30%;
+
+	}
+	#question_2-answer-div {
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+	#question_2-answer-div button{
+		padding:12px !important;
+	}
+	#question_2-div h1 {
+		font-size: 3.3em;
+		padding-bottom: 30px;
+	}
+	#question_2-skip {
+		margin-top: 50px;
+		margin-left: 40%;
+	}
+
 	#instruction-div {
 		margin-top: 40%;
 		width: 90%;

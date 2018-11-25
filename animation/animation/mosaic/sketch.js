@@ -35,6 +35,8 @@ var LETTER_SIZE = 3;
 
 // default character set
 var charSet = [2, 12, 20];// index of CMU
+var answer1 = "";
+var answer2 = "";
 
 //animate test
 var L = 30,
@@ -48,6 +50,11 @@ var img = (Math.random() >= 0.2);
 
 var data = {};
 data.nodes = [];
+
+var labelData = {};
+labelData.q1 = ["USA", "India", "Korea", "China", "Taiwan", "HongKong", "Canada", "Japan"]; // length:8
+labelData.q2 = ["FineArts", "Humanities", "InformationSystems",
+"Science", "Engineering", "SocialScience", "PublicPolicy", "ComputerScience", "Business", "ETC"]; //length:10
 
 
 // write json
@@ -130,30 +137,34 @@ function createSigmaObj(){
 	for (let i = json.nodes.length - 1; i >= 0; i--) {
 		json.nodes.splice(i, 1);
 	}
-	for (i=0; i < count ; i++){
-	   var obj = {
-	       label: i,
-	       id: 'n' +  i,
-	       type: img ? 'image' : 'def',
-	       url: img ? urls[Math.floor(Math.random() * urls.length)] : null,
-	       typo_x: positionList[i].x,
-	       typo_y: positionList[i].y,
-	       typo_color: "#ddd",
-	       typo_size: Math.random()*20 + 15,
-	       // circular_x: L * Math.cos(Math.PI * 2 * i / N - Math.PI / 2),
-	       // circular_y: L * Math.sin(Math.PI * 2 * i / N - Math.PI / 2),
-	       // circular_size: Math.random(),
-	       // circular_color: '#ccc',
-	       //   Math.floor(Math.random() * 16777215).toString(16) + '000000'
-	       // ).substr(0, 6),
-	       // grid_x: i % L,
-	       // grid_y: Math.floor(i / L),
-	       // grid_size: 1,
-	       // grid_color: '#ccc',
-	       random_x: Math.random() * 1.5,
-	       random_y: Math.random(),
-	       random_size: Math.random(),
-	       random_color: '#ccc'
+	for (i=0; i < count; i++){
+		var temp1 = labelData.q1[Math.floor(Math.random() * labelData.q1.length)];
+		var temp2 = labelData.q2[Math.floor(Math.random() * labelData.q2.length)];
+	    var obj = {
+	    	label: i,
+	    	// comment out this line to change the label.
+	        // label: "#" + temp1 + " #" + temp2,
+	        id: 'n' +  i,
+	        type: img ? 'image' : 'def',
+	        url: img ? urls[Math.floor(Math.random() * urls.length)] : null,
+	        q1_x: positionList[i].x,
+	        q1_y: positionList[i].y,
+	        q1_color: "#ddd",
+	        q1_size: Math.random()*20 + 15,
+	        // circular_x: L * Math.cos(Math.PI * 2 * i / N - Math.PI / 2),
+	        // circular_y: L * Math.sin(Math.PI * 2 * i / N - Math.PI / 2),
+	        // circular_size: Math.random(),
+	        // circular_color: '#ccc',
+	        //   Math.floor(Math.random() * 16777215).toString(16) + '000000'
+	        // ).substr(0, 6),
+	        // grid_x: i % L,
+	        // grid_y: Math.floor(i / L),
+	        // grid_size: 1,
+	        // grid_color: '#ccc',
+	        random_x: Math.random() * 1.5,
+	        random_y: Math.random(),
+	        random_size: Math.random(),
+	        random_color: '#ccc'
 	   };
 	   ['x', 'y', 'size', 'color'].forEach(function(val) {
 	     obj[val] = obj['random_' + val];
@@ -185,9 +196,11 @@ function createSigmaObj(){
 function updateJSON(combination) {
 	var request = new XMLHttpRequest();
 	var jsonData = {};
+	answer1 = combination.country;
+	answer2 = combination.interest;
 	request.open('GET', 'http://ec2-34-228-225-161.compute-1.amazonaws.com:8080/PictureYourself/match?country=default', true);
 	request.onload = function () {
-		switch(combination) {
+		switch(combination.country) {
 
 // A	B	C	D	E	F	G	H	I	J	K	L	M	N	O	P	Q	R	S	T	U	V	W	X	Y	Z
 // 0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25
@@ -257,22 +270,29 @@ function updateJSON(combination) {
 			edge_gen = 2;
 			setup();
 		}
-		// console.log(combination);
 		draw(charSet);
 		// Begin accessing JSON data here
 		jsonData = JSON.parse(this.response);
+
+		// Add the new input data to the nodes.
 		var lastIndex = jsonData.postList.length - 1;
 		var newUrl = "https://s3.amazonaws.com/newpicbuck/public/" + jsonData.postList[lastIndex].photo;
 		var index = Math.floor(Math.random() * count);
 		currentIndex = index;
 		json.nodes[index].url = newUrl;
-		
-		if(combination != "default"){
-			// saveJSON(json, 'data.json');
-			getJSON(json, newUrl);
-		} else {
-			console.log("cmu animation removed");
+		// update label texts (instead of using "you're here")
+		var currentLabel = "";
+		if(answer1 != "default") {
+			currentLabel += "#" + answer1;
+			if(answer2 != null) {
+				currentLabel += " #" + answer2;
+			}
 		}
+		json.nodes[index].label = currentLabel;
+		console.log(currentLabel);
+
+		// saveJSON(json, 'data.json');
+		getJSON(json, newUrl);
 		
 	}
 	request.send();
@@ -325,7 +345,12 @@ ws.onclose = function() {
 }
 
 ws.onmessage = function(payload) {
-  console.log(payload.data);
 	//fetchPictureList(payload.data);
-	updateJSON(payload.data);
+	var input = payload.data;
+	var obj = JSON.parse(input);
+	if(obj.country == "default" || obj.country == ""){
+		console.log("default");
+	} else {
+		updateJSON(obj);
+	}
 }

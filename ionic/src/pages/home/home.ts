@@ -12,7 +12,7 @@ import { Question_1Page } from "../question-1/question-1";
 export class HomePage {
   public base64Image: string;
   public filePath: string;
-
+  picture: string;
 
   constructor(
     private file: File,
@@ -27,8 +27,8 @@ export class HomePage {
     this.takePicture();
   }
 
-  takePicture() {
-    const options: CameraOptions = {
+  takePicture(){
+  const options: CameraOptions = {
       //quality: 100,
       destinationType: this.camera.DestinationType.FILE_URI,
       cameraDirection: this.camera.Direction.FRONT,
@@ -52,6 +52,7 @@ export class HomePage {
       }, err => {
         console.log(err);
       });
+
   }
 
   share() {

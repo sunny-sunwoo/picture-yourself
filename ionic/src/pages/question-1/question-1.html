@@ -9,7 +9,7 @@
   	<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Question</ion-title>
+    <ion-title>Question 1/2</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -20,7 +20,7 @@
 
 		<ion-item id="country-item">
     	<ion-label>Select Country...</ion-label>
-    	<ion-select (ionChange) = "instruction()" [(ngModel)]="country" multiple="false" cancelText="Cancel" okText="Submit!">
+    	<ion-select (ionChange) = "nextQuestion()" [(ngModel)]="country" multiple="false" cancelText="Cancel" okText="Submit!">
         <ion-option value="Canada">Canada</ion-option>
         <ion-option value="China">China</ion-option>
         <ion-option value="Hong Kong">Hong Kong</ion-option>
@@ -263,6 +263,6 @@
         	</ion-select>
         </ion-item>
 
-	<button (click)="instruction()" class="ui-button">SKIP</button>
+	<button (click)="nextQuestion()" class="ui-button">SKIP</button>
 </div>
 </ion-content>
