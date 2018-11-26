@@ -215,7 +215,7 @@
     <div id="dump" class="hidden"></div>
   </div>
   <div id="message-div">
-    <p id="message">Welcome to ETC!<br>You're <span id="visit-num">1st</span> visitor today<br>2018. 11. 04</p>
+    <!--p id="message">Welcome to ETC!<br>You're <span id="visit-num">1st</span> visitor today<br>2018. 11. 04</p-->
   </div>
   <!-- <main class="main">
     <div class="clockbox">
@@ -581,10 +581,12 @@ function grayScale(context) {
     //redraw the image in black & white
     context.putImageData(imgData, 0, 0);
   }
-
+var m_ = document.createElement('P');
+  m_.innerHTML = "Welcome to CMU";
+   
 function myMessageIn(){
   var opacityDegree = 0;
-  
+  _.$('message-div').appendChild(m_);
     var i = setInterval(function(){
     if(opacityDegree >= 0.99){
       _.$('message-div').style.opacity = 1;
@@ -603,6 +605,44 @@ function myMessageOut(){
     var j = setInterval(function(){
     if(opacityDegree <= 0.05){
       _.$('message-div').style.opacity = 0;
+      _.$('message-div').removeChild(m_);
+      clearInterval(j);
+    } else {
+      opacityDegree -= 0.01;
+      _.$('message-div').style.opacity =  opacityDegree;
+      // console.log("message out");
+    }
+  }, 10);
+}
+var dc_ = document.createElement('P');
+
+console.log(111, dc_.innerHTML);
+   
+function myDescriptionIn(){
+  var opacityDegree = 0;
+  dc_.innerHTML = description;
+  console.log("des" +description);
+
+  console.log("dc" + dc_.innerHTML);
+  _.$('message-div').appendChild(dc_);
+    var i = setInterval(function(){
+    if(opacityDegree >= 0.99){
+      _.$('message-div').style.opacity = 1;
+      clearInterval(i);
+    } else {
+      opacityDegree += 0.01;
+      _.$('message-div').style.opacity =  opacityDegree;
+      // console.log("message in");
+    }
+  }, 10);
+}
+function myDescriptionOut(){
+  opacityDegree = 1;
+     
+    var j = setInterval(function(){
+    if(opacityDegree <= 0.05){
+      _.$('message-div').style.opacity = 0;
+      _.$('message-div').removeChild(dc_);
       clearInterval(j);
     } else {
       opacityDegree -= 0.01;
@@ -766,7 +806,9 @@ function myAppear(graph) {
       myNew();
       console.log("new graph");
       setTimeout( function() {myAppear(graph)},  0);
+      setTimeout( myDescriptionIn, 0);
       setTimeout( function() {myTransition(before, after)}, 5000);
+      setTimeout( myDescriptionOut, 5000);
 
   }
 var currentIndex;
