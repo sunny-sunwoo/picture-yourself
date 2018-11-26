@@ -73,6 +73,8 @@
       background-image: radial-gradient( RGBA(177, 150, 148, 0.05), RGBA(177, 150, 148, 0.50));
       font-size: 14px;
       font-family: Lato, sans-serif;
+      overflow-x: hidden;
+      overflow-y: hidden;
     }
     #target-img {
       display: none;
@@ -120,6 +122,8 @@
       right: 0;
       position: absolute;
       opacity: 1;
+      overflow-x: hidden;
+      overflow-y: hidden;
     }
     #graph-container img {
       -webkit-filter: grayscale(100%);
@@ -812,7 +816,7 @@ function myAppear(graph) {
       setTimeout( myDescriptionIn, 0);
       setTimeout( function() {myTransition(before, after)}, 5000);
 
-      setTimeout( myDescriptionOut, 5000);
+      setTimeout( myDescriptionOut, 15000);
       newBool = true;
   }
 var currentIndex;

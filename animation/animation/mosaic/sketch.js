@@ -159,7 +159,7 @@ function createJSON(dataType, jsonType) {
 			var temp1 = labelData.q1[Math.floor(Math.random() * labelData.q1.length)];
 			var temp2 = labelData.q2[Math.floor(Math.random() * labelData.q2.length)];
 		    var obj = {
-		    	label: i,
+		    	// label: i,
 		    	// comment out this line to change the label.
 		        label: "#" + temp1 + " #" + temp2,
 		        id: 'n' +  i,
@@ -195,7 +195,7 @@ function createJSON(dataType, jsonType) {
 			var temp1 = labelData.q1[Math.floor(Math.random() * labelData.q1.length)];
 			var temp2 = labelData.q2[Math.floor(Math.random() * labelData.q2.length)];
 		    var obj = {
-		    	label: i,
+		    	// label: i,
 		    	// comment out this line to change the label.
 		        label: "#" + temp1 + " #" + temp2,
 		        id: 'n' +  i,
