@@ -513,10 +513,12 @@ function initialJSON(jsonInput) {
 var newSrc;
 
 var description = "";
+var countryMessage = "";
 
 
 function getString(newCountry, newInterest) {
   console.log(newCountry +", " + newInterest);
+  countryMessage = newCountry;
   switch(newInterest) {
       case "FineArts":
           description = "CMU’s College of Fine Arts is one of the most respected research universities offering convergence of contemporary art, technology, and critical discourse." ;
@@ -582,10 +584,11 @@ function grayScale(context) {
     context.putImageData(imgData, 0, 0);
   }
 var m_ = document.createElement('P');
-  m_.innerHTML = "Welcome to CMU";
+  
    
 function myMessageIn(){
   var opacityDegree = 0;
+  m_.innerHTML = "Welcome to CMU. <br> You're 11th person from " + countryMessage + " today";
   _.$('message-div').appendChild(m_);
     var i = setInterval(function(){
     if(opacityDegree >= 0.99){
@@ -808,6 +811,7 @@ function myAppear(graph) {
       setTimeout( function() {myAppear(graph)},  0);
       setTimeout( myDescriptionIn, 0);
       setTimeout( function() {myTransition(before, after)}, 5000);
+
       setTimeout( myDescriptionOut, 5000);
       newBool = true;
   }
