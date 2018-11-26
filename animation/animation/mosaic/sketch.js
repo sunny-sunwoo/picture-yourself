@@ -358,9 +358,9 @@ function updateJSON(combination, inputType) {
 			        charSet = [4, 13, 6, 8, 13, 4, 4, 17]; // ENGINEER
 			        LETTER_SIZE = 8;
 			        break;
-			    case "SocialScience":
-			        charSet = [3, 8, 4, 19, 17, 8, 2, 7]; // DIETRICH
-			        LETTER_SIZE = 8;
+			    case "Entertainment":
+			        charSet = [4, 19, 2]; // ETC
+			        LETTER_SIZE = 3;
 			        break;
 			    case "PublicPolicy":
 			        charSet = [7, 4, 8, 13, 25]; // HEINZ
@@ -424,6 +424,7 @@ function updateJSON(combination, inputType) {
 		// saveJSON(json, 'data.json');
 		if(inputType == "q2") {
 			getJSON(json, json2, newUrl);
+			getString(answer1, answer2);
 		}
 	}
 	request.send();
