@@ -398,7 +398,11 @@ function updateJSON(combination, inputType) {
 		var lastIndex = jsonData.postList.length - 1;
 		var newUrl = "https://s3.amazonaws.com/newpicbuck/public/" + jsonData.postList[lastIndex].photo;
 		var index = Math.floor(Math.random() * count);
+		if (inputType == "q2") {
+			index = Math.floor(Math.random() * Math.min(json.nodes.length, json2.nodes.length));
+		}
 		currentIndex = index;
+		console.log(jsonData.postList[lastIndex], json.nodes.length, json2.nodes.length)
 
 		// update label texts (instead of using "you're here")
 		var currentLabel = "";
@@ -415,6 +419,8 @@ function updateJSON(combination, inputType) {
 		}
 
 		if(inputType == "q2") {
+			json.nodes[index].url = newUrl;
+			json.nodes[index].label = currentLabel;
 			json2.nodes[index].url = newUrl;
 			json2.nodes[index].label = currentLabel;
 		}
