@@ -23,7 +23,7 @@
 <script src="../src/renderers/webgl/sigma.webgl.edges.def.js"></script>
 <script src="../src/renderers/webgl/sigma.webgl.edges.fast.js"></script>
 <script src="../src/renderers/webgl/sigma.webgl.edges.arrow.js"></script>
-<script src="../src/renderers/canvas/sigma.canvas.labels.def.js"></script>
+<!--script src="../src/renderers/canvas/sigma.canvas.labels.def.js"></script-->
 <script src="../src/renderers/canvas/sigma.canvas.hovers.def.js"></script>
 <script src="../src/renderers/canvas/sigma.canvas.nodes.def.js"></script>
 <script src="../src/renderers/canvas/sigma.canvas.edges.def.js"></script>
@@ -76,11 +76,12 @@
     }
     #target-img {
       display: none;
-      height: 100%;
-      height: 100px;
+      -webkit-clip-path: circle(50px at center); 
+      clip-path: circle(50px at center);
+       
       width: 100px;
       overflow: hidden;
-      border-radius: 50%;
+    
       position: absolute;
 
     }
@@ -88,6 +89,7 @@
     animation-name: example;
     animation-duration: 4s;
     }
+
 
     @keyframes example {
         0%   {transform: scale(1.5,1.5);}
@@ -213,7 +215,7 @@
     <div id="dump" class="hidden"></div>
   </div>
   <div id="message-div">
-    <p id="message">Welcome to ETC!<br>You're <span id="visit-num">1st</span> visitor today<br>2018. 11. 04</p>
+    <!--p id="message">Welcome to ETC!<br>You're <span id="visit-num">1st</span> visitor today<br>2018. 11. 04</p-->
   </div>
   <!-- <main class="main">
     <div class="clockbox">
@@ -383,6 +385,9 @@ sigma.canvas.nodes.image = (function() {
     }
   };
 
+
+
+
   // Let's add a public method to cache images, to make it possible to
   // preload images before the initial rendering:
   renderer.cache = function(url, callback) {
@@ -442,6 +447,7 @@ s = new sigma({
     maxEdgeSize: 3,
     labelSizeRatio: 30,
     labelColor: '#B50A0D',
+    labelThreshold: 25,
     font: "Lato"
   }
 });
@@ -499,26 +505,68 @@ sigma.parsers.json('data-random.json', s, function (s) {
   s.configForceAtlas2({worker: true, barnesHutOptimize: false, slowDown: 1, scalingRatio: 1, edgeWeightInfluence: 0.8, gravity: 0});*/
 //sigma.parsers.json('data.json', s.graph);
 
-//var newGraph = sigma.classes.graph();
-
 function initialJSON(jsonInput) {
   s.graph.clear();
   s.graph.read(jsonInput);
 }
 
 var newSrc;
-var newGraph;
-function getJSON(jsonInput, newUrl) {
+
+var description = "";
+
+
+function getString(newCountry, newInterest) {
+  console.log(newCountry +", " + newInterest);
+  switch(newInterest) {
+      case "FineArts":
+          description = "CMU’s College of Fine Arts is one of the most respected research universities offering convergence of contemporary art, technology, and critical discourse." ;
+          break;
+      case "Humanities":
+          description = "CMU’s Dietrich College of Humanities is home to students who can solve real-world problems and contribute in traditional ways." ;
+          break;
+      case "InformationSystems":
+          description = "CMU’s Heinz College is a interdisciplinary program for next generation of leaders who can connect People, policy, and technology.";
+          break;
+      case "Science":
+          description = "CMU’s Mellon College of Science is a dynamic, collaborative college for innovators and forward-thinkers.";
+          break;
+      case "Engineering":
+          description = "CMU's world-class College of Engineering is renowned for its excellence, innovation, and the societal relevance of its pursuits.";
+          break;
+      case "Entertainment":
+          description = "CMU’s Entertainment Technology Center is the premiere graduate program for interactive entertainment.";
+          break;
+      case "PublicPolicy":
+          description = "CMU’s Heinz College is a interdisciplinary program for next generation of leaders who can connect People, policy, and technology.";
+          break;
+      case "Business":
+          description = "CMU’s Tepper School is one of the strongest and most innovative business schools in the world.";
+          break;
+      case "ComputerScience":
+          description = "CMU’s SCS is one of the best computer science programs in the world leading many facets of computer science and robotics education.";
+          break;
+      default:
+          description = "Welcome to Carnegie Mellon University!";
+          break;
+  }
+}
+
+var newGraph2;
+var newGraph1;
+
+function getJSON(jsonInput1, jsonInput2, newUrl) {
   // console.log(jsonInput);
   newSrc = newUrl;
-  newGraph = jsonInput;
+  newGraph1 = jsonInput1;
+  newGraph2 = jsonInput2;
  
   s.graph.clear();
-  s.graph.read(jsonInput);
+  s.graph.read(newGraph1);
   $("#target-img").attr("src",newSrc);
   
   //render the animation
-  myAnimation(s.graph, 'random_', 'q1_');
+  myAnimation_1(s.graph, 'random1_', 'q1_');
+  setTimeout( function(){myAnimation_2(s.graph,'random2_', 'q2_')},23000);
   }
 function grayScale(context) {
     var imgData = context.getImageData(0, 0, 500, 500);
@@ -533,10 +581,12 @@ function grayScale(context) {
     //redraw the image in black & white
     context.putImageData(imgData, 0, 0);
   }
-
+var m_ = document.createElement('P');
+  m_.innerHTML = "Welcome to CMU";
+   
 function myMessageIn(){
   var opacityDegree = 0;
-  
+  _.$('message-div').appendChild(m_);
     var i = setInterval(function(){
     if(opacityDegree >= 0.99){
       _.$('message-div').style.opacity = 1;
@@ -555,6 +605,44 @@ function myMessageOut(){
     var j = setInterval(function(){
     if(opacityDegree <= 0.05){
       _.$('message-div').style.opacity = 0;
+      _.$('message-div').removeChild(m_);
+      clearInterval(j);
+    } else {
+      opacityDegree -= 0.01;
+      _.$('message-div').style.opacity =  opacityDegree;
+      // console.log("message out");
+    }
+  }, 10);
+}
+var dc_ = document.createElement('P');
+
+console.log(111, dc_.innerHTML);
+   
+function myDescriptionIn(){
+  var opacityDegree = 0;
+  dc_.innerHTML = description;
+  console.log("des" +description);
+
+  console.log("dc" + dc_.innerHTML);
+  _.$('message-div').appendChild(dc_);
+    var i = setInterval(function(){
+    if(opacityDegree >= 0.99){
+      _.$('message-div').style.opacity = 1;
+      clearInterval(i);
+    } else {
+      opacityDegree += 0.01;
+      _.$('message-div').style.opacity =  opacityDegree;
+      // console.log("message in");
+    }
+  }, 10);
+}
+function myDescriptionOut(){
+  opacityDegree = 1;
+     
+    var j = setInterval(function(){
+    if(opacityDegree <= 0.05){
+      _.$('message-div').style.opacity = 0;
+      _.$('message-div').removeChild(dc_);
       clearInterval(j);
     } else {
       opacityDegree -= 0.01;
@@ -665,7 +753,7 @@ function myAppear(graph) {
     function frame(){
       if( v == maxDegree){
         clearInterval(interval);
-        myDefault();
+        
       } else {
         v += 0.5;
         filter
@@ -678,44 +766,72 @@ function myAppear(graph) {
     }
 
   }
+  var appearAnim;
+  var newAnim;
+  var transAnim_1;
+  var transAnim_2;
+  var messageAnim_1;
+  var messageAnim_2;
+  var disappearAnim;
 
-  function myAnimation(graph, before, after){
+  function myAnimation_1(graph, before, after){
 	    window.dispatchEvent(new Event("show_picture"));
       // console.log("hey");
-      setTimeout( function() {myAppear(graph)},  0);
-      setTimeout( myNew, 4000)
-      setTimeout( function() {myTransition(before, after)}, 4500);
-      setTimeout( myMessageIn, 5000);
-      setTimeout( myMessageOut, 35000);
-      //setTimeout( function() {myDisappear(graph)}, 20000);
-      setTimeout( function() {myTransition(after, before)}, 10000);
-      setTimeout( function() {myTransition(before, after)}, 18000);
-      setTimeout( function() {myTransition(after, before)}, 35000);
+      appearAnim = setTimeout( function() {myAppear(graph)},  0);
+      newAnim = setTimeout( myNew, 4000);
+      transAnim_1 = setTimeout( function() {myTransition(before, after)}, 4500);
+      messageAnim_1 = setTimeout( myMessageIn, 5000);
+      messageAnim_2 = setTimeout( myMessageOut, 20000);
+      disappearAnim = setTimeout( function() {myDisappear(graph)}, 18000);
+      transAnim_2 = setTimeout( function() {myTransition(after, before)}, 10000);
+      //setTimeout( function() {myTransition(before, after)}, 18000);
+      //setTimeout( function() {myTransition(after, before)}, 35000);
+      console.log("before second animation");
+      
   }
 
+  function myAnimation_2(graph, before, after){
+      clearTimeout(appearAnim);
+      clearTimeout(newAnim);
+      clearTimeout(transAnim_1);
+      clearTimeout(transAnim_2);
+      clearTimeout(messageAnim_1);
+      clearTimeout(messageAnim_2);
+      clearTimeout(disappearAnim);
+      myDefault();
+      
+      console.log("start animation2");
+      graph.clear();
+      graph.read(newGraph2);
+      myNew();
+      console.log("new graph");
+      setTimeout( function() {myAppear(graph)},  0);
+      setTimeout( myDescriptionIn, 0);
+      setTimeout( function() {myTransition(before, after)}, 5000);
+      setTimeout( myDescriptionOut, 5000);
 
+  }
 var currentIndex;
+var newBool = true;
+  function myNewPop(){
+    $("#target-img").addClass("big").css({"display": "initial"});
+  }
   function myNew(){
       var currentNodes = s.graph.nodes(); 
-      
-      
-      /*s.graph.nodes().forEach(function(n) {
-        n.strokeStyle = n.color;
-        
-      });*/
-     currentNodes[currentIndex].color ="#B50A0D";
+     currentNodes[currentIndex].color ='#B50A0D';
      currentNodes[currentIndex].label = "You're Here!";
-      // console.log(currentNodes[currentIndex].label);
      currentNodes[currentIndex].strokeStyle = currentNodes[currentIndex].color;
-     $("#target-img").addClass("big").css({"display": "initial"});
-
-     
-  var currentNode = currentNodes[currentIndex];
-    // Initialize packages:
-  sigma.utils.pkg('sigma.canvas.labels');
+     if(newBool == true){
+     myNewPop();
+     newBool = false;
+    }
+    console.log(currentNodes[currentIndex].label);
+    var currentNode = currentNodes[currentIndex];
+      
+      sigma.utils.pkg('sigma.canvas.labels');
 
   /**
-   * This hover renderer will basically display the label with a background.
+   * This label renderer will just display the label on the right of the node.
    *
    * @param  {object}                   node     The node object.
    * @param  {CanvasRenderingContext2D} context  The canvas context.
@@ -728,98 +844,101 @@ var currentIndex;
         h,
         e,
         fontStyle = settings('fontStyle'),
-        prefix = settings('prefix') || '',
-        size = currentNode[prefix + 'size'],
         fontSize = (settings('labelSize') === 'fixed') ?
           settings('defaultLabelSize') :
-          settings('labelSizeRatio') * size;
+          settings('labelSizeRatio') * size,
+        prefix = settings('prefix') || '',
+        size = currentNode[prefix + 'size'];
 
-    // Label background:
-    context.font = (fontStyle ? fontStyle + ' ' : '') +
-      fontSize + 'px ' + settings('font');
+    
+    if(currentNode.label == "You're Here!"){
+       // Label background:
+        /*context.font = (fontStyle ? fontStyle + ' ' : '') +
+          fontSize + 'px ' + settings('font');
 
-    context.beginPath();
-    context.fillStyle = settings('labelHoverBGColor') === 'node' ?
-      (currentNode.color || settings('defaultNodeColor')) :
-      settings('defaultHoverLabelBGColor');
+        context.beginPath();
+        context.fillStyle = '#B50A0D';
+          x = Math.round(currentNode[prefix + 'x'] - fontSize / 2 + 20);
+          y = Math.round(currentNode[prefix + 'y'] - fontSize / 2 - 2);
+          w = Math.round(
+            context.measureText(currentNode.label).width + fontSize / 2 + size -2
+          );
+          h = Math.round(fontSize - 15);
+          e = Math.round(fontSize / 2 + 15);
 
-    /*if (node.label && settings('labelHoverShadow')) {
-      context.shadowOffsetX = 0;
-      context.shadowOffsetY = 0;
-      context.shadowBlur = 8;
-      context.shadowColor = settings('labelHoverShadowColor');
-    }*/
+          context.moveTo(x, y + e);
+          context.lineTo(x + w, y + e);
+          context.lineTo(x + w, y + h);
+          context.lineTo(x, y + h );
+          context.lineTo(x, y + e);
+          context.closePath();
+          context.fill();
+        */
+        // Label background:
+      context.font = (fontStyle ? fontStyle + ' ' : '') +
+        fontSize + 'px ' + (settings('hoverFont') || settings('font'));
 
-
-    if (currentNode.label && typeof currentNode.label === 'string') {
-      x = Math.round(currentNode[prefix + 'x'] - fontSize / 2 + 20);
-      y = Math.round(currentNode[prefix + 'y'] - fontSize / 2 - 2);
-      w = Math.round(
-        context.measureText(currentNode.label).width + fontSize / 2 + size + 4
-      );
-      h = Math.round(fontSize - 15);
-      e = Math.round(fontSize / 2 + 15);
-
-      /*context.moveTo(x, y + e);
-      context.arcTo(x, y, x + e, y, e);
-      context.lineTo(x + w, y);
-      context.lineTo(x + w, y + h);
-      context.lineTo(x + e, y + h);
-      context.arcTo(x, y + h, x, y + h - e, e);
-      context.lineTo(x, y + e);
-      */
-
-      context.moveTo(x, y + e);
-      context.lineTo(x + w, y + e);
-      context.lineTo(x + w, y + h);
-      context.lineTo(x, y + h );
-      context.lineTo(x, y + e);
-      context.closePath();
-      context.fill();
-
-      context.shadowOffsetX = 0;
-      context.shadowOffsetY = 0;
-      context.shadowBlur = 0;
-    }
-
-    // Node border:
-    /*if (settings('borderSize') > 0) {
       context.beginPath();
+      context.fillStyle = '#B50A0D';
+
+      
+        x = Math.round(currentNode[prefix + 'x'] - fontSize / 2 - 2);
+        y = Math.round(currentNode[prefix + 'y'] - fontSize / 2 - 2);
+        w = Math.round(
+          context.measureText(currentNode.label).width + fontSize / 2 + size + 7
+        );
+        h = Math.round(fontSize + 4);
+        e = Math.round(fontSize / 2 + 2);
+
+        context.moveTo(x, y + e);
+        context.arcTo(x, y, x + e, y, e);
+        context.lineTo(x + w, y);
+        context.lineTo(x + w, y + h);
+        context.lineTo(x + e, y + h);
+        context.arcTo(x, y + h, x, y + h - e, e);
+        context.lineTo(x, y + e);
+
+        context.closePath();
+        context.fill();
+
+        context.shadowOffsetX = 0;
+        context.shadowOffsetY = 0;
+        context.shadowBlur = 0;
+      
+
+       // Node:
+    var nodeRenderer = sigma.canvas.nodes[currentNode.type] || sigma.canvas.nodes.def;
+    nodeRenderer(currentNode, context, settings);
+            
+    }else {
+      if (size < settings('labelThreshold')){
+        return;
+      }
+    }
+    
+    if (!currentNode.label || typeof currentNode.label !== 'string')
+      return;
+
+    fontSize = (settings('labelSize') === 'fixed') ?
+      settings('defaultLabelSize') :
+      settings('labelSizeRatio') * size;
+
+    context.font = (settings('fontStyle') ? settings('fontStyle') + ' ' : '') +
+      fontSize + 'px ' + settings('font');
+    if(currentNode.label =="You're Here!"){
+    context.fillStyle = 'white';
+    }else{
       context.fillStyle = settings('nodeBorderColor') === 'node' ?
         (node.color || settings('defaultNodeColor')) :
         settings('defaultNodeBorderColor');
-      context.arc(
-        node[prefix + 'x'],
-        node[prefix + 'y'],
-        size + settings('borderSize'),
-        0,
-        Math.PI * 2,
-        true
-      );
-      context.closePath();
-      context.fill();
-    }
-  */
-    // Node:
-    //var nodeRenderer = sigma.canvas.nodes[currentNode.type] || sigma.canvas.nodes.def;
-    //nodeRenderer(currentNode, context, settings);
-
-    // Display the label:
-    if (currentNode.label && typeof currentNode.label === 'string') {
-      context.fillStyle = (settings('labelHoverColor') === 'node') ?
-        (currentNode.color || settings('defaultNodeColor')) :
-        settings('defaultLabelHoverColor');
-
-      context.fillText(
-        currentNode.label,
-        Math.round(currentNode[prefix + 'x'] + size + 3),
-        Math.round(currentNode[prefix + 'y'] + fontSize / 3)
-      );
     }
 
-
+    context.fillText(
+      currentNode.label,
+      Math.round(currentNode[prefix + 'x'] + size + 3),
+      Math.round(currentNode[prefix + 'y'] + fontSize / 3)
+    );
   };
-  
   }
 
 
@@ -843,14 +962,14 @@ $("#target-img").center()
 
 //Zoom in / out
 $("#click-change").on("click", function() {
-  $("#target-img").css("border-radius", "50%");
+  
   $("#target-img").addClass("big").css({"display": "initial"});
 });
 
 _.$('click-appear').addEventListener("click", function(){ myAppear(s.graph); });
 _.$('click-disappear').addEventListener("click", function(){ myDisappear(s.graph); });
 _.$('click-transition').addEventListener("click", function (){myTransition('random_', 'q1_');});
-_.$('click-animation').addEventListener("click", function(){myAnimation(s.graph, 'random_', 'q1_');});
+_.$('click-animation').addEventListener("click", function(){myAnimation_1(s.graph, 'random_', 'q1_');});
 
 //_.$('click-change').addEventListener("click", function(){ myChange(s.graph);});
 

@@ -15,7 +15,7 @@ import { PostProvider } from "../../providers/post/post";
   templateUrl: 'question-2.html',
 })
 export class Question_2Page {
-
+  
   constructor(
   private postProvider: PostProvider,
   public navCtrl: NavController,
