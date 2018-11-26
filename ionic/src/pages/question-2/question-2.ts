@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { InstructionPage } from "../instruction/instruction";
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { PostProvider } from "../../providers/post/post";
 
 /**
@@ -10,7 +10,6 @@ import { PostProvider } from "../../providers/post/post";
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-question-2',
   templateUrl: 'question-2.html',

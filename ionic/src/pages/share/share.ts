@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { WelcomePage } from "../welcome/welcome";
 import { SuccessPage } from "../success/success";
 import * as html2canvas from 'html2canvas';
@@ -15,7 +15,6 @@ import { Slides, Slide } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-share',
   templateUrl: 'share.html',

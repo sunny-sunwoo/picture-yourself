@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
 import { File } from "@ionic-native/file";
 import { Buffer } from 'buffer';
 import { Storage } from 'aws-amplify';
-import { UniqueDeviceID } from '@ionic-native/unique-device-id';
 
 /*
   Generated class for the PostProvider provider.
@@ -24,7 +23,6 @@ export class PostProvider {
 
   constructor(
     private file: File,
-    private uniqueDeviceID: UniqueDeviceID,
     public http: HttpClient) {
       console.log('Hello PostProvider Provider');
   }
