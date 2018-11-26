@@ -511,22 +511,28 @@ function initialJSON(jsonInput) {
 }
 
 var newSrc;
-var newGraph;
+
 
 function getString(newCountry, newInterest) {
   console.log(newCountry +", " + newInterest);
 }
+
+var newGraph2;
+var newGraph1;
+
 function getJSON(jsonInput1, jsonInput2, newUrl) {
   // console.log(jsonInput);
   newSrc = newUrl;
-  newGraph = jsonInput2;
+  newGraph1 = jsonInput1;
+  newGraph2 = jsonInput2;
  
   s.graph.clear();
-  s.graph.read(jsonInput2);
+  s.graph.read(newGraph1);
   $("#target-img").attr("src",newSrc);
   
   //render the animation
-  myAnimation(s.graph, 'random2_', 'q2_');
+  myAnimation_1(s.graph, 'random1_', 'q1_');
+  setTimeout( function(){myAnimation_2(s.graph,'random2_', 'q2_')},23000);
   }
 function grayScale(context) {
     var imgData = context.getImageData(0, 0, 500, 500);
@@ -673,7 +679,7 @@ function myAppear(graph) {
     function frame(){
       if( v == maxDegree){
         clearInterval(interval);
-        myDefault();
+        
       } else {
         v += 0.5;
         filter
@@ -686,29 +692,64 @@ function myAppear(graph) {
     }
 
   }
+  var appearAnim;
+  var newAnim;
+  var transAnim_1;
+  var transAnim_2;
+  var messageAnim_1;
+  var messageAnim_2;
+  var disappearAnim;
 
-  function myAnimation(graph, before, after){
+  function myAnimation_1(graph, before, after){
 	    window.dispatchEvent(new Event("show_picture"));
       // console.log("hey");
-      setTimeout( function() {myAppear(graph)},  0);
-      setTimeout( myNew, 4000)
-      setTimeout( function() {myTransition(before, after)}, 4500);
-      setTimeout( myMessageIn, 5000);
-      setTimeout( myMessageOut, 35000);
-      //setTimeout( function() {myDisappear(graph)}, 20000);
-      setTimeout( function() {myTransition(after, before)}, 10000);
-      setTimeout( function() {myTransition(before, after)}, 18000);
-      setTimeout( function() {myTransition(after, before)}, 35000);
+      appearAnim = setTimeout( function() {myAppear(graph)},  0);
+      newAnim = setTimeout( myNew, 4000);
+      transAnim_1 = setTimeout( function() {myTransition(before, after)}, 4500);
+      messageAnim_1 = setTimeout( myMessageIn, 5000);
+      messageAnim_2 = setTimeout( myMessageOut, 20000);
+      disappearAnim = setTimeout( function() {myDisappear(graph)}, 18000);
+      transAnim_2 = setTimeout( function() {myTransition(after, before)}, 10000);
+      //setTimeout( function() {myTransition(before, after)}, 18000);
+      //setTimeout( function() {myTransition(after, before)}, 35000);
+      console.log("before second animation");
+      
   }
 
+  function myAnimation_2(graph, before, after){
+      clearTimeout(appearAnim);
+      clearTimeout(newAnim);
+      clearTimeout(transAnim_1);
+      clearTimeout(transAnim_2);
+      clearTimeout(messageAnim_1);
+      clearTimeout(messageAnim_2);
+      clearTimeout(disappearAnim);
+      myDefault();
+      
+      console.log("start animation2");
+      graph.clear();
+      graph.read(newGraph2);
+      myNew();
+      console.log("new graph");
+      setTimeout( function() {myAppear(graph)},  0);
+      setTimeout( function() {myTransition(before, after)}, 5000);
 
+  }
 var currentIndex;
+var newBool = true;
+  function myNewPop(){
+    $("#target-img").addClass("big").css({"display": "initial"});
+  }
   function myNew(){
       var currentNodes = s.graph.nodes(); 
-     currentNodes[currentIndex].color ="#B50A0D";
+     currentNodes[currentIndex].color ='#B50A0D';
      currentNodes[currentIndex].label = "You're Here!";
      currentNodes[currentIndex].strokeStyle = currentNodes[currentIndex].color;
-     $("#target-img").addClass("big").css({"display": "initial"});
+     if(newBool == true){
+     myNewPop();
+     newBool = false;
+    }
+    console.log(currentNodes[currentIndex].label);
     var currentNode = currentNodes[currentIndex];
       
       sigma.utils.pkg('sigma.canvas.labels');
@@ -852,7 +893,7 @@ $("#click-change").on("click", function() {
 _.$('click-appear').addEventListener("click", function(){ myAppear(s.graph); });
 _.$('click-disappear').addEventListener("click", function(){ myDisappear(s.graph); });
 _.$('click-transition').addEventListener("click", function (){myTransition('random_', 'q1_');});
-_.$('click-animation').addEventListener("click", function(){myAnimation(s.graph, 'random_', 'q1_');});
+_.$('click-animation').addEventListener("click", function(){myAnimation_1(s.graph, 'random_', 'q1_');});
 
 //_.$('click-change').addEventListener("click", function(){ myChange(s.graph);});
 

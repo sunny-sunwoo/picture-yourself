@@ -161,7 +161,7 @@ function createJSON(dataType, jsonType) {
 		    var obj = {
 		    	label: i,
 		    	// comment out this line to change the label.
-		        // label: "#" + temp1 + " #" + temp2,
+		        label: "#" + temp1 + " #" + temp2,
 		        id: 'n' +  i,
 		        type: img ? 'image' : 'def',
 		        url: img ? urls[Math.floor(Math.random() * urls.length)] : null,
@@ -197,7 +197,7 @@ function createJSON(dataType, jsonType) {
 		    var obj = {
 		    	label: i,
 		    	// comment out this line to change the label.
-		        // label: "#" + temp1 + " #" + temp2,
+		        label: "#" + temp1 + " #" + temp2,
 		        id: 'n' +  i,
 		        type: img ? 'image' : 'def',
 		        url: img ? urls[Math.floor(Math.random() * urls.length)] : null,
