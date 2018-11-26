@@ -512,9 +512,42 @@ function initialJSON(jsonInput) {
 
 var newSrc;
 var newGraph;
+var description = "";
 
 function getString(newCountry, newInterest) {
   console.log(newCountry +", " + newInterest);
+  switch(newInterest) {
+      case "FineArts":
+          description = "CMU’s College of Fine Arts is one of the most respected research universities offering convergence of contemporary art, technology, and critical discourse." ;
+          break;
+      case "Humanities":
+          description = "CMU’s Dietrich College of Humanities is home to students who can solve real-world problems and contribute in traditional ways." ;
+          break;
+      case "InformationSystems":
+          description = "CMU’s Heinz College is a interdisciplinary program for next generation of leaders who can connect People, policy, and technology.";
+          break;
+      case "Science":
+          description = "CMU’s Mellon College of Science is a dynamic, collaborative college for innovators and forward-thinkers.";
+          break;
+      case "Engineering":
+          description = "CMU's world-class College of Engineering is renowned for its excellence, innovation, and the societal relevance of its pursuits.";
+          break;
+      case "Entertainment":
+          description = "CMU’s Entertainment Technology Center is the premiere graduate program for interactive entertainment.";
+          break;
+      case "PublicPolicy":
+          description = "CMU’s Heinz College is a interdisciplinary program for next generation of leaders who can connect People, policy, and technology.";
+          break;
+      case "Business":
+          description = "CMU’s Tepper School is one of the strongest and most innovative business schools in the world.";
+          break;
+      case "ComputerScience":
+          description = "CMU’s SCS is one of the best computer science programs in the world leading all facets of computer science and robotics education.";
+          break;
+      default:
+          description = "Welcome to Carnegie Mellon University!";
+          break;
+  }
 }
 function getJSON(jsonInput1, jsonInput2, newUrl) {
   // console.log(jsonInput);

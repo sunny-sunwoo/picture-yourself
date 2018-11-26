@@ -400,8 +400,6 @@ function updateJSON(combination, inputType) {
 		var index = Math.floor(Math.random() * count);
 		currentIndex = index;
 
-
-		
 		// update label texts (instead of using "you're here")
 		var currentLabel = "";
 		if(answer1 != "default") {
