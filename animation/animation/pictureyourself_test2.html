@@ -512,17 +512,17 @@ function initialJSON(jsonInput) {
 
 var newSrc;
 var newGraph;
-function getJSON(jsonInput, newUrl) {
+function getJSON(jsonInput1, jsonInput2, newUrl) {
   // console.log(jsonInput);
   newSrc = newUrl;
-  newGraph = jsonInput;
+  newGraph = jsonInput2;
  
   s.graph.clear();
-  s.graph.read(jsonInput);
+  s.graph.read(jsonInput2);
   $("#target-img").attr("src",newSrc);
   
   //render the animation
-  myAnimation(s.graph, 'random_', 'q1_');
+  myAnimation(s.graph, 'random2_', 'q2_');
   }
 function grayScale(context) {
     var imgData = context.getImageData(0, 0, 500, 500);
