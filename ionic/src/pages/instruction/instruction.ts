@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { WelcomePage } from "../welcome/welcome";
 import { SharePage } from "../share/share";
 
@@ -10,7 +10,6 @@ import { SharePage } from "../share/share";
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-instruction',
   templateUrl: 'instruction.html',
